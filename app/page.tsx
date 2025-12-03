@@ -14,7 +14,7 @@ export default function Home() {
                     </div>
 
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                        <a href="#features" className="hover:text-white transition-colors">Features</a>
+                        <a href="#features" className="hover:text-white transition-colors">AIpath CRM</a>
                         <a href="#roadmap" className="hover:text-white transition-colors">Roadmap</a>
                         <a href="#about" className="hover:text-white transition-colors">About</a>
                     </div>
