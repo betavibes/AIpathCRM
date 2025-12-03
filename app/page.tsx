@@ -14,9 +14,9 @@ export default function Home() {
                     </div>
 
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                        <a href="#features" className="hover:text-white transition-colors">AIpath CRM</a>
-                        <a href="#roadmap" className="hover:text-white transition-colors">Roadmap</a>
-                        <a href="#about" className="hover:text-white transition-colors">About</a>
+                        <a href="#features" className="hover:text-white transition-colors">Features</a>
+                        <a href="#why-aipath" className="hover:text-white transition-colors">Why AIpath CRM?</a>
+                        <a href="#about" className="hover:text-white transition-colors">About Us</a>
                     </div>
 
                     <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors">
