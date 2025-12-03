@@ -271,6 +271,237 @@ export default function FeaturesPage() {
                 </div>
             </section>
 
+            {/* --- Feature Section 5: Attendance Management System --- */}
+            <section className="py-20 relative">
+                <div className="container mx-auto px-4">
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Attendance Management System</h2>
+                        <p className="text-gray-400 text-lg">
+                            Revolutionary attendance tracking with selfie verification, GPS validation, and automated calculations. Say goodbye to proxy attendance and manual timesheet management.
+                        </p>
+                    </div>
+
+                    {/* Content Grid - Image Right */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
+                        <div className="flex flex-col justify-center space-y-4">
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Selfie Check-In/Out
+                                </h3>
+                                <p className="text-gray-400 text-sm">Photo-based attendance with facial verification to prevent proxy attendance and ensure authenticity.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> GPS Location Verification
+                                </h3>
+                                <p className="text-gray-400 text-sm">Automatic GPS tracking ensures staff check-in from designated work locations with geo-fencing support.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Automated Calculations
+                                </h3>
+                                <p className="text-gray-400 text-sm">Auto-calculate late arrivals, early departures, overtime, half-days, and short days with configurable rules.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Real-Time Attendance Reports
+                                </h3>
+                                <p className="text-gray-400 text-sm">Live attendance dashboard with present/absent status, attendance percentage, and monthly reports.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center">
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500 w-full">
+                                <Image
+                                    src="/attendance-management.png"
+                                    alt="Attendance Management System"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Feature Section 6: Task Management System --- */}
+            <section className="py-20 relative bg-white/[0.01]">
+                <div className="container mx-auto px-4">
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Task Management System</h2>
+                        <p className="text-gray-400 text-lg">
+                            Assign, track, and manage tasks with photo updates, subtasks, and real-time progress monitoring. Keep your team aligned and productive.
+                        </p>
+                    </div>
+
+                    {/* Content Grid - Image Left */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
+                        <div className="flex items-center">
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500 w-full">
+                                <Image
+                                    src="/task-management.png"
+                                    alt="Task Management System"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col justify-center space-y-4">
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Task Assignment & Tracking
+                                </h3>
+                                <p className="text-gray-400 text-sm">Create and assign tasks to staff with descriptions, deadlines, priority levels, and custom fields.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Photo & Progress Updates
+                                </h3>
+                                <p className="text-gray-400 text-sm">Staff can update task progress with photos, comments, and status changes from their mobile app.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Subtasks & Dependencies
+                                </h3>
+                                <p className="text-gray-400 text-sm">Break down complex tasks into subtasks and manage task dependencies for better workflow control.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Task Analytics & Reports
+                                </h3>
+                                <p className="text-gray-400 text-sm">Track task completion rates, overdue tasks, and staff productivity with detailed analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Feature Section 7: Leave Management System --- */}
+            <section className="py-20 relative">
+                <div className="container mx-auto px-4">
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">Leave Management System</h2>
+                        <p className="text-gray-400 text-lg">
+                            Streamline leave requests, approvals, and balance tracking. Automated workflows ensure smooth leave management with complete transparency.
+                        </p>
+                    </div>
+
+                    {/* Content Grid - Image Right */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
+                        <div className="flex flex-col justify-center space-y-4">
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Easy Leave Requests
+                                </h3>
+                                <p className="text-gray-400 text-sm">Staff can apply for leaves directly from mobile app with reason, dates, and supporting documents.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Multi-Level Approval Workflow
+                                </h3>
+                                <p className="text-gray-400 text-sm">Configure approval hierarchies with automated notifications to managers and HR for pending requests.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Leave Balance Tracking
+                                </h3>
+                                <p className="text-gray-400 text-sm">Automatic tracking of leave balances for different leave types (casual, sick, annual, unpaid).</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Leave Calendar & History
+                                </h3>
+                                <p className="text-gray-400 text-sm">Visual calendar view of team leaves and complete leave history with approval status.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center">
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500 w-full">
+                                <Image
+                                    src="/leave-management.png"
+                                    alt="Leave Management System"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Feature Section 8: AI Assistant for Business --- */}
+            <section className="py-20 relative bg-white/[0.01]">
+                <div className="container mx-auto px-4">
+                    {/* Section Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">AI Assistant for Business</h2>
+                        <p className="text-gray-400 text-lg">
+                            Harness the power of AI to automate decisions, get intelligent insights, and optimize your workforce operations with predictive analytics.
+                        </p>
+                    </div>
+
+                    {/* Content Grid - Image Left */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
+                        <div className="flex items-center">
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500 w-full">
+                                <div className="bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
+                                    <div className="text-center">
+                                        <div className="text-6xl mb-4">🤖</div>
+                                        <p className="text-gray-400">AI Assistant Interface</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col justify-center space-y-4">
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Intelligent Recommendations
+                                </h3>
+                                <p className="text-gray-400 text-sm">AI-powered suggestions for optimal shift scheduling, resource allocation, and productivity improvements.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Predictive Analytics
+                                </h3>
+                                <p className="text-gray-400 text-sm">Forecast attendance patterns, identify productivity trends, and predict staffing needs with AI models.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Automated Insights
+                                </h3>
+                                <p className="text-gray-400 text-sm">Get automated reports on anomalies, performance issues, and opportunities for optimization.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Natural Language Queries
+                                </h3>
+                                <p className="text-gray-400 text-sm">Ask questions in plain English and get instant answers about your workforce data and metrics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* --- CTA Section --- */}
             <section className="py-24 relative overflow-hidden">
                 <div className="container mx-auto px-4 text-center relative z-10">
