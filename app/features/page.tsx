@@ -452,24 +452,55 @@ export default function FeaturesPage() {
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-4">AI Assistant for Business</h2>
                         <p className="text-gray-400 text-lg">
-                            Harness the power of AI to automate decisions, get intelligent insights, and optimize your workforce operations with predictive analytics.
+                            Ask anything about your business and get instant answers. Your intelligent assistant understands natural language and provides real-time insights.
                         </p>
                     </div>
 
                     {/* Content Grid - Image Left */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
                         <div className="flex items-center">
-                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500 w-full">
-                                <div className="bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">🤖</div>
-                                        <p className="text-gray-400">AI Assistant Interface</p>
+                            <div className="glass-premium rounded-3xl p-6 overflow-hidden w-full">
+                                <div className="space-y-4">
+                                    <div className="text-center mb-6">
+                                        <div className="text-5xl mb-3">🤖</div>
+                                        <h3 className="text-xl font-bold text-gradient">Ask Anything About Your Business</h3>
+                                    </div>
+
+                                    {/* Example Queries */}
+                                    <div className="space-y-3">
+                                        <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl p-4 text-right">
+                                            <p className="text-white font-medium">"Show today's attendance"</p>
+                                        </div>
+                                        <div className="bg-purple-500/10 border border-purple-500/30 rounded-xl p-4 text-right">
+                                            <p className="text-white font-medium">"What tasks are pending?"</p>
+                                        </div>
+                                        <div className="bg-pink-500/10 border border-pink-500/30 rounded-xl p-4 text-right">
+                                            <p className="text-white font-medium">"Who is on leave today?"</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="text-center pt-4">
+                                        <p className="text-green-400 font-semibold">✓ Get instant answers</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="flex flex-col justify-center space-y-4">
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Natural Language Queries
+                                </h3>
+                                <p className="text-gray-400 text-sm">Ask questions in plain English and get instant answers about attendance, tasks, leaves, and more.</p>
+                            </div>
+
+                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
+                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                    <span className="text-green-400">✓</span> Real-Time Data Access
+                                </h3>
+                                <p className="text-gray-400 text-sm">Get up-to-date information from your workforce data instantly without navigating through multiple screens.</p>
+                            </div>
+
                             <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
                                 <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
                                     <span className="text-green-400">✓</span> Intelligent Recommendations
@@ -479,23 +510,9 @@ export default function FeaturesPage() {
 
                             <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
                                 <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                                    <span className="text-green-400">✓</span> Predictive Analytics
+                                    <span className="text-green-400">✓</span> Predictive Insights
                                 </h3>
                                 <p className="text-gray-400 text-sm">Forecast attendance patterns, identify productivity trends, and predict staffing needs with AI models.</p>
-                            </div>
-
-                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
-                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                                    <span className="text-green-400">✓</span> Automated Insights
-                                </h3>
-                                <p className="text-gray-400 text-sm">Get automated reports on anomalies, performance issues, and opportunities for optimization.</p>
-                            </div>
-
-                            <div className="glass p-5 rounded-xl hover:bg-white/5 transition-colors">
-                                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                                    <span className="text-green-400">✓</span> Natural Language Queries
-                                </h3>
-                                <p className="text-gray-400 text-sm">Ask questions in plain English and get instant answers about your workforce data and metrics.</p>
                             </div>
                         </div>
                     </div>
