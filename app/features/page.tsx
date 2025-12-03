@@ -20,14 +20,19 @@ export default function FeaturesPage() {
                     <div className="hidden md:flex items-center gap-8 text-sm font-bold text-blue-900">
                         <a href="/" className="hover:text-blue-700 transition-colors">Home</a>
                         <a href="/features" className="hover:text-blue-700 transition-colors text-blue-700">Features</a>
-                        <a href="#why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
-                        <a href="#pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
-                        <a href="#about" className="hover:text-blue-700 transition-colors">About Us</a>
+                        <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
+                        <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
+                        <a href="/roadmap" className="hover:text-blue-700 transition-colors">Future Roadmap</a>
                     </div>
 
-                    <button className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors">
+                    <a
+                        href="https://www.aidiginext.com/contact"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
+                    >
                         Contact Us
-                    </button>
+                    </a>
                 </div>
             </nav>
 

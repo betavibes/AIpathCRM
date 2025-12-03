@@ -20,14 +20,19 @@ export default function Home() {
                     <div className="hidden md:flex items-center gap-8 text-sm font-bold text-blue-900">
                         <a href="#" className="hover:text-blue-700 transition-colors">Home</a>
                         <a href="/features" className="hover:text-blue-700 transition-colors">Features</a>
-                        <a href="#why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
-                        <a href="#pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
-                        <a href="#about" className="hover:text-blue-700 transition-colors">About Us</a>
+                        <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
+                        <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
+                        <a href="/roadmap" className="hover:text-blue-700 transition-colors">Future Roadmap</a>
                     </div>
 
-                    <button className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors">
+                    <a
+                        href="https://www.aidiginext.com/contact"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
+                    >
                         Contact Us
-                    </button>
+                    </a>
                 </div>
             </nav>
 
@@ -135,6 +140,8 @@ export default function Home() {
                 </div>
             </section>
 
+
+
             {/* --- Roadmap / Future --- */}
             <section id="roadmap" className="py-24 bg-gradient-to-b from-transparent to-indigo-900/10">
                 <div className="container mx-auto px-4">
@@ -194,7 +201,9 @@ export default function Home() {
                         <div className="inline-block p-8 rounded-3xl glass-premium">
                             <h3 className="text-2xl font-bold mb-4">🔔 Stay Tuned</h3>
                             <p className="text-gray-300 mb-6">More updates, feature drops, and AI automation tools are on the way.</p>
-                            <p className="text-xl font-bold text-gradient-blue">AIPATH CRM – Digitize. Automate. Grow.</p>
+                            <p className="text-xl font-bold text-gradient-blue">
+                                AIPATH CRM – Digitize. Automate. Grow.
+                            </p>
                         </div>
                     </div>
                 </div>
