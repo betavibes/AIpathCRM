@@ -2,7 +2,7 @@
 
 :root {
   /* Cosmic Intelligence Palette */
-  --background: #0B0C15;
+  --background: #050505;
   --foreground: #E2E8F0;
 
   /* Primary Brand Colors */
@@ -139,7 +139,7 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0C15;
+  background: #050505;
 }
 
 ::-webkit-scrollbar-thumb {
