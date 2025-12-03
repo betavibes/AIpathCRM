@@ -99,9 +99,9 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                         {/* Large Card */}
-                        <div className="md:col-span-2 bento-card min-h-[300px] flex flex-col justify-between group">
+                        <div className="md:col-span-2 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 min-h-[300px] flex flex-col justify-between group">
                             <div>
-                                <div className="bento-icon">📊</div>
+                                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-2xl text-white border border-white/10">📊</div>
                                 <h3 className="text-2xl font-bold mb-2">Command Center</h3>
                                 <p className="text-gray-400">Real-time oversight of your entire workforce. Track attendance, location, and tasks in one unified dashboard.</p>
                             </div>
@@ -111,9 +111,9 @@ export default function Home() {
                         </div>
 
                         {/* Tall Card */}
-                        <div className="md:row-span-2 bento-card flex flex-col justify-between">
+                        <div className="md:row-span-2 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex flex-col justify-between">
                             <div>
-                                <div className="bento-icon">📱</div>
+                                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-2xl text-white border border-white/10">📱</div>
                                 <h3 className="text-2xl font-bold mb-2">Mobile First</h3>
                                 <p className="text-gray-400">Empower your staff with a powerful mobile app. Check-ins, task updates, and leave requests on the go.</p>
                             </div>
@@ -125,23 +125,23 @@ export default function Home() {
                         </div>
 
                         {/* Small Card 1 */}
-                        <div className="bento-card">
-                            <div className="bento-icon">🤖</div>
+                        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-2xl text-white border border-white/10">🤖</div>
                             <h3 className="text-xl font-bold mb-2">AI Insights</h3>
                             <p className="text-gray-400 text-sm">Predictive analytics to optimize scheduling and reduce costs.</p>
                         </div>
 
                         {/* Small Card 2 */}
-                        <div className="bento-card">
-                            <div className="bento-icon">📍</div>
+                        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-2xl text-white border border-white/10">📍</div>
                             <h3 className="text-xl font-bold mb-2">Geo-Fencing</h3>
                             <p className="text-gray-400 text-sm">Precise location tracking ensures staff are where they need to be.</p>
                         </div>
 
                         {/* Wide Card */}
-                        <div className="md:col-span-2 bento-card flex items-center gap-8">
+                        <div className="md:col-span-2 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex items-center gap-8">
                             <div className="flex-1">
-                                <div className="bento-icon">⚡</div>
+                                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-2xl text-white border border-white/10">⚡</div>
                                 <h3 className="text-2xl font-bold mb-2">Automated Payroll</h3>
                                 <p className="text-gray-400">One-click payroll generation based on accurate attendance and performance data.</p>
                             </div>
