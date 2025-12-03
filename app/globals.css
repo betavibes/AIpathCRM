@@ -2,8 +2,8 @@
 
 :root {
   /* Cosmic Intelligence Palette */
-  --background: #F5F5F5;
-  --foreground: #1a1a1a;
+  --background: #0f172a;
+  --foreground: #f1f5f9;
 
   /* Primary Brand Colors */
   --primary: #6366F1;
@@ -21,17 +21,17 @@
   /* Cyan 500 */
 
   /* Surface Colors */
-  --surface-1: rgba(255, 255, 255, 0.8);
-  --surface-2: rgba(255, 255, 255, 0.9);
-  --surface-3: rgba(240, 240, 240, 0.95);
+  --surface-1: rgba(30, 41, 59, 0.5);
+  --surface-2: rgba(30, 41, 59, 0.7);
+  --surface-3: rgba(15, 23, 42, 0.9);
 
   /* Gradients */
   --gradient-main: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
   --gradient-dark: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
-  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 
   /* Borders */
-  --border-glass: rgba(0, 0, 0, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.15);
   --border-glow: rgba(99, 102, 241, 0.3);
 }
 
@@ -139,14 +139,14 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F5F5;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #475569;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #64748b;
 }
