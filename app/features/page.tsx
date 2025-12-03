@@ -44,13 +44,14 @@ export default function FeaturesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
                         <div className="order-2 lg:order-1">
-                            <div className="glass-premium rounded-3xl p-2 overflow-hidden">
-                                <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">💼</div>
-                                        <p className="text-gray-400">HR & Payroll Dashboard</p>
-                                    </div>
-                                </div>
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                                <Image
+                                    src="/hr-payroll-dashboard.png"
+                                    alt="HR & Payroll Dashboard"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
@@ -136,13 +137,14 @@ export default function FeaturesPage() {
                             </div>
                         </div>
                         <div>
-                            <div className="glass-premium rounded-3xl p-2 overflow-hidden">
-                                <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">📍</div>
-                                        <p className="text-gray-400">Live Tracking Interface</p>
-                                    </div>
-                                </div>
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                                <Image
+                                    src="/workforce-tracking.png"
+                                    alt="Live Workforce Tracking"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
                             </div>
                         </div>
                     </div>
@@ -154,13 +156,14 @@ export default function FeaturesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
                         <div className="order-2 lg:order-1">
-                            <div className="glass-premium rounded-3xl p-2 overflow-hidden">
-                                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">📱</div>
-                                        <p className="text-gray-400">Mobile App Screens</p>
-                                    </div>
-                                </div>
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                                <Image
+                                    src="/mobile-app-screens.png"
+                                    alt="Mobile App Interface"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
@@ -246,13 +249,14 @@ export default function FeaturesPage() {
                             </div>
                         </div>
                         <div>
-                            <div className="glass-premium rounded-3xl p-2 overflow-hidden">
-                                <div className="bg-gradient-to-br from-pink-500/20 to-orange-500/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">📊</div>
-                                        <p className="text-gray-400">Analytics Dashboard</p>
-                                    </div>
-                                </div>
+                            <div className="glass-premium rounded-3xl p-3 overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                                <Image
+                                    src="/analytics-dashboard.png"
+                                    alt="Business Intelligence Dashboard"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto rounded-2xl"
+                                />
                             </div>
                         </div>
                     </div>
