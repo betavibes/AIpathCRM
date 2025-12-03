@@ -5,23 +5,28 @@ export default function Home() {
         <div className="min-h-screen selection:bg-indigo-500/30">
             {/* --- Navigation --- */}
             <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-                <div className="glass-premium rounded-full px-6 py-3 flex items-center justify-between">
+                <div className="bg-gray-200/90 backdrop-blur-md border border-gray-300 shadow-lg rounded-full px-6 py-3 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white">
-                            A
-                        </div>
-                        <span className="font-bold text-lg tracking-tight">AIPATH</span>
+                        <Image
+                            src="/logo.png"
+                            alt="AIPATH CRM Logo"
+                            width={150}
+                            height={40}
+                            className="h-10 w-auto object-contain"
+                            priority
+                        />
                     </div>
 
-                    <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                        <a href="#" className="hover:text-white transition-colors">Home</a>
-                        <a href="/features" className="hover:text-white transition-colors">Features</a>
-                        <a href="#why-aipath" className="hover:text-white transition-colors">Why AIpath CRM?</a>
-                        <a href="#about" className="hover:text-white transition-colors">About Us</a>
+                    <div className="hidden md:flex items-center gap-8 text-sm font-bold text-blue-900">
+                        <a href="#" className="hover:text-blue-700 transition-colors">Home</a>
+                        <a href="/features" className="hover:text-blue-700 transition-colors">Features</a>
+                        <a href="#why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
+                        <a href="#pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
+                        <a href="#about" className="hover:text-blue-700 transition-colors">About Us</a>
                     </div>
 
-                    <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors">
-                        Get Started
+                    <button className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors">
+                        Contact Us
                     </button>
                 </div>
             </nav>
@@ -217,8 +222,13 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                         <div className="col-span-1 md:col-span-1">
                             <div className="flex items-center gap-2 mb-6">
-                                <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center font-bold text-white">A</div>
-                                <span className="font-bold text-xl">AIPATH</span>
+                                <Image
+                                    src="/logo.png"
+                                    alt="AIPATH CRM Logo"
+                                    width={150}
+                                    height={40}
+                                    className="h-10 w-auto object-contain"
+                                />
                             </div>
                             <p className="text-gray-500 text-sm leading-relaxed">
                                 Empowering businesses with intelligent workforce solutions. Built for the future of work.
