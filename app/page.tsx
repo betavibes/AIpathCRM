@@ -196,16 +196,6 @@ export default function Home() {
                             </ul>
                         </div>
                     </div>
-
-                    <div className="mt-20 text-center">
-                        <div className="inline-block p-8 rounded-3xl glass-premium">
-                            <h3 className="text-2xl font-bold mb-4">🔔 Stay Tuned</h3>
-                            <p className="text-gray-300 mb-6">More updates, feature drops, and AI automation tools are on the way.</p>
-                            <p className="text-xl font-bold text-gradient-blue">
-                                AIPATH CRM – Digitize. Automate. Grow.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
