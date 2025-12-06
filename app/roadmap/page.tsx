@@ -225,13 +225,13 @@ export default function RoadmapPage() {
                                     Login
                                 </div>
                                 <div className="text-3xl text-indigo-400">↓</div>
-                                
+
                                 {/* Role Auto-Detection */}
                                 <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-2xl text-white font-bold text-xl shadow-lg">
                                     Role Auto-Detection
                                 </div>
                                 <div className="text-3xl text-indigo-400">↓</div>
-                                
+
                                 {/* Three Roles */}
                                 <div className="grid grid-cols-3 gap-4 w-full">
                                     <div className="bg-blue-500/20 border-2 border-blue-500 px-6 py-4 rounded-xl text-center">
@@ -247,9 +247,9 @@ export default function RoadmapPage() {
                                         <div className="font-bold text-purple-400">Staff</div>
                                     </div>
                                 </div>
-                                
+
                                 <div className="text-3xl text-indigo-400">↓</div>
-                                
+
                                 {/* Personalized Dashboard */}
                                 <div className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-2xl text-white font-bold text-xl shadow-lg text-center">
                                     Personalized Dashboard for Each Role
@@ -430,8 +430,272 @@ export default function RoadmapPage() {
                 </div>
             </section>
 
-            {/* --- Final CTA Section --- */}
+            {/* --- Landing Page UI Section --- */}
             <section className="py-20 bg-gradient-to-b from-indigo-900/10 to-transparent">
+                <div className="container mx-auto px-4">
+                    <div className="text-center max-w-4xl mx-auto mb-16">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">📊 Landing Page UI Preview</h2>
+                        <p className="text-lg text-gray-400">
+                            See how each role experiences their personalized dashboard
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        {/* Admin Dashboard UI */}
+                        <div className="glass-premium rounded-3xl overflow-hidden border-t-4 border-t-blue-500">
+                            <div className="bg-gradient-to-br from-blue-600/20 to-blue-900/20 p-6 border-b border-white/10">
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-2xl font-bold text-blue-400">📊 Admin Dashboard</h3>
+                                </div>
+                                <p className="text-sm text-gray-400">High-level control panel for the business</p>
+                            </div>
+
+                            <div className="p-6 space-y-4">
+                                {/* Welcome */}
+                                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+                                    <p className="text-sm font-semibold">👋 Welcome, Admin</p>
+                                    <p className="text-xs text-gray-400">🔔 Notifications (4)</p>
+                                </div>
+
+                                {/* Today's Overview */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-blue-400">📈 Today's Overview</p>
+                                    <div className="bg-white/5 rounded-lg p-3 space-y-1 text-xs">
+                                        <p>• Total Leads: <span className="font-bold">124</span></p>
+                                        <p>• Active Projects: <span className="font-bold">18</span></p>
+                                        <p>• Attendance Today: <span className="font-bold">42/50</span></p>
+                                        <p>• Pending Approvals: <span className="font-bold">7</span></p>
+                                    </div>
+                                </div>
+
+                                {/* Quick Actions */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-blue-400">🧩 Quick Actions</p>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
+                                            + Create Lead
+                                        </button>
+                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
+                                            View Tasks
+                                        </button>
+                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
+                                            Approvals
+                                        </button>
+                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
+                                            Reports
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Key Widgets */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-blue-400">📊 Key Widgets</p>
+                                    <div className="bg-white/5 rounded-lg p-3 space-y-1 text-xs">
+                                        <p>• Lead Pipeline (Chart)</p>
+                                        <p>• Sales Funnel</p>
+                                        <p>• Team Performance Snapshot</p>
+                                    </div>
+                                </div>
+
+                                {/* Modules Grid */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-blue-400">📁 Modules</p>
+                                    <div className="grid grid-cols-2 gap-2 text-xs">
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Leads</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Customers</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Projects</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Attendance</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Tasks</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ HR/Payroll</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Billing</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Settings</div>
+                                    </div>
+                                </div>
+
+                                <div className="pt-3 border-t border-white/10">
+                                    <p className="text-xs text-gray-500 italic">UI Feel: Strong, professional, analytics-focused</p>
+                                    <p className="text-xs text-blue-400 font-semibold">Color: Blue + White + Graphs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Manager Hub UI */}
+                        <div className="glass-premium rounded-3xl overflow-hidden border-t-4 border-t-indigo-500">
+                            <div className="bg-gradient-to-br from-indigo-600/20 to-green-600/20 p-6 border-b border-white/10">
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-2xl font-bold text-indigo-400">🧑‍💼 Manager Hub</h3>
+                                </div>
+                                <p className="text-sm text-gray-400">Monitor team, track work, handle follow-ups</p>
+                            </div>
+
+                            <div className="p-6 space-y-4">
+                                {/* Welcome */}
+                                <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-lg p-3">
+                                    <p className="text-sm font-semibold">👋 Hello, Manager</p>
+                                    <p className="text-xs text-gray-400">📍 Team Status Updated</p>
+                                </div>
+
+                                {/* Today's Snapshot */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-indigo-400">📌 Today's Snapshot</p>
+                                    <div className="bg-white/5 rounded-lg p-3 space-y-1 text-xs">
+                                        <p>• Team Present: <span className="font-bold">11/14</span></p>
+                                        <p>• Open Tasks: <span className="font-bold">22</span></p>
+                                        <p>• Visits Planned: <span className="font-bold">9</span></p>
+                                        <p>• Pending Approvals: <span className="font-bold">3</span></p>
+                                    </div>
+                                </div>
+
+                                {/* Team Activity Timeline */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-indigo-400">📍 Team Activity Timeline</p>
+                                    <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs max-h-24 overflow-y-auto">
+                                        <p className="text-gray-300">- Rahul completed "Client Visit"</p>
+                                        <p className="text-gray-300">- Neha updated lead follow-up</p>
+                                        <p className="text-gray-300">- Mahesh applied expense ₹450</p>
+                                    </div>
+                                </div>
+
+                                {/* Quick Manager Tools */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-indigo-400">⚡ Quick Manager Tools</p>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
+                                            Assign Task
+                                        </button>
+                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
+                                            Approvals
+                                        </button>
+                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
+                                            View Team
+                                        </button>
+                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
+                                            Daily Report
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Modules Grid */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-indigo-400">📁 Modules</p>
+                                    <div className="grid grid-cols-2 gap-2 text-xs">
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Leads</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Team</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Tasks</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Attendance</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Visits</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Expenses</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Reports</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Chat</div>
+                                    </div>
+                                </div>
+
+                                <div className="pt-3 border-t border-white/10">
+                                    <p className="text-xs text-gray-500 italic">UI Feel: Clean, operational, team-centric</p>
+                                    <p className="text-xs text-indigo-400 font-semibold">Color: Blue/Green Operational Theme</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Staff Workday View UI */}
+                        <div className="glass-premium rounded-3xl overflow-hidden border-t-4 border-t-purple-500">
+                            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 border-b border-white/10">
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-2xl font-bold text-purple-400">👷 My Day</h3>
+                                </div>
+                                <p className="text-sm text-gray-400">Simple, fast access to daily tasks</p>
+                            </div>
+
+                            <div className="p-6 space-y-4">
+                                {/* Welcome */}
+                                <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-3">
+                                    <p className="text-sm font-semibold">👋 Hi, John</p>
+                                    <p className="text-xs text-gray-400">🕘 Punch-In: 09:02 AM</p>
+                                    <p className="text-xs text-gray-400">🔔 Today's Reminders (2)</p>
+                                </div>
+
+                                {/* Quick Actions */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-purple-400">🚀 Quick Actions</p>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
+                                            Start Task
+                                        </button>
+                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
+                                            Visit Plan
+                                        </button>
+                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
+                                            Add Lead
+                                        </button>
+                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
+                                            Apply Expense
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Today's Tasks */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-purple-400">📋 Today's Tasks</p>
+                                    <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs">
+                                        <div className="flex items-start gap-2">
+                                            <span>▢</span>
+                                            <div>
+                                                <p className="font-semibold">Follow up with Meera</p>
+                                                <p className="text-gray-500">10:00 AM</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-2">
+                                            <span>▢</span>
+                                            <div>
+                                                <p className="font-semibold">Site visit: NeoTech</p>
+                                                <p className="text-gray-500">12:00 PM</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-2">
+                                            <span>▢</span>
+                                            <div>
+                                                <p className="font-semibold">Submit visit report</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Location & Attendance */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-purple-400">📍 Location & Attendance</p>
+                                    <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs">
+                                        <button className="w-full bg-purple-600 hover:bg-purple-700 rounded-lg py-2 font-semibold transition-colors">
+                                            Punch In/Out
+                                        </button>
+                                        <p className="text-gray-400 text-center">📍 GPS location capture</p>
+                                    </div>
+                                </div>
+
+                                {/* Modules Grid */}
+                                <div className="space-y-2">
+                                    <p className="text-sm font-bold text-purple-400">📁 Modules</p>
+                                    <div className="grid grid-cols-2 gap-2 text-xs">
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Tasks</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Leads</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Visits</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Attendance</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Expenses</div>
+                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Chat</div>
+                                    </div>
+                                </div>
+
+                                <div className="pt-3 border-t border-white/10">
+                                    <p className="text-xs text-gray-500 italic">UI Feel: Minimal, fast, action-driven</p>
+                                    <p className="text-xs text-purple-400 font-semibold">Color: Light & Productivity Theme</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Final CTA Section --- */}
+            <section className="py-20 bg-gradient-to-b from-transparent to-indigo-900/10">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto text-center">
                         <div className="glass-premium p-12 rounded-3xl border border-white/10">
