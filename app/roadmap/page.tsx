@@ -694,8 +694,321 @@ export default function RoadmapPage() {
                 </div>
             </section>
 
-            {/* --- Final CTA Section --- */}
+            {/* --- Mobile Screen Mockups Section --- */}
             <section className="py-20 bg-gradient-to-b from-transparent to-indigo-900/10">
+                <div className="container mx-auto px-4">
+                    <div className="text-center max-w-4xl mx-auto mb-16">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">📱 Mobile App Interface</h2>
+                        <p className="text-lg text-gray-400">
+                            Premium SaaS-grade mobile experience for every role
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                        {/* Admin Mobile Screen */}
+                        <div className="mx-auto">
+                            <div className="relative w-[320px] h-[640px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
+                                {/* Phone Notch */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
+
+                                {/* Screen Content */}
+                                <div className="h-full overflow-y-auto bg-gradient-to-b from-gray-50 to-white">
+                                    {/* Header - AIPATH Blue */}
+                                    <div className="bg-gradient-to-br from-blue-600 to-blue-800 px-4 pt-8 pb-6 text-white">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="text-xs font-bold">AIPATH CRM</div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">⚙️</div>
+                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">🔔</div>
+                                                <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-xs">👤</div>
+                                            </div>
+                                        </div>
+                                        <div className="text-sm font-bold">Hello, Anuj! (Admin)</div>
+                                        <div className="text-xs opacity-90">AIPATH DigiNext Pvt. Ltd</div>
+                                    </div>
+
+                                    {/* Quick Actions Carousel */}
+                                    <div className="px-4 py-3 bg-white border-b border-gray-200">
+                                        <div className="flex gap-2 overflow-x-auto pb-1">
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                                + Add Lead
+                                            </div>
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                                Assign Task
+                                            </div>
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                                View Staff
+                                            </div>
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                                Approvals
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Main Content */}
+                                    <div className="px-4 py-4">
+                                        <p className="text-xs font-semibold text-gray-700 mb-3">What do you want to do today?</p>
+
+                                        {/* Icon Grid - 3 Columns */}
+                                        <div className="grid grid-cols-3 gap-3">
+                                            {[
+                                                { icon: '📊', label: 'Dashboard' },
+                                                { icon: '👥', label: 'Leads' },
+                                                { icon: '🤝', label: 'Customers' },
+                                                { icon: '📋', label: 'Tasks' },
+                                                { icon: '⏰', label: 'Attendance' },
+                                                { icon: '💰', label: 'Payroll' },
+                                                { icon: '📁', label: 'Projects' },
+                                                { icon: '💳', label: 'Expenses' },
+                                                { icon: '🧾', label: 'Billing' },
+                                                { icon: '📦', label: 'Inventory' },
+                                                { icon: '👔', label: 'HRMS' },
+                                                { icon: '⚙️', label: 'Settings' },
+                                                { icon: '📈', label: 'Reports' },
+                                                { icon: '📍', label: 'Staff Track' },
+                                                { icon: '✅', label: 'Approvals' },
+                                                { icon: '🤖', label: 'AI Assistant' },
+                                            ].map((item, idx) => (
+                                                <div key={idx} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-1 hover:shadow-md transition-shadow">
+                                                    <div className="text-2xl">{item.icon}</div>
+                                                    <div className="text-[9px] text-gray-700 text-center font-medium leading-tight">{item.label}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Footer Banner */}
+                                    <div className="mx-4 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-3 text-white shadow-lg">
+                                        <div className="flex items-center gap-2">
+                                            <div className="text-2xl">🤖</div>
+                                            <div className="flex-1">
+                                                <div className="text-xs font-bold">AI Assistant!</div>
+                                                <div className="text-[10px] opacity-90">Ask anything about your business</div>
+                                            </div>
+                                            <div className="text-lg">→</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p className="text-center text-sm font-semibold text-blue-400 mt-4">Admin Interface</p>
+                        </div>
+
+                        {/* Manager Mobile Screen */}
+                        <div className="mx-auto">
+                            <div className="relative w-[320px] h-[640px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
+                                {/* Phone Notch */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
+
+                                {/* Screen Content */}
+                                <div className="h-full overflow-y-auto bg-gradient-to-b from-gray-50 to-white">
+                                    {/* Header - AIPATH Blue */}
+                                    <div className="bg-gradient-to-br from-indigo-600 to-blue-700 px-4 pt-8 pb-6 text-white">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="text-xs font-bold">AIPATH CRM</div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">⚙️</div>
+                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">🔔</div>
+                                                <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-xs">👤</div>
+                                            </div>
+                                        </div>
+                                        <div className="text-sm font-bold">Hello, Rahul! (Manager)</div>
+                                        <div className="text-xs opacity-90">AIPATH DigiNext Pvt. Ltd</div>
+                                    </div>
+
+                                    {/* Quick Actions Carousel */}
+                                    <div className="px-4 py-3 bg-white border-b border-gray-200">
+                                        <div className="flex gap-2 overflow-x-auto pb-1">
+                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
+                                                + Add Lead
+                                            </div>
+                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
+                                                Assign Task
+                                            </div>
+                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
+                                                View Staff
+                                            </div>
+                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
+                                                Approvals
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Main Content */}
+                                    <div className="px-4 py-4">
+                                        <p className="text-xs font-semibold text-gray-700 mb-3">What do you want to do today?</p>
+
+                                        {/* Icon Grid - 3 Columns */}
+                                        <div className="grid grid-cols-3 gap-3">
+                                            {[
+                                                { icon: '👥', label: 'Team Overview' },
+                                                { icon: '⏰', label: 'Attendance' },
+                                                { icon: '📋', label: 'Tasks' },
+                                                { icon: '✅', label: 'Approvals' },
+                                                { icon: '📍', label: 'Visit Plans' },
+                                                { icon: '💳', label: 'Expenses' },
+                                                { icon: '🤝', label: 'Customer List' },
+                                                { icon: '📊', label: 'Reports' },
+                                                { icon: '💰', label: 'Salary Summary' },
+                                                { icon: '📌', label: 'Staff Tracking' },
+                                                { icon: '⭐', label: 'Performance' },
+                                                { icon: '📚', label: 'Training' },
+                                                { icon: '🤖', label: 'AI Insights' },
+                                            ].map((item, idx) => (
+                                                <div key={idx} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-1 hover:shadow-md transition-shadow">
+                                                    <div className="text-2xl">{item.icon}</div>
+                                                    <div className="text-[9px] text-gray-700 text-center font-medium leading-tight">{item.label}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Footer Banner */}
+                                    <div className="mx-4 mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-3 text-white shadow-lg">
+                                        <div className="flex items-center gap-2">
+                                            <div className="text-2xl">📊</div>
+                                            <div className="flex-1">
+                                                <div className="text-xs font-bold">Business Insights!</div>
+                                                <div className="text-[10px] opacity-90">View team performance & analytics</div>
+                                            </div>
+                                            <div className="text-lg">→</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p className="text-center text-sm font-semibold text-indigo-400 mt-4">Manager Interface</p>
+                        </div>
+
+                        {/* Staff Mobile Screen */}
+                        <div className="mx-auto">
+                            <div className="relative w-[320px] h-[640px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
+                                {/* Phone Notch */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
+
+                                {/* Screen Content */}
+                                <div className="h-full overflow-y-auto bg-gradient-to-b from-gray-50 to-white">
+                                    {/* Header - AIPATH Blue */}
+                                    <div className="bg-gradient-to-br from-purple-600 to-indigo-700 px-4 pt-8 pb-6 text-white">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="text-xs font-bold">AIPATH CRM</div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">⚙️</div>
+                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">🔔</div>
+                                                <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-xs">👤</div>
+                                            </div>
+                                        </div>
+                                        <div className="text-sm font-bold">Hello, John! (Staff)</div>
+                                        <div className="text-xs opacity-90">AIPATH DigiNext Pvt. Ltd</div>
+                                    </div>
+
+                                    {/* Quick Actions Carousel */}
+                                    <div className="px-4 py-3 bg-white border-b border-gray-200">
+                                        <div className="flex gap-2 overflow-x-auto pb-1">
+                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
+                                                Punch-In
+                                            </div>
+                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
+                                                Start Task
+                                            </div>
+                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
+                                                Apply Leave
+                                            </div>
+                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
+                                                Visit Plan
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Main Content */}
+                                    <div className="px-4 py-4">
+                                        <p className="text-xs font-semibold text-gray-700 mb-3">What do you want to do today?</p>
+
+                                        {/* Icon Grid - 3 Columns */}
+                                        <div className="grid grid-cols-3 gap-3">
+                                            {[
+                                                { icon: '⏰', label: 'Check-In/Out' },
+                                                { icon: '📋', label: 'Tasks' },
+                                                { icon: '📍', label: 'Visits' },
+                                                { icon: '🏖️', label: 'Apply Leave' },
+                                                { icon: '💰', label: 'Payslip' },
+                                                { icon: '💵', label: 'Salary View' },
+                                                { icon: '💳', label: 'Claims' },
+                                                { icon: '📅', label: 'Attendance History' },
+                                                { icon: '🤝', label: 'Customer List' },
+                                                { icon: '📚', label: 'Training' },
+                                                { icon: '🎁', label: 'Rewards' },
+                                                { icon: '💬', label: 'Feedback' },
+                                                { icon: '👤', label: 'Profile' },
+                                            ].map((item, idx) => (
+                                                <div key={idx} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-1 hover:shadow-md transition-shadow">
+                                                    <div className="text-2xl">{item.icon}</div>
+                                                    <div className="text-[9px] text-gray-700 text-center font-medium leading-tight">{item.label}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Footer Banner */}
+                                    <div className="mx-4 mb-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-3 text-white shadow-lg">
+                                        <div className="flex items-center gap-2">
+                                            <div className="text-2xl">🤖</div>
+                                            <div className="flex-1">
+                                                <div className="text-xs font-bold">AI Assistant!</div>
+                                                <div className="text-[10px] opacity-90">Get instant help with your tasks</div>
+                                            </div>
+                                            <div className="text-lg">→</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p className="text-center text-sm font-semibold text-purple-400 mt-4">Staff Interface</p>
+                        </div>
+                    </div>
+
+                    {/* Design Notes */}
+                    <div className="mt-12 max-w-4xl mx-auto">
+                        <div className="glass p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold mb-4 text-center">✨ Premium SaaS-Grade Design</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>AIPATH Blue branded header</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>Personalized user greeting + role</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>Rounded icon boxes (3 per row)</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>Modern icons in brand colors</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>Soft shadows for premium feel</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>Quick Actions carousel at top</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>AI Assistant promotional banner</span>
+                                </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="text-blue-400">👉</span>
+                                    <span>Responsive & touch-optimized</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- Final CTA Section --- */}
+            <section className="py-20 bg-gradient-to-b from-indigo-900/10 to-transparent">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto text-center">
                         <div className="glass-premium p-12 rounded-3xl border border-white/10">
