@@ -24,14 +24,9 @@ export default function FeaturesPage() {
                         <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
                         <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
                         <a href="/roadmap" className="hover:text-blue-700 transition-colors">Roadmap</a>
-                        <a href="/about" className="hover:text-blue-700 transition-colors">About</a>                        <a href="/contact" className="hover:text-blue-700 transition-colors">Contact</a>                    </div>
-
-                    <a
-                        href="/contact"
-                        className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
-                    >
-                        Contact Us
-                    </a>
+                        <a href="/about" className="hover:text-blue-700 transition-colors">About Us</a>
+                        <a href="/contact" className="bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors">Contact Us</a>
+                    </div>
                 </div>
             </nav>
 
