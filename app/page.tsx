@@ -24,8 +24,7 @@ export default function Home() {
                         <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
                         <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
                         <a href="/roadmap" className="hover:text-blue-700 transition-colors">Roadmap</a>
-                        <a href="/about" className="hover:text-blue-700 transition-colors">About</a>
-                    </div>
+                        <a href="/about" className="hover:text-blue-700 transition-colors">About</a>                        <a href="/contact" className="hover:text-blue-700 transition-colors">Contact</a>                    </div>
 
                     <div className="flex items-center gap-3">
                         <a
@@ -293,7 +292,7 @@ export default function Home() {
                             <h4 className="font-bold mb-6">Company</h4>
                             <ul className="space-y-4 text-sm text-gray-400">
                                 <li><a href="/about" className="hover:text-blue-700 transition-colors">About</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Blog</a></li>
+                                <li><a href="/contact" className="hover:text-blue-700 transition-colors">Contact</a></li>
                                 <li><a href="#" className="hover:text-blue-700 transition-colors">Careers</a></li>
                             </ul>
                         </div>

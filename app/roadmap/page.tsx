@@ -24,6 +24,8 @@ export default function RoadmapPage() {
                         <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
                         <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
                         <a href="/roadmap" className="hover:text-white transition-colors text-white">Future Roadmap</a>
+                        <a href="/about" className="hover:text-blue-700 transition-colors">About</a>
+                        <a href="/contact" className="hover:text-blue-700 transition-colors">Contact</a>
                     </div>
 
                     <a

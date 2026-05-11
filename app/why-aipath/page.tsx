@@ -25,6 +25,7 @@ export default function WhyAipathPage() {
                         <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
                         <a href="/roadmap" className="hover:text-blue-700 transition-colors">Roadmap</a>
                         <a href="/about" className="hover:text-blue-700 transition-colors">About</a>
+                        <a href="/contact" className="hover:text-blue-700 transition-colors">Contact</a>
                     </div>
 
                     <a
