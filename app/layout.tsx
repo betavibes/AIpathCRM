@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AIPATH CRM - Intelligent Staff Management",
-  description: "Transform your workforce with AIPATH CRM. The all-in-one platform for staff operations, real-time tracking, and AI-driven productivity.",
+  title: "AIpath CRM — CRM. ERP. AI. Unified.",
+  description: "AIpath CRM is an AI-first business operating system that unifies CRM, ERP, mobile, and messaging into one intelligent SaaS platform.",
 };
 
 export default function RootLayout({

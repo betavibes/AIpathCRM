@@ -8,12 +8,13 @@ export default function RoadmapPage() {
                 <div className="bg-gray-200/90 backdrop-blur-md border border-gray-300 shadow-lg rounded-full px-6 py-3 flex items-center justify-between">
                     <a href="/" className="flex items-center gap-2">
                         <Image
-                            src="/logo.png"
+                            src="/AIpath CRM LOGO.png"
                             alt="AIPATH CRM Logo"
-                            width={150}
-                            height={40}
-                            className="h-10 w-auto object-contain"
+                            width={220}
+                            height={60}
+                            className="h-14 w-auto object-contain logo-premium drop-shadow-sm"
                             priority
+                            unoptimized={true}
                         />
                     </a>
 
@@ -22,7 +23,7 @@ export default function RoadmapPage() {
                         <a href="/features" className="hover:text-blue-700 transition-colors">Features</a>
                         <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
                         <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
-                        <a href="/roadmap" className="hover:text-blue-700 transition-colors text-blue-700">Future Roadmap</a>
+                        <a href="/roadmap" className="hover:text-white transition-colors text-white">Future Roadmap</a>
                     </div>
 
                     <a
@@ -37,26 +38,24 @@ export default function RoadmapPage() {
             </nav>
 
             {/* --- Hero Section --- */}
-            <section className="relative pt-40 pb-20 md:pt-52 md:pb-20 overflow-hidden">
+            <section className="relative pt-40 pb-20 md:pt-52 md:pb-20 overflow-hidden bg-[#05060A]">
+                <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-r from-indigo-700 via-slate-900 to-sky-700 opacity-20 blur-3xl"></div>
                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-                        AIPATH CRM – <br />
-                        <span className="text-gradient">One Mobile App</span>
+                    <p className="text-sm uppercase tracking-[0.35em] text-blue-300 mb-6">Roadmap & product direction</p>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
+                        AIPATH CRM Roadmap — <span className="text-gradient">where AI and operations meet.</span>
                     </h1>
-                    <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-                        Unified. Powerful. Simple.
-                    </p>
-                    <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10">
-                        AIPATH CRM brings Admin, Management, and Staff workflows into one single mobile app—designed for fast operations, seamless communication, and complete business control from anywhere.
+                    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                        See the future of our platform: mobile-first workflows, intelligent automation, and unified experience for admins, managers, and staff.
                     </p>
                 </div>
             </section>
 
-            {/* --- Why One Mobile App Section --- */}
+            {/* --- Roadmap Focus Section --- */}
             <section className="py-16 bg-gradient-to-b from-transparent to-indigo-900/10">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-4xl mx-auto mb-12">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">💡 Why One Mobile App?</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">💡 Future Platform Vision</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
@@ -83,7 +82,7 @@ export default function RoadmapPage() {
                     </div>
 
                     <div className="text-center max-w-3xl mx-auto">
-                        <p className="text-xl text-gray-300 mb-4">
+                        <p className="text-xl text-blue-900 mb-4">
                             A single app automatically adjusts features based on user role:
                         </p>
                         <div className="flex justify-center gap-6 text-2xl font-bold">
@@ -112,7 +111,7 @@ export default function RoadmapPage() {
                         <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-blue-500">
                             <div className="text-4xl mb-4">👨‍💼</div>
                             <h3 className="text-2xl font-bold mb-6 text-blue-400">Admin Interface</h3>
-                            <ul className="text-gray-300 space-y-3">
+                            <ul className="text-blue-900 space-y-3">
                                 <li className="flex items-start gap-2">
                                     <span className="text-blue-400 mt-1">•</span>
                                     <span>Dashboard, KPIs, reports</span>
@@ -144,7 +143,7 @@ export default function RoadmapPage() {
                         <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-indigo-500">
                             <div className="text-4xl mb-4">🧑‍💼</div>
                             <h3 className="text-2xl font-bold mb-6 text-indigo-400">Manager Interface</h3>
-                            <ul className="text-gray-300 space-y-3">
+                            <ul className="text-blue-900 space-y-3">
                                 <li className="flex items-start gap-2">
                                     <span className="text-indigo-400 mt-1">•</span>
                                     <span>Team monitoring</span>
@@ -176,7 +175,7 @@ export default function RoadmapPage() {
                         <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-purple-500">
                             <div className="text-4xl mb-4">👷</div>
                             <h3 className="text-2xl font-bold mb-6 text-purple-400">Staff Interface</h3>
-                            <ul className="text-gray-300 space-y-3">
+                            <ul className="text-blue-900 space-y-3">
                                 <li className="flex items-start gap-2">
                                     <span className="text-purple-400 mt-1">•</span>
                                     <span>Daily tasks & reminders</span>
@@ -550,9 +549,9 @@ export default function RoadmapPage() {
                                 <div className="space-y-2">
                                     <p className="text-sm font-bold text-indigo-400">📍 Team Activity Timeline</p>
                                     <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs max-h-24 overflow-y-auto">
-                                        <p className="text-gray-300">- Rahul completed "Client Visit"</p>
-                                        <p className="text-gray-300">- Neha updated lead follow-up</p>
-                                        <p className="text-gray-300">- Mahesh applied expense ₹450</p>
+                                        <p className="text-blue-900">- Rahul completed "Client Visit"</p>
+                                        <p className="text-blue-900">- Neha updated lead follow-up</p>
+                                        <p className="text-blue-900">- Mahesh applied expense ₹450</p>
                                     </div>
                                 </div>
 
@@ -730,16 +729,16 @@ export default function RoadmapPage() {
                                     {/* Quick Actions Carousel */}
                                     <div className="px-4 py-3 bg-white border-b border-gray-200">
                                         <div className="flex gap-2 overflow-x-auto pb-1">
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
                                                 + Add Lead
                                             </div>
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
                                                 Assign Task
                                             </div>
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
                                                 View Staff
                                             </div>
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-blue-700 whitespace-nowrap">
+                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
                                                 Approvals
                                             </div>
                                         </div>
@@ -968,7 +967,7 @@ export default function RoadmapPage() {
                     <div className="mt-12 max-w-4xl mx-auto">
                         <div className="glass p-6 rounded-2xl">
                             <h3 className="text-xl font-bold mb-4 text-center">✨ Premium SaaS-Grade Design</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-900">
                                 <div className="flex items-start gap-2">
                                     <span className="text-blue-400">👉</span>
                                     <span>AIPATH Blue branded header</span>
@@ -1013,7 +1012,7 @@ export default function RoadmapPage() {
                     <div className="max-w-5xl mx-auto text-center">
                         <div className="glass-premium p-12 rounded-3xl border border-white/10">
                             <h3 className="text-3xl md:text-4xl font-bold mb-6">🚀 One App. All Roles. Complete Control.</h3>
-                            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                            <p className="text-xl text-blue-900 mb-8 leading-relaxed">
                                 AIPATH CRM's One Mobile App system eliminates complexity and brings your entire team together on a single platform. Whether you're an admin managing the business, a manager leading the team, or staff executing tasks—everyone gets exactly what they need, when they need it.
                             </p>
                             <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-2xl">
@@ -1031,7 +1030,7 @@ export default function RoadmapPage() {
                         <div className="col-span-1 md:col-span-1">
                             <div className="flex items-center gap-2 mb-6">
                                 <Image
-                                    src="/logo.png"
+                                    src="/AIpath CRM LOGO.png"
                                     alt="AIPATH CRM Logo"
                                     width={150}
                                     height={40}
@@ -1046,18 +1045,18 @@ export default function RoadmapPage() {
                         <div>
                             <h4 className="font-bold mb-6">Product</h4>
                             <ul className="space-y-4 text-sm text-gray-400">
-                                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
+                                <li><a href="#" className="hover:text-blue-700 transition-colors">Features</a></li>
+                                <li><a href="#" className="hover:text-blue-700 transition-colors">Pricing</a></li>
+                                <li><a href="#" className="hover:text-blue-700 transition-colors">API</a></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 className="font-bold mb-6">Company</h4>
                             <ul className="space-y-4 text-sm text-gray-400">
-                                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                                <li><a href="/about" className="hover:text-blue-700 transition-colors">About</a></li>
+                                <li><a href="#" className="hover:text-blue-700 transition-colors">Blog</a></li>
+                                <li><a href="#" className="hover:text-blue-700 transition-colors">Careers</a></li>
                             </ul>
                         </div>
 
