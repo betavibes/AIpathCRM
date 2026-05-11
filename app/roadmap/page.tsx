@@ -29,9 +29,7 @@ export default function RoadmapPage() {
                     </div>
 
                     <a
-                        href="https://www.aidiginext.com/contact"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/contact"
                         className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
                     >
                         Contact Us

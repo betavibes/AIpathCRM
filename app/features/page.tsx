@@ -27,9 +27,7 @@ export default function FeaturesPage() {
                         <a href="/about" className="hover:text-blue-700 transition-colors">About</a>                        <a href="/contact" className="hover:text-blue-700 transition-colors">Contact</a>                    </div>
 
                     <a
-                        href="https://www.aidiginext.com/contact"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/contact"
                         className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
                     >
                         Contact Us
@@ -175,10 +173,10 @@ export default function FeaturesPage() {
                             Discover how AIpath CRM unifies your business into a single intelligent platform.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <a href="https://www.aidiginext.com/contact" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-1">
+                            <a href="/contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold hover:shadow-lg hover:shadow-indigo-500/25 transition-all transform hover:-translate-y-1">
                                 Book a Demo
                             </a>
-                            <a href="https://www.aidiginext.com/contact" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/15 bg-white/5 text-white font-semibold hover:bg-white/10 transition-all">
+                            <a href="/contact" className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/15 bg-white/5 text-white font-semibold hover:bg-white/10 transition-all">
                                 Talk to Sales
                             </a>
                         </div>

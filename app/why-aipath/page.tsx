@@ -29,9 +29,7 @@ export default function WhyAipathPage() {
                     </div>
 
                     <a
-                        href="https://www.aidiginext.com/contact"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/contact"
                         className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
                     >
                         Contact Us
@@ -112,9 +110,7 @@ export default function WhyAipathPage() {
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <p className="text-xl text-gray-300 mb-4">AIpath CRM is built for businesses that need modern tools, real-time control, and intelligent automation.</p>
                     <a
-                        href="https://www.aidiginext.com/contact"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/contact"
                         className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-10 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all"
                     >
                         Talk to Sales

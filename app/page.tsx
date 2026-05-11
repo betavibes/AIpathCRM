@@ -28,9 +28,7 @@ export default function Home() {
 
                     <div className="flex items-center gap-3">
                         <a
-                            href="https://www.aidiginext.com/contact"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/contact"
                             className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
                         >
                             Contact Us
@@ -56,17 +54,13 @@ export default function Home() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <a
-                            href="https://www.aidiginext.com/contact"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/contact"
                             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all"
                         >
                             Get Started
                         </a>
                         <a
-                            href="https://www.aidiginext.com/contact"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/contact"
                             className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white hover:bg-white/10 transition-all"
                         >
                             Book a Demo
@@ -252,8 +246,8 @@ export default function Home() {
                     <div className="inline-flex flex-col gap-6 rounded-3xl border border-white/10 bg-[#0b1224] p-12 shadow-xl shadow-indigo-900/10">
                         <h2 className="text-4xl md:text-5xl font-bold">Move your business forward with AIpath CRM.</h2>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <a href="https://www.aidiginext.com/contact" target="_blank" rel="noopener noreferrer" className="rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-sm font-semibold text-white hover:shadow-lg hover:shadow-indigo-500/20 transition-all">Get Started</a>
-                            <a href="https://www.aidiginext.com/contact" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white hover:bg-white/10 transition-all">Book a Demo</a>
+                            <a href="/contact" className="rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 text-sm font-semibold text-white hover:shadow-lg hover:shadow-indigo-500/20 transition-all">Get Started</a>
+                            <a href="/contact" className="rounded-full border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white hover:bg-white/10 transition-all">Book a Demo</a>
                         </div>
                     </div>
                 </div>
