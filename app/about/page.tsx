@@ -81,10 +81,10 @@ export default function AboutUs() {
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0B10]/50 z-10"></div>
                                 <svg className="w-16 h-16 text-white/20 group-hover:text-white/40 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                             </div>
-                            <h3 className="text-2xl font-semibold text-white mb-1 tracking-tight">Anuj Kumar Singh</h3>
-                            <h4 className="text-purple-300 font-medium text-sm tracking-wide mb-4">Co-founder & Director – CRM, ERP & Product Strategy</h4>
+                            <h3 className="text-2xl font-semibold text-white mb-1 tracking-tight">Anurag Chaurasia</h3>
+                            <h4 className="text-cyan-300 font-medium text-sm tracking-wide mb-4">Co-founder & Director – Technology, AI & Infrastructure</h4>
                             <p className="text-gray-200 font-light leading-relaxed text-base">
-                                Leading product vision, CRM/ERP architecture, and scalable SaaS innovation.
+                                Spearheading AI systems, platform engineering, and cloud infrastructure.
                             </p>
                         </div>
 
@@ -93,10 +93,10 @@ export default function AboutUs() {
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A0B10]/50 z-10"></div>
                                 <svg className="w-16 h-16 text-white/20 group-hover:text-white/40 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                             </div>
-                            <h3 className="text-2xl font-semibold text-white mb-1 tracking-tight">Anurag Chaurasia</h3>
-                            <h4 className="text-cyan-300 font-medium text-sm tracking-wide mb-4">Co-founder & Director – Technology, AI & Infrastructure</h4>
+                            <h3 className="text-2xl font-semibold text-white mb-1 tracking-tight">Anuj Kumar Singh</h3>
+                            <h4 className="text-purple-300 font-medium text-sm tracking-wide mb-4">Co-founder & Director – CRM, ERP & Product Strategy</h4>
                             <p className="text-gray-200 font-light leading-relaxed text-base">
-                                Spearheading AI systems, platform engineering, and cloud infrastructure.
+                                Leading product vision, CRM/ERP architecture, and scalable SaaS innovation.
                             </p>
                         </div>
                     </div>
