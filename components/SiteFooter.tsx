@@ -116,11 +116,13 @@ export default function SiteFooter() {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        {/* Bottom bar — 3 columns: copyright | developed by (center) | compliance + links */}
+        <div className="pt-8 border-t border-white/[0.06] grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-xs text-zinc-500">
           <p className="text-center md:text-left">
             © {new Date().getFullYear()} AIpath CRM. All rights reserved.
-            <span className="mx-2 opacity-50">·</span>
+          </p>
+
+          <p className="text-center order-last md:order-none">
             Developed by{" "}
             <a
               href="https://www.aipathdiginext.com"
@@ -131,7 +133,8 @@ export default function SiteFooter() {
               AIpath DigiNext Private Limited
             </a>
           </p>
-          <div className="flex items-center gap-6">
+
+          <div className="flex items-center justify-center md:justify-end gap-6 flex-wrap">
             <span className="inline-flex items-center gap-2">
               <span className="opacity-60">SOC 2</span>
               <span className="opacity-60">·</span>
