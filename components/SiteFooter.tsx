@@ -118,7 +118,19 @@ export default function SiteFooter() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <p>© {new Date().getFullYear()} AIpath CRM. All rights reserved.</p>
+          <p className="text-center md:text-left">
+            © {new Date().getFullYear()} AIpath CRM. All rights reserved.
+            <span className="mx-2 opacity-50">·</span>
+            Developed by{" "}
+            <a
+              href="https://www.aipathdiginext.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-zinc-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+            >
+              AIpath DigiNext Private Limited
+            </a>
+          </p>
           <div className="flex items-center gap-6">
             <span className="inline-flex items-center gap-2">
               <span className="opacity-60">SOC 2</span>
@@ -131,19 +143,6 @@ export default function SiteFooter() {
             <Link href="#" className="hover:text-white transition-colors">Terms</Link>
             <Link href="#" className="hover:text-white transition-colors">Security</Link>
           </div>
-        </div>
-
-        {/* Developed by */}
-        <div className="mt-6 text-center text-xs text-zinc-500">
-          Developed by{" "}
-          <a
-            href="https://www.aipathdiginext.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-zinc-300 hover:text-white transition-colors underline-offset-4 hover:underline"
-          >
-            AIpath DigiNext Private Limited
-          </a>
         </div>
       </div>
     </footer>
