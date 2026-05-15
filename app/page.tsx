@@ -8,7 +8,6 @@ import StatsBand from "@/components/home/StatsBand";
 import AILayer from "@/components/home/AILayer";
 import Integrations from "@/components/home/Integrations";
 import Testimonials from "@/components/home/Testimonials";
-import PricingPreview from "@/components/home/PricingPreview";
 import FAQ from "@/components/home/FAQ";
 import WhatsAppAIDemo from "@/components/showcase/WhatsAppAIDemo";
 
@@ -64,10 +63,7 @@ export default function HomePage() {
       {/* 8. Testimonials */}
       <Testimonials />
 
-      {/* 9. Pricing preview */}
-      <PricingPreview />
-
-      {/* 10. FAQ */}
+      {/* 9. FAQ */}
       <FAQ />
 
       <SiteFooter />
