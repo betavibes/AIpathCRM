@@ -1,5 +1,5 @@
 ﻿import Link from "next/link";
-import CRMDashboard from "@/components/dashboards/CRMDashboard";
+import BusinessSystemHero from "@/components/dashboards/BusinessSystemHero";
 
 export default function Hero() {
   return (
@@ -87,49 +87,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Live dashboard mockup */}
+        {/* Full Business System composition */}
         <div
           className="mt-20 relative max-w-6xl mx-auto animate-slide-up"
           style={{ animationDelay: "560ms", animationFillMode: "both" }}
         >
-          <CRMDashboard />
-
-          {/* Floating glass card overlays */}
-          <div className="hidden md:flex absolute -left-6 top-1/3 glass-premium rounded-2xl p-4 w-60 animate-float z-20">
-            <div className="flex items-start gap-3">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-sm font-bold shadow-lg shadow-indigo-500/30">
-                ✦
-              </div>
-              <div>
-                <p className="text-xs text-zinc-400">AI Assistant</p>
-                <p className="text-sm font-medium leading-snug">
-                  Q3 forecast updated. Pipeline +18%.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="hidden md:flex absolute -right-6 bottom-1/4 glass-premium rounded-2xl p-4 w-64 animate-float z-20"
-            style={{ animationDelay: "1.2s" }}
-          >
-            <div className="w-full">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-xs text-zinc-400">Revenue (Live)</p>
-                <span className="text-xs text-emerald-400 font-medium">—² 12.4%</span>
-              </div>
-              <p className="text-2xl font-semibold tracking-tight">$1.24M</p>
-              <div className="mt-3 h-12 flex items-end gap-1">
-                {[40, 65, 50, 72, 68, 85, 78, 92, 88, 95].map((h, i) => (
-                  <span
-                    key={i}
-                    className="flex-1 rounded-sm bg-gradient-to-t from-indigo-500 to-violet-400"
-                    style={{ height: `${h}%` }}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <BusinessSystemHero />
         </div>
       </div>
     </section>
