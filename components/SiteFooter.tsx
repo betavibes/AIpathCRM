@@ -142,7 +142,7 @@ export default function SiteFooter() {
             rel="noopener noreferrer"
             className="font-semibold text-zinc-300 hover:text-white transition-colors underline-offset-4 hover:underline"
           >
-            AIpath DigiNex Private Limited
+            AIpath DigiNext Private Limited
           </a>
         </div>
       </div>
