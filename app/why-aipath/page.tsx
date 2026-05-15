@@ -1,179 +1,175 @@
-import Image from "next/image";
+﻿import Link from "next/link";
+import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
+import PageHero from "@/components/PageHero";
+
+export const metadata = {
+  title: "Why AIpath CRM — The AI-First Business OS",
+  description:
+    "Why operators choose AIpath: one unified platform, AI in every layer, mobile-first, enterprise-grade — built for how modern businesses actually run.",
+};
+
+const reasons = [
+  {
+    icon: "✦",
+    title: "AI is the substrate, not a feature",
+    body:
+      "Legacy CRMs added AI to existing rails. AIpath was built around an AI core — every record, workflow, and report is intelligent by default.",
+  },
+  {
+    icon: "◆",
+    title: "One unified data model",
+    body:
+      "CRM + ERP + operations sharing the same schema. No more reconciling six tools — your data moves with your business.",
+  },
+  {
+    icon: "◇",
+    title: "Mobile-first, field-ready",
+    body:
+      "Native iOS & Android with offline mode. Built for sales reps, technicians, and operations teams who don't sit at desks.",
+  },
+  {
+    icon: "—²",
+    title: "Enterprise-grade by default",
+    body:
+      "SOC 2, ISO 27001, GDPR, granular RBAC, audit logs, 99.99% SLA. The same controls Fortune 500s ship in week one.",
+  },
+  {
+    icon: "●",
+    title: "Setup in days, not quarters",
+    body:
+      "Native importers from Salesforce, HubSpot, Zoho, NetSuite. White-glove onboarding included on every plan.",
+  },
+  {
+    icon: "—¼",
+    title: "Pricing built for India and the world",
+    body:
+      "₹199—₹499 per user. No hidden fees, no platform tax. Predictable monthly billing with annual discounts.",
+  },
+];
+
+const compare = [
+  ["Unified CRM + ERP", "AIpath", "Yes — one schema", "Salesforce / HubSpot", "CRM only", "Zoho / Microsoft", "Bundled apps, separate data"],
+  ["AI architecture", "AIpath", "Native (built around it)", "Salesforce / HubSpot", "Bolted on (Einstein)", "Zoho / Microsoft", "Add-ons"],
+  ["Mobile experience", "AIpath", "Native, offline-ready", "Salesforce / HubSpot", "Web wrapper", "Zoho / Microsoft", "Limited"],
+  ["Pricing transparency", "AIpath", "Public, predictable", "Salesforce / HubSpot", "Quote-based", "Zoho / Microsoft", "Tiered upsells"],
+  ["Time to value", "AIpath", "Days", "Salesforce / HubSpot", "Weeks—months", "Zoho / Microsoft", "Months"],
+];
 
 export default function WhyAipathPage() {
-    return (
-        <div className="min-h-screen selection:bg-indigo-500/30 bg-[#05060A] text-gray-100">
-            {/* --- Navigation --- */}
-            <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl">
-                <div className="bg-gray-200/90 backdrop-blur-md border border-gray-300 shadow-lg rounded-full px-6 py-3 flex items-center justify-between">
-                    <a href="/" className="flex items-center gap-2">
-                        <Image
-                            src="/AIpath CRM LOGO.png"
-                            alt="AIpath CRM Logo"
-                            width={220}
-                            height={60}
-                            className="h-14 w-auto object-contain logo-premium drop-shadow-sm"
-                            priority
-                            unoptimized={true}
-                        />
-                    </a>
+  return (
+    <main className="min-h-screen bg-[#0E0F1A] text-white overflow-x-hidden">
+      <SiteNav />
 
-                    <div className="hidden md:flex items-center gap-8 text-sm font-medium text-blue-900">
-                        <a href="/" className="hover:text-blue-700 transition-colors">Home</a>
-                        <a href="/features" className="hover:text-blue-700 transition-colors">Features</a>
-                        <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
-                        <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
-                        <a href="/roadmap" className="hover:text-blue-700 transition-colors">Roadmap</a>
-                        <a href="/about" className="hover:text-blue-700 transition-colors">About Us</a>
-                        <a href="/contact" className="bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors">Contact Us</a>
-                    </div>
+      <PageHero
+        eyebrow="Why operators choose AIpath"
+        title={
+          <>
+            They built CRMs and added AI.
+            <br />
+            <span className="text-gradient">We built AI and shaped it into a business OS.</span>
+          </>
+        }
+        subtitle="One platform. One data model. One intelligence layer. Built for the way modern businesses actually run."
+      >
+        <Link href="/contact" className="btn-primary">Book a Demo</Link>
+        <Link href="/features" className="btn-secondary">Explore the platform</Link>
+      </PageHero>
 
-                    <a
-                        href="/contact"
-                        className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
-                    >
-                        Contact Us
-                    </a>
+      {/* Reasons */}
+      <section className="pb-24">
+        <div className="container mx-auto px-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            {reasons.map((r) => (
+              <div key={r.title} className="card-glow p-7">
+                <div className="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 text-white text-lg shadow-lg shadow-indigo-500/20 mb-5">
+                  {r.icon}
                 </div>
-            </nav>
-
-            <section className="relative pt-40 pb-20 md:pt-52 md:pb-20 overflow-hidden">
-                <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-r from-indigo-700 via-slate-900 to-sky-700 opacity-30 blur-3xl"></div>
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <p className="text-sm uppercase tracking-[0.35em] text-blue-300 mb-6">What makes AIpath CRM different</p>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
-                        Why businesses choose <span className="text-gradient">AIpath CRM.</span>
-                    </h1>
-                    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-                        A premium AI-first platform built to unify CRM, ERP, and automation workflows in one intelligent ecosystem.
-                    </p>
-                </div>
-            </section>
-
-            <section className="py-24 relative bg-white/[0.02]">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div className="glass p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors text-center">
-                            <div className="text-5xl mb-4">🚀</div>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">All-in-one platform</h3>
-                            <p className="text-gray-400">CRM, ERP, staff management, and AI workflows all in one modern, unified SaaS experience.</p>
-                        </div>
-                        <div className="glass p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors text-center">
-                            <div className="text-5xl mb-4">🤖</div>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">AI-powered automation</h3>
-                            <p className="text-gray-400">Smart task routing, predictive insights, and automated follow-ups so your team can move faster.</p>
-                        </div>
-                        <div className="glass p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors text-center">
-                            <div className="text-5xl mb-4">🌍</div>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Work from anywhere</h3>
-                            <p className="text-gray-400">Web, mobile, WhatsApp, and Telegram access for distributed teams and remote workflows.</p>
-                        </div>
-                        <div className="glass p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors text-center">
-                            <div className="text-5xl mb-4">⚡</div>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Fast onboarding</h3>
-                            <p className="text-gray-400">Designed for quick setup and easy adoption with guided training and support.</p>
-                        </div>
-                        <div className="glass p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors text-center">
-                            <div className="text-5xl mb-4">📈</div>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Built to scale</h3>
-                            <p className="text-gray-400">A SaaS platform for growing businesses that need reliable operations across teams and locations.</p>
-                        </div>
-                        <div className="glass p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors text-center">
-                            <div className="text-5xl mb-4">🔐</div>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Secure & dependable</h3>
-                            <p className="text-gray-400">Enterprise-grade controls, secure data handling, and a platform built for trust.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-24">
-                <div className="container mx-auto px-4">
-                    <div className="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
-                        <div className="glass-premium p-8 rounded-3xl border border-white/10">
-                            <h3 className="text-xl font-semibold mb-4">Unify your tech stack</h3>
-                            <p className="text-gray-400">Replace disconnected point solutions with one powerful platform for people, processes, and performance.</p>
-                        </div>
-                        <div className="glass-premium p-8 rounded-3xl border border-white/10">
-                            <h3 className="text-xl font-semibold mb-4">AI-ready workflows</h3>
-                            <p className="text-gray-400">Use AI to automate follow-up, analytics, staff productivity, and customer engagement.</p>
-                        </div>
-                        <div className="glass-premium p-8 rounded-3xl border border-white/10">
-                            <h3 className="text-xl font-semibold mb-4">Customer-first support</h3>
-                            <p className="text-gray-400">A white-glove launch experience, guided onboarding, and always-on support for your team.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-24 bg-white/[0.02]">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <p className="text-xl text-gray-300 mb-4">AIpath CRM is built for businesses that need modern tools, real-time control, and intelligent automation.</p>
-                    <a
-                        href="/contact"
-                        className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-10 py-4 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all"
-                    >
-                        Talk to Sales
-                    </a>
-                </div>
-            </section>
-
-            <footer className="border-t border-white/10 bg-[#05060A] pt-16 pb-8">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                        <div className="col-span-1 md:col-span-1">
-                            <div className="flex items-center gap-2 mb-6">
-                                <Image
-                                    src="/AIpath CRM LOGO.png"
-                                    alt="AIpath CRM Logo"
-                                    width={150}
-                                    height={40}
-                                    className="h-10 w-auto object-contain"
-                                />
-                            </div>
-                            <p className="text-gray-500 text-sm leading-relaxed">
-                                Empowering businesses with intelligent workforce solutions. Built for the future of work.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold mb-6">Product</h4>
-                            <ul className="space-y-4 text-sm text-gray-400">
-                                <li><a href="/features" className="hover:text-blue-700 transition-colors">Features</a></li>
-                                <li><a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">API</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold mb-6">Company</h4>
-                            <ul className="space-y-4 text-sm text-gray-400">
-                                <li><a href="/about" className="hover:text-blue-700 transition-colors">About</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Blog</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Careers</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold mb-6">Stay Updated</h4>
-                            <div className="flex gap-2">
-                                <input type="email" placeholder="Enter your email" className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-indigo-500 transition-colors" />
-                                <button className="bg-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors">
-                                    →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-                        <p>© 2026 AIpath CRM. All rights reserved.</p>
-                        <div className="flex gap-6">
-                            <a href="#" className="hover:text-gray-400">Privacy</a>
-                            <a href="#" className="hover:text-gray-400">Terms</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+                <h3 className="text-lg font-semibold tracking-tight">{r.title}</h3>
+                <p className="mt-2.5 text-sm text-zinc-400 leading-relaxed">{r.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    );
+      </section>
+
+      {/* Comparison */}
+      <section className="py-24 bg-[#161823] border-y border-white/[0.06]">
+        <div className="container mx-auto px-5">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <span className="chip"><span className="chip-dot" />How we compare</span>
+            <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
+              The honest <span className="text-gradient">comparison.</span>
+            </h2>
+            <p className="mt-5 text-zinc-400">
+              We respect the incumbents — but operators ship faster on a unified, AI-native platform.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto rounded-2xl border border-white/[0.08] bg-white/[0.02] overflow-hidden">
+            <div className="grid grid-cols-3 px-6 py-4 bg-white/[0.02] border-b border-white/[0.06] text-xs uppercase tracking-[0.15em] text-zinc-400">
+              <span>Capability</span>
+              <span className="text-indigo-300">AIpath</span>
+              <span>Legacy CRMs</span>
+            </div>
+            {compare.map((row) => (
+              <div
+                key={row[0]}
+                className="grid grid-cols-3 px-6 py-5 border-b border-white/[0.04] last:border-b-0 items-center text-sm"
+              >
+                <span className="text-zinc-200 font-medium">{row[0]}</span>
+                <span className="text-emerald-300 inline-flex items-center gap-2">
+                  <span className="inline-flex w-5 h-5 items-center justify-center rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs">✓</span>
+                  {row[2]}
+                </span>
+                <span className="text-zinc-500 inline-flex items-center gap-2">
+                  <span className="inline-flex w-5 h-5 items-center justify-center rounded-full bg-zinc-500/10 border border-zinc-600/30 text-xs">·</span>
+                  {row[6]}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What you get */}
+      <section className="py-24">
+        <div className="container mx-auto px-5">
+          <div className="grid lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            {[
+              ["Unify your tech stack", "Replace 5—14 disconnected point tools with one intelligent platform."],
+              ["AI-ready workflows", "Automate follow-ups, analytics, productivity, and customer engagement."],
+              ["White-glove launch", "Guided onboarding, dedicated CSM, and always-on support."],
+            ].map(([t, d]) => (
+              <div
+                key={t}
+                className="rounded-2xl p-8 border border-white/[0.08] bg-gradient-to-br from-white/[0.04] to-transparent"
+              >
+                <h3 className="text-xl font-semibold tracking-tight">{t}</h3>
+                <p className="mt-3 text-zinc-400 text-sm leading-relaxed">{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pb-28">
+        <div className="container mx-auto px-5">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-600/15 via-violet-600/10 to-transparent p-10 md:p-14 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Ready to see <span className="text-gradient">the difference?</span>
+            </h2>
+            <p className="mt-4 text-zinc-400">A 30-minute demo is worth more than 30 product brochures.</p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="/contact" className="btn-primary">Book a Demo</Link>
+              <Link href="/contact" className="btn-secondary">Talk to Sales</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </main>
+  );
 }

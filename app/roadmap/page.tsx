@@ -1,1085 +1,275 @@
-import Image from "next/image";
+﻿import Link from "next/link";
+import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
+import PageHero from "@/components/PageHero";
+
+export const metadata = {
+  title: "Roadmap — AIpath CRM",
+  description:
+    "Where AIpath is heading next. Quarterly roadmap covering AI agents, mobile-first ops, deep automation, and unified role-based experiences.",
+};
+
+const roles = [
+  {
+    name: "Admin",
+    color: "from-indigo-500 to-blue-500",
+    items: [
+      "Dashboards, KPIs, reports",
+      "Lead & customer management",
+      "Project & task allocation",
+      "HR & attendance",
+      "Approval workflows",
+      "Billing & subscription control",
+    ],
+  },
+  {
+    name: "Manager",
+    color: "from-violet-500 to-indigo-500",
+    items: [
+      "Team monitoring",
+      "Daily tasks",
+      "Staff performance",
+      "Approvals",
+      "Internal communication",
+      "Customer visit tracking",
+    ],
+  },
+  {
+    name: "Staff",
+    color: "from-pink-500 to-violet-500",
+    items: [
+      "Selfie attendance + GPS",
+      "Daily tasks",
+      "Submit reports & expenses",
+      "Customer visits",
+      "Leave requests",
+      "Notifications & alerts",
+    ],
+  },
+];
+
+const phases = [
+  {
+    label: "Now shipping",
+    quarter: "Q2 2026",
+    title: "Unified mobile experience",
+    status: "shipping",
+    items: [
+      "Single role-aware mobile app (admin/manager/staff)",
+      "Offline mode + background sync",
+      "Push intelligence (AI alerts that matter)",
+      "Selfie attendance + geofencing 2.0",
+    ],
+  },
+  {
+    label: "Building",
+    quarter: "Q3 2026",
+    title: "AI Agents — generally available",
+    status: "building",
+    items: [
+      "Sales SDR agent (drafts, follow-ups, qualification)",
+      "Support agent with ticket triage + auto-resolve",
+      "Finance agent: invoice approval, reconciliation",
+      "Custom agent builder (no-code)",
+    ],
+  },
+  {
+    label: "Designing",
+    quarter: "Q4 2026",
+    title: "Workflow Builder 2.0 + Marketplace",
+    status: "design",
+    items: [
+      "Visual drag-and-drop with AI-suggested steps",
+      "Public template marketplace",
+      "Conditional branching + parallel execution",
+      "Versioning + sandbox testing",
+    ],
+  },
+  {
+    label: "Researching",
+    quarter: "Q1 2027",
+    title: "Voice + Conversational OS",
+    status: "research",
+    items: [
+      "Voice command across CRM + ERP",
+      "Real-time call summarization with action items",
+      "WhatsApp-native business workflows",
+      "Multilingual AI for India + APAC",
+    ],
+  },
+];
+
+const principles = [
+  ["No multiple apps to download", "One install. Role detected automatically."],
+  ["Unified UI for all roles", "Same product, smart context switching."],
+  ["Faster onboarding", "Days, not months. White-glove on every plan."],
+  ["Lower TCO", "One platform replaces 5—14 point tools."],
+  ["Mobile-first by default", "Designed for field, sales, and ops teams."],
+];
+
+const statusColors: Record<string, string> = {
+  shipping: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
+  building: "bg-indigo-500/15 text-indigo-300 border-indigo-500/30",
+  design: "bg-violet-500/15 text-violet-300 border-violet-500/30",
+  research: "bg-zinc-500/10 text-zinc-300 border-zinc-500/30",
+};
 
 export default function RoadmapPage() {
-    return (
-        <div className="min-h-screen selection:bg-indigo-500/30">
-            {/* --- Navigation --- */}
-            <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-                <div className="bg-gray-200/90 backdrop-blur-md border border-gray-300 shadow-lg rounded-full px-6 py-3 flex items-center justify-between">
-                    <a href="/" className="flex items-center gap-2">
-                        <Image
-                            src="/AIpath CRM LOGO.png"
-                            alt="AIPATH CRM Logo"
-                            width={220}
-                            height={60}
-                            className="h-14 w-auto object-contain logo-premium drop-shadow-sm"
-                            priority
-                            unoptimized={true}
-                        />
-                    </a>
+  return (
+    <main className="min-h-screen bg-[#0E0F1A] text-white overflow-x-hidden">
+      <SiteNav />
 
-                    <div className="hidden md:flex items-center gap-8 text-sm font-bold text-blue-900">
-                        <a href="/" className="hover:text-blue-700 transition-colors">Home</a>
-                        <a href="/features" className="hover:text-blue-700 transition-colors">Features</a>
-                        <a href="/why-aipath" className="hover:text-blue-700 transition-colors">Why AIpath CRM?</a>
-                        <a href="/pricing" className="hover:text-blue-700 transition-colors">Pricing</a>
-                        <a href="/roadmap" className="hover:text-white transition-colors text-white">Future Roadmap</a>
-                        <a href="/about" className="hover:text-blue-700 transition-colors">About Us</a>
-                        <a href="/contact" className="bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors">Contact Us</a>
-                    </div>
+      <PageHero
+        eyebrow="Roadmap & product direction"
+        title={
+          <>
+            Where AI and{" "}
+            <span className="text-gradient">operations meet.</span>
+          </>
+        }
+        subtitle="Our public roadmap: mobile-first workflows, autonomous agents, and a unified experience for admins, managers, and staff."
+      >
+        <Link href="/contact" className="btn-primary">Influence the roadmap</Link>
+        <Link href="/features" className="btn-secondary">See what's live today</Link>
+      </PageHero>
 
-                    <a
-                        href="/contact"
-                        className="bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition-colors"
-                    >
-                        Contact Us
-                    </a>
+      {/* Principles */}
+      <section className="pb-20">
+        <div className="container mx-auto px-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {principles.map(([t, d]) => (
+              <div
+                key={t}
+                className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="mt-0.5 inline-flex w-5 h-5 items-center justify-center rounded-md bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs shrink-0">
+                    ✓
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold">{t}</p>
+                    <p className="text-xs text-zinc-500 mt-1">{d}</p>
+                  </div>
                 </div>
-            </nav>
-
-            {/* --- Hero Section --- */}
-            <section className="relative pt-40 pb-20 md:pt-52 md:pb-20 overflow-hidden bg-[#05060A]">
-                <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-r from-indigo-700 via-slate-900 to-sky-700 opacity-20 blur-3xl"></div>
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <p className="text-sm uppercase tracking-[0.35em] text-blue-300 mb-6">Roadmap & product direction</p>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
-                        AIPATH CRM Roadmap — <span className="text-gradient">where AI and operations meet.</span>
-                    </h1>
-                    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-                        See the future of our platform: mobile-first workflows, intelligent automation, and unified experience for admins, managers, and staff.
-                    </p>
-                </div>
-            </section>
-
-            {/* --- Roadmap Focus Section --- */}
-            <section className="py-16 bg-gradient-to-b from-transparent to-indigo-900/10">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-12">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">💡 Future Platform Vision</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-3xl mb-3">✔</div>
-                            <h3 className="text-lg font-bold mb-2">No multiple apps to download</h3>
-                        </div>
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-3xl mb-3">✔</div>
-                            <h3 className="text-lg font-bold mb-2">Unified UI for all roles</h3>
-                        </div>
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-3xl mb-3">✔</div>
-                            <h3 className="text-lg font-bold mb-2">Faster onboarding for teams</h3>
-                        </div>
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-3xl mb-3">✔</div>
-                            <h3 className="text-lg font-bold mb-2">Lower development & maintenance cost</h3>
-                        </div>
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors col-span-1 md:col-span-2 lg:col-span-2">
-                            <div className="text-3xl mb-3">✔</div>
-                            <h3 className="text-lg font-bold mb-2">Web + Mobile = complete SaaS ecosystem</h3>
-                        </div>
-                    </div>
-
-                    <div className="text-center max-w-3xl mx-auto">
-                        <p className="text-xl text-blue-900 mb-4">
-                            A single app automatically adjusts features based on user role:
-                        </p>
-                        <div className="flex justify-center gap-6 text-2xl font-bold">
-                            <span className="text-blue-400">Admin</span>
-                            <span className="text-gray-500">|</span>
-                            <span className="text-indigo-400">Manager</span>
-                            <span className="text-gray-500">|</span>
-                            <span className="text-purple-400">Staff</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Role-Based Experience Section --- */}
-            <section className="py-20 bg-gradient-to-b from-indigo-900/10 to-transparent">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">🔐 Role-Based Experience (Auto-Switch UI)</h2>
-                        <p className="text-lg text-gray-400">
-                            The same app, different experiences based on your role
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                        {/* Admin Interface */}
-                        <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-blue-500">
-                            <div className="text-4xl mb-4">👨‍💼</div>
-                            <h3 className="text-2xl font-bold mb-6 text-blue-400">Admin Interface</h3>
-                            <ul className="text-blue-900 space-y-3">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-400 mt-1">•</span>
-                                    <span>Dashboard, KPIs, reports</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-400 mt-1">•</span>
-                                    <span>Lead & customer management</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-400 mt-1">•</span>
-                                    <span>Project & task allocation</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-400 mt-1">•</span>
-                                    <span>HR & attendance</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-400 mt-1">•</span>
-                                    <span>Approval workflows</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-400 mt-1">•</span>
-                                    <span>Billing & subscription control</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Manager Interface */}
-                        <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-indigo-500">
-                            <div className="text-4xl mb-4">🧑‍💼</div>
-                            <h3 className="text-2xl font-bold mb-6 text-indigo-400">Manager Interface</h3>
-                            <ul className="text-blue-900 space-y-3">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-indigo-400 mt-1">•</span>
-                                    <span>Team monitoring</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-indigo-400 mt-1">•</span>
-                                    <span>Daily tasks</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-indigo-400 mt-1">•</span>
-                                    <span>Staff performance</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-indigo-400 mt-1">•</span>
-                                    <span>Approvals</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-indigo-400 mt-1">•</span>
-                                    <span>Internal communication</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-indigo-400 mt-1">•</span>
-                                    <span>Customer visit tracking</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Staff Interface */}
-                        <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-purple-500">
-                            <div className="text-4xl mb-4">👷</div>
-                            <h3 className="text-2xl font-bold mb-6 text-purple-400">Staff Interface</h3>
-                            <ul className="text-blue-900 space-y-3">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-400 mt-1">•</span>
-                                    <span>Daily tasks & reminders</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-400 mt-1">•</span>
-                                    <span>Attendance punch-in/out</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-400 mt-1">•</span>
-                                    <span>Customer visits</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-400 mt-1">•</span>
-                                    <span>Expense submissions</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-400 mt-1">•</span>
-                                    <span>Activity tracking</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-400 mt-1">•</span>
-                                    <span>Chat with manager</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- App Flow Overview Section --- */}
-            <section className="py-20 bg-gradient-to-b from-transparent to-indigo-900/10">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">📲 App Flow Overview</h2>
-                        <p className="text-lg text-gray-400">
-                            Simple login, smart role detection, personalized experience
-                        </p>
-                    </div>
-
-                    <div className="max-w-3xl mx-auto">
-                        <div className="glass-premium p-10 rounded-3xl">
-                            <div className="flex flex-col items-center space-y-6">
-                                {/* Login */}
-                                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 rounded-2xl text-white font-bold text-xl shadow-lg">
-                                    Login
-                                </div>
-                                <div className="text-3xl text-indigo-400">↓</div>
-
-                                {/* Role Auto-Detection */}
-                                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-2xl text-white font-bold text-xl shadow-lg">
-                                    Role Auto-Detection
-                                </div>
-                                <div className="text-3xl text-indigo-400">↓</div>
-
-                                {/* Three Roles */}
-                                <div className="grid grid-cols-3 gap-4 w-full">
-                                    <div className="bg-blue-500/20 border-2 border-blue-500 px-6 py-4 rounded-xl text-center">
-                                        <div className="text-3xl mb-2">👨‍💼</div>
-                                        <div className="font-bold text-blue-400">Admin</div>
-                                    </div>
-                                    <div className="bg-indigo-500/20 border-2 border-indigo-500 px-6 py-4 rounded-xl text-center">
-                                        <div className="text-3xl mb-2">🧑‍💼</div>
-                                        <div className="font-bold text-indigo-400">Manager</div>
-                                    </div>
-                                    <div className="bg-purple-500/20 border-2 border-purple-500 px-6 py-4 rounded-xl text-center">
-                                        <div className="text-3xl mb-2">👷</div>
-                                        <div className="font-bold text-purple-400">Staff</div>
-                                    </div>
-                                </div>
-
-                                <div className="text-3xl text-indigo-400">↓</div>
-
-                                {/* Personalized Dashboard */}
-                                <div className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-2xl text-white font-bold text-xl shadow-lg text-center">
-                                    Personalized Dashboard for Each Role
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Screens Overview Section --- */}
-            <section className="py-20 bg-gradient-to-b from-indigo-900/10 to-transparent">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">🎨 Screens Overview</h2>
-                        <p className="text-lg text-gray-400">
-                            Beautiful, intuitive interfaces for every role
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        {/* Screen Cards */}
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">🔐</div>
-                            <h3 className="text-xl font-bold mb-2">Login & OTP Page</h3>
-                            <p className="text-gray-400 text-sm">Secure authentication with OTP verification for all users.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">📊</div>
-                            <h3 className="text-xl font-bold mb-2">Admin Dashboard</h3>
-                            <p className="text-gray-400 text-sm">Complete business snapshot with KPIs, revenue, leads, and staff activity.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">🧑‍💼</div>
-                            <h3 className="text-xl font-bold mb-2">Manager Dashboard</h3>
-                            <p className="text-gray-400 text-sm">Team performance, daily activities, escalations in one screen.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">👷</div>
-                            <h3 className="text-xl font-bold mb-2">Staff Dashboard</h3>
-                            <p className="text-gray-400 text-sm">Quick access to daily tasks, punch-in, customer visits, and activities.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">📋</div>
-                            <h3 className="text-xl font-bold mb-2">Task Page</h3>
-                            <p className="text-gray-400 text-sm">Manage and track all tasks with priority levels and deadlines.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">👥</div>
-                            <h3 className="text-xl font-bold mb-2">Lead/Customer Page</h3>
-                            <p className="text-gray-400 text-sm">Complete customer relationship management with follow-ups.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">⏰</div>
-                            <h3 className="text-xl font-bold mb-2">Attendance Page</h3>
-                            <p className="text-gray-400 text-sm">GPS-based punch-in/out with real-time attendance tracking.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">💰</div>
-                            <h3 className="text-xl font-bold mb-2">Expense Management</h3>
-                            <p className="text-gray-400 text-sm">Submit and approve expenses with receipt uploads.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">✅</div>
-                            <h3 className="text-xl font-bold mb-2">Approvals Page</h3>
-                            <p className="text-gray-400 text-sm">Streamlined approval workflows for leaves, expenses, and tasks.</p>
-                        </div>
-
-                        <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-colors">
-                            <div className="text-4xl mb-4">💬</div>
-                            <h3 className="text-xl font-bold mb-2">Chat & Communication</h3>
-                            <p className="text-gray-400 text-sm">Real-time messaging between team members and managers.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Modules Inside the App Section --- */}
-            <section className="py-20 bg-gradient-to-b from-transparent to-indigo-900/10">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">🧩 Modules Inside the App</h2>
-                        <p className="text-lg text-gray-400">
-                            Powerful features tailored for each role
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        {/* Admin Modules */}
-                        <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-blue-500">
-                            <div className="text-4xl mb-4">👨‍💼</div>
-                            <h3 className="text-2xl font-bold mb-6 text-blue-400">Admin</h3>
-                            <div className="grid grid-cols-1 gap-3">
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">Lead & CRM</span>
-                                </div>
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">HR & Attendance</span>
-                                </div>
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">Project/Tasks</span>
-                                </div>
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">Billing & Invoices</span>
-                                </div>
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">Approvals</span>
-                                </div>
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">Team Performance</span>
-                                </div>
-                                <div className="bg-blue-500/10 px-4 py-3 rounded-lg border border-blue-500/30">
-                                    <span className="font-semibold">Automation & Alerts</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Manager Modules */}
-                        <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-indigo-500">
-                            <div className="text-4xl mb-4">🧑‍💼</div>
-                            <h3 className="text-2xl font-bold mb-6 text-indigo-400">Manager</h3>
-                            <div className="grid grid-cols-1 gap-3">
-                                <div className="bg-indigo-500/10 px-4 py-3 rounded-lg border border-indigo-500/30">
-                                    <span className="font-semibold">Team Monitoring</span>
-                                </div>
-                                <div className="bg-indigo-500/10 px-4 py-3 rounded-lg border border-indigo-500/30">
-                                    <span className="font-semibold">Task Delegation</span>
-                                </div>
-                                <div className="bg-indigo-500/10 px-4 py-3 rounded-lg border border-indigo-500/30">
-                                    <span className="font-semibold">Customer Visits</span>
-                                </div>
-                                <div className="bg-indigo-500/10 px-4 py-3 rounded-lg border border-indigo-500/30">
-                                    <span className="font-semibold">Reporting</span>
-                                </div>
-                                <div className="bg-indigo-500/10 px-4 py-3 rounded-lg border border-indigo-500/30">
-                                    <span className="font-semibold">Approvals</span>
-                                </div>
-                                <div className="bg-indigo-500/10 px-4 py-3 rounded-lg border border-indigo-500/30">
-                                    <span className="font-semibold">Leads Follow-Up</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Staff Modules */}
-                        <div className="glass-premium p-8 rounded-3xl border-t-4 border-t-purple-500">
-                            <div className="text-4xl mb-4">👷</div>
-                            <h3 className="text-2xl font-bold mb-6 text-purple-400">Staff</h3>
-                            <div className="grid grid-cols-1 gap-3">
-                                <div className="bg-purple-500/10 px-4 py-3 rounded-lg border border-purple-500/30">
-                                    <span className="font-semibold">Tasks</span>
-                                </div>
-                                <div className="bg-purple-500/10 px-4 py-3 rounded-lg border border-purple-500/30">
-                                    <span className="font-semibold">Visit Planner</span>
-                                </div>
-                                <div className="bg-purple-500/10 px-4 py-3 rounded-lg border border-purple-500/30">
-                                    <span className="font-semibold">Attendance</span>
-                                </div>
-                                <div className="bg-purple-500/10 px-4 py-3 rounded-lg border border-purple-500/30">
-                                    <span className="font-semibold">Expenses</span>
-                                </div>
-                                <div className="bg-purple-500/10 px-4 py-3 rounded-lg border border-purple-500/30">
-                                    <span className="font-semibold">Chat</span>
-                                </div>
-                                <div className="bg-purple-500/10 px-4 py-3 rounded-lg border border-purple-500/30">
-                                    <span className="font-semibold">Performance Score</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Landing Page UI Section --- */}
-            <section className="py-20 bg-gradient-to-b from-indigo-900/10 to-transparent">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">📊 Landing Page UI Preview</h2>
-                        <p className="text-lg text-gray-400">
-                            See how each role experiences their personalized dashboard
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        {/* Admin Dashboard UI */}
-                        <div className="glass-premium rounded-3xl overflow-hidden border-t-4 border-t-blue-500">
-                            <div className="bg-gradient-to-br from-blue-600/20 to-blue-900/20 p-6 border-b border-white/10">
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-2xl font-bold text-blue-400">📊 Admin Dashboard</h3>
-                                </div>
-                                <p className="text-sm text-gray-400">High-level control panel for the business</p>
-                            </div>
-
-                            <div className="p-6 space-y-4">
-                                {/* Welcome */}
-                                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
-                                    <p className="text-sm font-semibold">👋 Welcome, Admin</p>
-                                    <p className="text-xs text-gray-400">🔔 Notifications (4)</p>
-                                </div>
-
-                                {/* Today's Overview */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-blue-400">📈 Today's Overview</p>
-                                    <div className="bg-white/5 rounded-lg p-3 space-y-1 text-xs">
-                                        <p>• Total Leads: <span className="font-bold">124</span></p>
-                                        <p>• Active Projects: <span className="font-bold">18</span></p>
-                                        <p>• Attendance Today: <span className="font-bold">42/50</span></p>
-                                        <p>• Pending Approvals: <span className="font-bold">7</span></p>
-                                    </div>
-                                </div>
-
-                                {/* Quick Actions */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-blue-400">🧩 Quick Actions</p>
-                                    <div className="grid grid-cols-2 gap-2">
-                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
-                                            + Create Lead
-                                        </button>
-                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
-                                            View Tasks
-                                        </button>
-                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
-                                            Approvals
-                                        </button>
-                                        <button className="bg-blue-600/20 border border-blue-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-blue-600/30 transition-colors">
-                                            Reports
-                                        </button>
-                                    </div>
-                                </div>
-
-                                {/* Key Widgets */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-blue-400">📊 Key Widgets</p>
-                                    <div className="bg-white/5 rounded-lg p-3 space-y-1 text-xs">
-                                        <p>• Lead Pipeline (Chart)</p>
-                                        <p>• Sales Funnel</p>
-                                        <p>• Team Performance Snapshot</p>
-                                    </div>
-                                </div>
-
-                                {/* Modules Grid */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-blue-400">📁 Modules</p>
-                                    <div className="grid grid-cols-2 gap-2 text-xs">
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Leads</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Customers</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Projects</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Attendance</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Tasks</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ HR/Payroll</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Billing</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Settings</div>
-                                    </div>
-                                </div>
-
-                                <div className="pt-3 border-t border-white/10">
-                                    <p className="text-xs text-gray-500 italic">UI Feel: Strong, professional, analytics-focused</p>
-                                    <p className="text-xs text-blue-400 font-semibold">Color: Blue + White + Graphs</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Manager Hub UI */}
-                        <div className="glass-premium rounded-3xl overflow-hidden border-t-4 border-t-indigo-500">
-                            <div className="bg-gradient-to-br from-indigo-600/20 to-green-600/20 p-6 border-b border-white/10">
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-2xl font-bold text-indigo-400">🧑‍💼 Manager Hub</h3>
-                                </div>
-                                <p className="text-sm text-gray-400">Monitor team, track work, handle follow-ups</p>
-                            </div>
-
-                            <div className="p-6 space-y-4">
-                                {/* Welcome */}
-                                <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-lg p-3">
-                                    <p className="text-sm font-semibold">👋 Hello, Manager</p>
-                                    <p className="text-xs text-gray-400">📍 Team Status Updated</p>
-                                </div>
-
-                                {/* Today's Snapshot */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-indigo-400">📌 Today's Snapshot</p>
-                                    <div className="bg-white/5 rounded-lg p-3 space-y-1 text-xs">
-                                        <p>• Team Present: <span className="font-bold">11/14</span></p>
-                                        <p>• Open Tasks: <span className="font-bold">22</span></p>
-                                        <p>• Visits Planned: <span className="font-bold">9</span></p>
-                                        <p>• Pending Approvals: <span className="font-bold">3</span></p>
-                                    </div>
-                                </div>
-
-                                {/* Team Activity Timeline */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-indigo-400">📍 Team Activity Timeline</p>
-                                    <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs max-h-24 overflow-y-auto">
-                                        <p className="text-blue-900">- Rahul completed "Client Visit"</p>
-                                        <p className="text-blue-900">- Neha updated lead follow-up</p>
-                                        <p className="text-blue-900">- Mahesh applied expense ₹450</p>
-                                    </div>
-                                </div>
-
-                                {/* Quick Manager Tools */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-indigo-400">⚡ Quick Manager Tools</p>
-                                    <div className="grid grid-cols-2 gap-2">
-                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
-                                            Assign Task
-                                        </button>
-                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
-                                            Approvals
-                                        </button>
-                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
-                                            View Team
-                                        </button>
-                                        <button className="bg-indigo-600/20 border border-indigo-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-indigo-600/30 transition-colors">
-                                            Daily Report
-                                        </button>
-                                    </div>
-                                </div>
-
-                                {/* Modules Grid */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-indigo-400">📁 Modules</p>
-                                    <div className="grid grid-cols-2 gap-2 text-xs">
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Leads</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Team</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Tasks</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Attendance</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Visits</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Expenses</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Reports</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Chat</div>
-                                    </div>
-                                </div>
-
-                                <div className="pt-3 border-t border-white/10">
-                                    <p className="text-xs text-gray-500 italic">UI Feel: Clean, operational, team-centric</p>
-                                    <p className="text-xs text-indigo-400 font-semibold">Color: Blue/Green Operational Theme</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Staff Workday View UI */}
-                        <div className="glass-premium rounded-3xl overflow-hidden border-t-4 border-t-purple-500">
-                            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-6 border-b border-white/10">
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-2xl font-bold text-purple-400">👷 My Day</h3>
-                                </div>
-                                <p className="text-sm text-gray-400">Simple, fast access to daily tasks</p>
-                            </div>
-
-                            <div className="p-6 space-y-4">
-                                {/* Welcome */}
-                                <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-3">
-                                    <p className="text-sm font-semibold">👋 Hi, John</p>
-                                    <p className="text-xs text-gray-400">🕘 Punch-In: 09:02 AM</p>
-                                    <p className="text-xs text-gray-400">🔔 Today's Reminders (2)</p>
-                                </div>
-
-                                {/* Quick Actions */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-purple-400">🚀 Quick Actions</p>
-                                    <div className="grid grid-cols-2 gap-2">
-                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
-                                            Start Task
-                                        </button>
-                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
-                                            Visit Plan
-                                        </button>
-                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
-                                            Add Lead
-                                        </button>
-                                        <button className="bg-purple-600/20 border border-purple-500/30 rounded-lg py-2 text-xs font-semibold hover:bg-purple-600/30 transition-colors">
-                                            Apply Expense
-                                        </button>
-                                    </div>
-                                </div>
-
-                                {/* Today's Tasks */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-purple-400">📋 Today's Tasks</p>
-                                    <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs">
-                                        <div className="flex items-start gap-2">
-                                            <span>▢</span>
-                                            <div>
-                                                <p className="font-semibold">Follow up with Meera</p>
-                                                <p className="text-gray-500">10:00 AM</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span>▢</span>
-                                            <div>
-                                                <p className="font-semibold">Site visit: NeoTech</p>
-                                                <p className="text-gray-500">12:00 PM</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span>▢</span>
-                                            <div>
-                                                <p className="font-semibold">Submit visit report</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Location & Attendance */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-purple-400">📍 Location & Attendance</p>
-                                    <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs">
-                                        <button className="w-full bg-purple-600 hover:bg-purple-700 rounded-lg py-2 font-semibold transition-colors">
-                                            Punch In/Out
-                                        </button>
-                                        <p className="text-gray-400 text-center">📍 GPS location capture</p>
-                                    </div>
-                                </div>
-
-                                {/* Modules Grid */}
-                                <div className="space-y-2">
-                                    <p className="text-sm font-bold text-purple-400">📁 Modules</p>
-                                    <div className="grid grid-cols-2 gap-2 text-xs">
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Tasks</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Leads</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Visits</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Attendance</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Expenses</div>
-                                        <div className="bg-white/5 rounded-lg p-2 text-center">▢ Chat</div>
-                                    </div>
-                                </div>
-
-                                <div className="pt-3 border-t border-white/10">
-                                    <p className="text-xs text-gray-500 italic">UI Feel: Minimal, fast, action-driven</p>
-                                    <p className="text-xs text-purple-400 font-semibold">Color: Light & Productivity Theme</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Mobile Screen Mockups Section --- */}
-            <section className="py-20 bg-gradient-to-b from-transparent to-indigo-900/10">
-                <div className="container mx-auto px-4">
-                    <div className="text-center max-w-4xl mx-auto mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">📱 Mobile App Interface</h2>
-                        <p className="text-lg text-gray-400">
-                            Premium SaaS-grade mobile experience for every role
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        {/* Admin Mobile Screen */}
-                        <div className="mx-auto">
-                            <div className="relative w-[320px] h-[640px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
-                                {/* Phone Notch */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
-
-                                {/* Screen Content */}
-                                <div className="h-full overflow-y-auto bg-gradient-to-b from-gray-50 to-white">
-                                    {/* Header - AIPATH Blue */}
-                                    <div className="bg-gradient-to-br from-blue-600 to-blue-800 px-4 pt-8 pb-6 text-white">
-                                        <div className="flex items-center justify-between mb-3">
-                                            <div className="text-xs font-bold">AIPATH CRM</div>
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">⚙️</div>
-                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">🔔</div>
-                                                <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-xs">👤</div>
-                                            </div>
-                                        </div>
-                                        <div className="text-sm font-bold">Hello, Anuj! (Admin)</div>
-                                        <div className="text-xs opacity-90">AIPATH DigiNext Pvt. Ltd</div>
-                                    </div>
-
-                                    {/* Quick Actions Carousel */}
-                                    <div className="px-4 py-3 bg-white border-b border-gray-200">
-                                        <div className="flex gap-2 overflow-x-auto pb-1">
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
-                                                + Add Lead
-                                            </div>
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
-                                                Assign Task
-                                            </div>
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
-                                                View Staff
-                                            </div>
-                                            <div className="flex-shrink-0 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap">
-                                                Approvals
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Main Content */}
-                                    <div className="px-4 py-4">
-                                        <p className="text-xs font-semibold text-gray-700 mb-3">What do you want to do today?</p>
-
-                                        {/* Icon Grid - 3 Columns */}
-                                        <div className="grid grid-cols-3 gap-3">
-                                            {[
-                                                { icon: '📊', label: 'Dashboard' },
-                                                { icon: '👥', label: 'Leads' },
-                                                { icon: '🤝', label: 'Customers' },
-                                                { icon: '📋', label: 'Tasks' },
-                                                { icon: '⏰', label: 'Attendance' },
-                                                { icon: '💰', label: 'Payroll' },
-                                                { icon: '📁', label: 'Projects' },
-                                                { icon: '💳', label: 'Expenses' },
-                                                { icon: '🧾', label: 'Billing' },
-                                                { icon: '📦', label: 'Inventory' },
-                                                { icon: '👔', label: 'HRMS' },
-                                                { icon: '⚙️', label: 'Settings' },
-                                                { icon: '📈', label: 'Reports' },
-                                                { icon: '📍', label: 'Staff Track' },
-                                                { icon: '✅', label: 'Approvals' },
-                                                { icon: '🤖', label: 'AI Assistant' },
-                                            ].map((item, idx) => (
-                                                <div key={idx} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-1 hover:shadow-md transition-shadow">
-                                                    <div className="text-2xl">{item.icon}</div>
-                                                    <div className="text-[9px] text-gray-700 text-center font-medium leading-tight">{item.label}</div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Footer Banner */}
-                                    <div className="mx-4 mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-3 text-white shadow-lg">
-                                        <div className="flex items-center gap-2">
-                                            <div className="text-2xl">🤖</div>
-                                            <div className="flex-1">
-                                                <div className="text-xs font-bold">AI Assistant!</div>
-                                                <div className="text-[10px] opacity-90">Ask anything about your business</div>
-                                            </div>
-                                            <div className="text-lg">→</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p className="text-center text-sm font-semibold text-blue-400 mt-4">Admin Interface</p>
-                        </div>
-
-                        {/* Manager Mobile Screen */}
-                        <div className="mx-auto">
-                            <div className="relative w-[320px] h-[640px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
-                                {/* Phone Notch */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
-
-                                {/* Screen Content */}
-                                <div className="h-full overflow-y-auto bg-gradient-to-b from-gray-50 to-white">
-                                    {/* Header - AIPATH Blue */}
-                                    <div className="bg-gradient-to-br from-indigo-600 to-blue-700 px-4 pt-8 pb-6 text-white">
-                                        <div className="flex items-center justify-between mb-3">
-                                            <div className="text-xs font-bold">AIPATH CRM</div>
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">⚙️</div>
-                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">🔔</div>
-                                                <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-xs">👤</div>
-                                            </div>
-                                        </div>
-                                        <div className="text-sm font-bold">Hello, Rahul! (Manager)</div>
-                                        <div className="text-xs opacity-90">AIPATH DigiNext Pvt. Ltd</div>
-                                    </div>
-
-                                    {/* Quick Actions Carousel */}
-                                    <div className="px-4 py-3 bg-white border-b border-gray-200">
-                                        <div className="flex gap-2 overflow-x-auto pb-1">
-                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
-                                                + Add Lead
-                                            </div>
-                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
-                                                Assign Task
-                                            </div>
-                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
-                                                View Staff
-                                            </div>
-                                            <div className="flex-shrink-0 bg-indigo-50 border border-indigo-200 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-700 whitespace-nowrap">
-                                                Approvals
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Main Content */}
-                                    <div className="px-4 py-4">
-                                        <p className="text-xs font-semibold text-gray-700 mb-3">What do you want to do today?</p>
-
-                                        {/* Icon Grid - 3 Columns */}
-                                        <div className="grid grid-cols-3 gap-3">
-                                            {[
-                                                { icon: '👥', label: 'Team Overview' },
-                                                { icon: '⏰', label: 'Attendance' },
-                                                { icon: '📋', label: 'Tasks' },
-                                                { icon: '✅', label: 'Approvals' },
-                                                { icon: '📍', label: 'Visit Plans' },
-                                                { icon: '💳', label: 'Expenses' },
-                                                { icon: '🤝', label: 'Customer List' },
-                                                { icon: '📊', label: 'Reports' },
-                                                { icon: '💰', label: 'Salary Summary' },
-                                                { icon: '📌', label: 'Staff Tracking' },
-                                                { icon: '⭐', label: 'Performance' },
-                                                { icon: '📚', label: 'Training' },
-                                                { icon: '🤖', label: 'AI Insights' },
-                                            ].map((item, idx) => (
-                                                <div key={idx} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-1 hover:shadow-md transition-shadow">
-                                                    <div className="text-2xl">{item.icon}</div>
-                                                    <div className="text-[9px] text-gray-700 text-center font-medium leading-tight">{item.label}</div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Footer Banner */}
-                                    <div className="mx-4 mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-3 text-white shadow-lg">
-                                        <div className="flex items-center gap-2">
-                                            <div className="text-2xl">📊</div>
-                                            <div className="flex-1">
-                                                <div className="text-xs font-bold">Business Insights!</div>
-                                                <div className="text-[10px] opacity-90">View team performance & analytics</div>
-                                            </div>
-                                            <div className="text-lg">→</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p className="text-center text-sm font-semibold text-indigo-400 mt-4">Manager Interface</p>
-                        </div>
-
-                        {/* Staff Mobile Screen */}
-                        <div className="mx-auto">
-                            <div className="relative w-[320px] h-[640px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
-                                {/* Phone Notch */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
-
-                                {/* Screen Content */}
-                                <div className="h-full overflow-y-auto bg-gradient-to-b from-gray-50 to-white">
-                                    {/* Header - AIPATH Blue */}
-                                    <div className="bg-gradient-to-br from-purple-600 to-indigo-700 px-4 pt-8 pb-6 text-white">
-                                        <div className="flex items-center justify-between mb-3">
-                                            <div className="text-xs font-bold">AIPATH CRM</div>
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">⚙️</div>
-                                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">🔔</div>
-                                                <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-xs">👤</div>
-                                            </div>
-                                        </div>
-                                        <div className="text-sm font-bold">Hello, John! (Staff)</div>
-                                        <div className="text-xs opacity-90">AIPATH DigiNext Pvt. Ltd</div>
-                                    </div>
-
-                                    {/* Quick Actions Carousel */}
-                                    <div className="px-4 py-3 bg-white border-b border-gray-200">
-                                        <div className="flex gap-2 overflow-x-auto pb-1">
-                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
-                                                Punch-In
-                                            </div>
-                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
-                                                Start Task
-                                            </div>
-                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
-                                                Apply Leave
-                                            </div>
-                                            <div className="flex-shrink-0 bg-purple-50 border border-purple-200 rounded-lg px-3 py-2 text-xs font-semibold text-purple-700 whitespace-nowrap">
-                                                Visit Plan
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Main Content */}
-                                    <div className="px-4 py-4">
-                                        <p className="text-xs font-semibold text-gray-700 mb-3">What do you want to do today?</p>
-
-                                        {/* Icon Grid - 3 Columns */}
-                                        <div className="grid grid-cols-3 gap-3">
-                                            {[
-                                                { icon: '⏰', label: 'Check-In/Out' },
-                                                { icon: '📋', label: 'Tasks' },
-                                                { icon: '📍', label: 'Visits' },
-                                                { icon: '🏖️', label: 'Apply Leave' },
-                                                { icon: '💰', label: 'Payslip' },
-                                                { icon: '💵', label: 'Salary View' },
-                                                { icon: '💳', label: 'Claims' },
-                                                { icon: '📅', label: 'Attendance History' },
-                                                { icon: '🤝', label: 'Customer List' },
-                                                { icon: '📚', label: 'Training' },
-                                                { icon: '🎁', label: 'Rewards' },
-                                                { icon: '💬', label: 'Feedback' },
-                                                { icon: '👤', label: 'Profile' },
-                                            ].map((item, idx) => (
-                                                <div key={idx} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-1 hover:shadow-md transition-shadow">
-                                                    <div className="text-2xl">{item.icon}</div>
-                                                    <div className="text-[9px] text-gray-700 text-center font-medium leading-tight">{item.label}</div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Footer Banner */}
-                                    <div className="mx-4 mb-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-3 text-white shadow-lg">
-                                        <div className="flex items-center gap-2">
-                                            <div className="text-2xl">🤖</div>
-                                            <div className="flex-1">
-                                                <div className="text-xs font-bold">AI Assistant!</div>
-                                                <div className="text-[10px] opacity-90">Get instant help with your tasks</div>
-                                            </div>
-                                            <div className="text-lg">→</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p className="text-center text-sm font-semibold text-purple-400 mt-4">Staff Interface</p>
-                        </div>
-                    </div>
-
-                    {/* Design Notes */}
-                    <div className="mt-12 max-w-4xl mx-auto">
-                        <div className="glass p-6 rounded-2xl">
-                            <h3 className="text-xl font-bold mb-4 text-center">✨ Premium SaaS-Grade Design</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-900">
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>AIPATH Blue branded header</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>Personalized user greeting + role</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>Rounded icon boxes (3 per row)</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>Modern icons in brand colors</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>Soft shadows for premium feel</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>Quick Actions carousel at top</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>AI Assistant promotional banner</span>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                    <span className="text-blue-400">👉</span>
-                                    <span>Responsive & touch-optimized</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Final CTA Section --- */}
-            <section className="py-20 bg-gradient-to-b from-indigo-900/10 to-transparent">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-5xl mx-auto text-center">
-                        <div className="glass-premium p-12 rounded-3xl border border-white/10">
-                            <h3 className="text-3xl md:text-4xl font-bold mb-6">🚀 One App. All Roles. Complete Control.</h3>
-                            <p className="text-xl text-blue-900 mb-8 leading-relaxed">
-                                AIPATH CRM's One Mobile App system eliminates complexity and brings your entire team together on a single platform. Whether you're an admin managing the business, a manager leading the team, or staff executing tasks—everyone gets exactly what they need, when they need it.
-                            </p>
-                            <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-2xl">
-                                <p className="text-2xl font-bold text-white">AIPATH CRM – Digitize. Automate. Grow.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Footer --- */}
-            <footer className="border-t border-white/10 bg-[#05060A] pt-16 pb-8">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                        <div className="col-span-1 md:col-span-1">
-                            <div className="flex items-center gap-2 mb-6">
-                                <Image
-                                    src="/AIpath CRM LOGO.png"
-                                    alt="AIPATH CRM Logo"
-                                    width={150}
-                                    height={40}
-                                    className="h-10 w-auto object-contain"
-                                />
-                            </div>
-                            <p className="text-gray-500 text-sm leading-relaxed">
-                                Empowering businesses with intelligent workforce solutions. Built for the future of work.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold mb-6">Product</h4>
-                            <ul className="space-y-4 text-sm text-gray-400">
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Features</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Pricing</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">API</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold mb-6">Company</h4>
-                            <ul className="space-y-4 text-sm text-gray-400">
-                                <li><a href="/about" className="hover:text-blue-700 transition-colors">About</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Blog</a></li>
-                                <li><a href="#" className="hover:text-blue-700 transition-colors">Careers</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="font-bold mb-6">Stay Updated</h4>
-                            <div className="flex gap-2">
-                                <input type="email" placeholder="Enter your email" className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-indigo-500 transition-colors" />
-                                <button className="bg-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors">
-                                    →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-                        <p>© 2025 AIPATH CRM. All rights reserved.</p>
-                        <div className="flex gap-6">
-                            <a href="#" className="hover:text-gray-400">Privacy</a>
-                            <a href="#" className="hover:text-gray-400">Terms</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+              </div>
+            ))}
+          </div>
         </div>
-    );
+      </section>
+
+      {/* Timeline */}
+      <section className="py-24 bg-[#161823] border-y border-white/[0.06]">
+        <div className="container mx-auto px-5">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <span className="chip"><span className="chip-dot" />Quarterly themes</span>
+            <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
+              The next <span className="text-gradient">12 months.</span>
+            </h2>
+            <p className="mt-5 text-zinc-400">
+              We ship publicly. Here's what's in motion.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto relative">
+            {/* vertical line */}
+            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-2 bottom-2 w-px bg-gradient-to-b from-indigo-500/60 via-violet-500/40 to-transparent" />
+
+            <div className="space-y-10">
+              {phases.map((p, i) => (
+                <div
+                  key={p.title}
+                  className={`relative grid md:grid-cols-2 gap-8 md:gap-16 items-center ${
+                    i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
+                  }`}
+                >
+                  {/* Dot */}
+                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gradient-to-br from-indigo-400 to-violet-500 ring-4 ring-[#161823] shadow-lg shadow-indigo-500/40 z-10" />
+
+                  <div className={`pl-12 md:pl-0 ${i % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"}`}>
+                    <span className={`chip ${statusColors[p.status]}`}>
+                      <span className="chip-dot !bg-current" />
+                      {p.label} · {p.quarter}
+                    </span>
+                    <h3 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight">
+                      {p.title}
+                    </h3>
+                  </div>
+
+                  <div className={`pl-12 md:pl-0 ${i % 2 === 0 ? "md:pl-12" : "md:text-right md:pr-12"}`}>
+                    <ul className="space-y-2.5 text-sm text-zinc-300">
+                      {p.items.map((it) => (
+                        <li
+                          key={it}
+                          className={`flex items-start gap-2 ${
+                            i % 2 === 0 ? "" : "md:flex-row-reverse md:text-right"
+                          }`}
+                        >
+                          <span className="mt-1.5 inline-block w-1 h-1 rounded-full bg-indigo-400 shrink-0" />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Role-based experience */}
+      <section className="py-24">
+        <div className="container mx-auto px-5">
+          <div className="max-w-3xl mb-14">
+            <span className="chip"><span className="chip-dot" />Role-based experience</span>
+            <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
+              One app. <span className="text-gradient">Three experiences.</span>
+            </h2>
+            <p className="mt-5 text-zinc-400">
+              The interface adapts automatically. No separate apps for admins, managers, or staff.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5 max-w-6xl">
+            {roles.map((r) => (
+              <div key={r.name} className="card-glow p-7">
+                <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br ${r.color} text-white font-semibold mb-5 shadow-lg`}>
+                  {r.name[0]}
+                </div>
+                <h3 className="text-xl font-semibold tracking-tight mb-4">{r.name}</h3>
+                <ul className="space-y-2.5 text-sm text-zinc-300">
+                  {r.items.map((it) => (
+                    <li key={it} className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5 shrink-0">•</span>
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pb-28">
+        <div className="container mx-auto px-5">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-600/15 via-violet-600/10 to-transparent p-10 md:p-14 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              Want to <span className="text-gradient">shape what we build?</span>
+            </h2>
+            <p className="mt-4 text-zinc-400">
+              Join our customer advisory board. Earliest access, direct line to product.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link href="/contact" className="btn-primary">Request access</Link>
+              <Link href="/features" className="btn-secondary">See current features</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </main>
+  );
 }

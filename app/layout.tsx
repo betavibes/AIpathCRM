@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
+import StickyDemoBar from "@/components/StickyDemoBar";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -15,8 +16,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AIpath CRM — CRM. ERP. AI. Unified.",
-  description: "AIpath CRM is an AI-first business operating system that unifies CRM, ERP, mobile, and messaging into one intelligent SaaS platform.",
+  title: "AIpath CRM — The AI-First Business Operating System",
+  description:
+    "Run your entire business with AI. AIpath unifies CRM, ERP, automation, and AI agents into one intelligent operating system for modern teams.",
+  metadataBase: new URL("https://aipathcrm.com"),
+  openGraph: {
+    title: "AIpath CRM — The AI-First Business Operating System",
+    description:
+      "CRM, ERP, automation, and AI agents — unified into one intelligent platform.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -27,9 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.variable} ${inter.variable} font-sans antialiased bg-[#0B0C15] text-white overflow-x-hidden`}
+        className={`${outfit.variable} ${inter.variable} font-sans antialiased bg-[#0E0F1A] text-zinc-100 overflow-x-hidden`}
       >
         {children}
+        <StickyDemoBar />
       </body>
     </html>
   );
