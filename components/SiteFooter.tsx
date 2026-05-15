@@ -132,6 +132,19 @@ export default function SiteFooter() {
             <Link href="#" className="hover:text-white transition-colors">Security</Link>
           </div>
         </div>
+
+        {/* Developed by */}
+        <div className="mt-6 text-center text-xs text-zinc-500">
+          Developed by{" "}
+          <a
+            href="https://www.aipathdiginext.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-zinc-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+          >
+            AIpath DigiNex Private Limited
+          </a>
+        </div>
       </div>
     </footer>
   );
