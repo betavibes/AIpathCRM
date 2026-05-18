@@ -57,9 +57,14 @@ export default function SiteNav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Link href="/contact" className="btn-ghost">
+          <a
+            href="https://aipath-one.vercel.app/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost"
+          >
             Sign in
-          </Link>
+          </a>
           <Link href="/demo" className="btn-primary !py-2.5 !px-5 text-sm">
             Book a Demo
           </Link>
@@ -93,9 +98,15 @@ export default function SiteNav() {
             ))}
           </ul>
           <div className="mt-4 grid grid-cols-2 gap-3">
-            <Link href="/contact" className="btn-secondary !py-2.5 !text-sm">
+            <a
+              href="https://aipath-one.vercel.app/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary !py-2.5 !text-sm"
+              onClick={() => setOpen(false)}
+            >
               Sign in
-            </Link>
+            </a>
             <Link href="/demo" className="btn-primary !py-2.5 !text-sm">
               Book Demo
             </Link>

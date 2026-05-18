@@ -18,8 +18,8 @@ const nodes: Node[] = [
   { id: "n2", x: 280, y: 90,  type: "ai",        title: "AI scores lead", body: "Win probability + intent", icon: "✦" },
   { id: "n3", x: 500, y: 30,  type: "condition", title: "If score > 70", body: "High-intent path", icon: "◆" },
   { id: "n4", x: 500, y: 170, type: "condition", title: "Else",     body: "Nurture path", icon: "◇" },
-  { id: "n5", x: 720, y: 30,  type: "action",    title: "Assign SDR", body: "Round-robin enterprise reps", icon: "—¦" },
-  { id: "n6", x: 720, y: 170, type: "action",    title: "Drip campaign", body: "5-touch nurture sequence", icon: "—¥" },
+  { id: "n5", x: 720, y: 30,  type: "action",    title: "Assign SDR", body: "Round-robin enterprise reps", icon: "▦" },
+  { id: "n6", x: 720, y: 170, type: "action",    title: "Drip campaign", body: "5-touch nurture sequence", icon: "▥" },
   { id: "n7", x: 940, y: 100, type: "notify",    title: "Notify team", body: "Slack + email + WhatsApp", icon: "♪" },
 ];
 
