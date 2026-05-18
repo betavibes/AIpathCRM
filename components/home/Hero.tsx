@@ -16,33 +16,40 @@ export default function Hero() {
           <div className="inline-flex animate-fade-in">
             <span className="chip">
               <span className="chip-dot" />
-              Introducing AIpath CRM 2.0 — AI Agents now live
+              Introducing AIpath One · AI Agents now live
             </span>
           </div>
 
-          <h1 className="mt-8 text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight animate-slide-up">
-            <span className="block text-zinc-100">AIpath CRM —</span>
-            <span className="block mt-1 md:mt-2">
-              CRM. ERP. AI. <span className="text-gradient">Unified.</span>
-            </span>
+          {/* Product name */}
+          <h1 className="mt-8 text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1] tracking-tight animate-slide-up">
+            <span className="text-zinc-100">AIpath </span>
+            <span className="text-gradient">One</span>
           </h1>
 
+          {/* Positioning line */}
           <p
-            className="mt-7 text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed animate-slide-up"
-            style={{ animationDelay: "120ms", animationFillMode: "both" }}
+            className="mt-5 text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-200 animate-slide-up"
+            style={{ animationDelay: "100ms", animationFillMode: "both" }}
           >
-            An AI-First Business Operating System designed to{" "}
-            <span className="text-zinc-100 font-medium">automate operations</span>,{" "}
-            <span className="text-zinc-100 font-medium">streamline growth</span>,
-            and run your entire business from one intelligent platform.
+            CRM<span className="text-indigo-400 mx-1">.</span>
+            ERP<span className="text-violet-400 mx-1">.</span>
+            AI<span className="text-pink-400">.</span>
+          </p>
+
+          {/* Extended tagline */}
+          <p
+            className="mt-5 text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up"
+            style={{ animationDelay: "160ms", animationFillMode: "both" }}
+          >
+            The <span className="text-zinc-100 font-semibold">AI-first Business Operating System</span> — built to automate operations, streamline growth, and run your entire business from one intelligent platform.
           </p>
 
           <p
-            className="mt-4 text-base md:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed animate-slide-up"
-            style={{ animationDelay: "200ms", animationFillMode: "both" }}
+            className="mt-3 text-sm md:text-base text-zinc-500 max-w-2xl mx-auto leading-relaxed animate-slide-up"
+            style={{ animationDelay: "220ms", animationFillMode: "both" }}
           >
-            From sales to service, finance to communication — AIpath brings everything together across{" "}
-            <span className="text-zinc-200">web, mobile, and messaging</span> platforms.
+            From sales to service, finance to communication — across{" "}
+            <span className="text-zinc-300">web, mobile, and messaging</span> platforms.
           </p>
 
           <div
