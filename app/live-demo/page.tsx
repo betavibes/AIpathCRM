@@ -37,8 +37,8 @@ export default function LiveDemoPage() {
               <Link href="/demo" className="btn-primary">
                 Book a personalized demo
               </Link>
-              <Link href="/pricing" className="btn-secondary">
-                See pricing
+              <Link href="/case-studies" className="btn-secondary">
+                See our work
               </Link>
             </div>
           </div>

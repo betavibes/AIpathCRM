@@ -7,6 +7,7 @@ import HowItWorks from "@/components/home/HowItWorks";
 import StatsBand from "@/components/home/StatsBand";
 import AILayer from "@/components/home/AILayer";
 import Integrations from "@/components/home/Integrations";
+import WorkDelivered from "@/components/home/WorkDelivered";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
 import WhatsAppAIDemo from "@/components/showcase/WhatsAppAIDemo";
@@ -60,10 +61,13 @@ export default function HomePage() {
       {/* 7. Integrations marquee */}
       <Integrations />
 
-      {/* 8. Testimonials */}
+      {/* 8. Work we've delivered — real client systems in production */}
+      <WorkDelivered />
+
+      {/* 9. Testimonials */}
       <Testimonials />
 
-      {/* 9. FAQ */}
+      {/* 10. FAQ */}
       <FAQ />
 
       <SiteFooter />

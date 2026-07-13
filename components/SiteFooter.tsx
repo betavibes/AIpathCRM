@@ -39,8 +39,8 @@ const cols = [
     title: "Resources",
     links: [
       { label: "Blog & Guides", href: "/resources" },
-      { label: "Customer Stories", href: "/resources" },
-      { label: "Pricing", href: "/pricing" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Customer Stories", href: "/case-studies" },
       { label: "Documentation", href: "/features" },
       { label: "Help Center", href: "/contact" },
       { label: "API", href: "/features" },

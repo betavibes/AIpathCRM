@@ -82,8 +82,8 @@ export default function FeaturesPage() {
         <Link href="/contact" className="btn-primary">
           Book a Demo
         </Link>
-        <Link href="/pricing" className="btn-secondary">
-          See pricing
+        <Link href="/case-studies" className="btn-secondary">
+          See our work
         </Link>
       </PageHero>
 
