@@ -156,9 +156,9 @@ export default function BusinessOneDemo() {
           <div>
             <div className="flex items-center gap-2 mb-5">
               <span className="px-3 py-1.5 rounded-md bg-blue-600 text-white text-[10px] font-bold tracking-wider">AIPATH</span>
-              <span className="text-blue-900 font-bold text-sm">Business One</span>
+              <span className="text-blue-900 font-bold text-sm">Business Suite</span>
               <span className="text-blue-300">|</span>
-              <span className="text-blue-900 font-semibold text-xs">Premium ERP</span>
+              <span className="text-blue-900 font-semibold text-xs">Sample data — for illustration</span>
             </div>
 
             <h3 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-slate-900">
@@ -205,7 +205,7 @@ export default function BusinessOneDemo() {
         {/* CTA pill */}
         <div className="mt-10 flex justify-center">
           <a
-            href="/demo"
+            href="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-base shadow-2xl shadow-blue-700/40 hover:shadow-blue-700/60 transition-shadow"
           >
             <span className="w-7 h-7 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">💬</span>

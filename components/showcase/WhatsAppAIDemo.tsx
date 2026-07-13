@@ -201,7 +201,7 @@ export default function WhatsAppAIDemo() {
             { v: "24/7", l: "Instant response" },
             { v: "0", l: "Manual data entry" },
             { v: "8 langs", l: "Including Hindi & Tamil" },
-            { v: "62%", l: "More qualified leads" },
+            { v: "Live", l: "Running at Kiran Fabricators" },
           ].map((s) => (
             <div key={s.l} className="bg-white/80 backdrop-blur rounded-xl p-4 border border-emerald-100 text-center shadow-sm">
               <p className="text-2xl font-bold text-emerald-600">{s.v}</p>
@@ -212,7 +212,7 @@ export default function WhatsAppAIDemo() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-3">
-          <a href="/demo" className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold shadow-xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transition-shadow">
+          <a href="/contact" className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold shadow-xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transition-shadow">
             <span>💬</span>
             Try the WhatsApp AI agent
             <span>→</span>

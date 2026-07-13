@@ -34,11 +34,11 @@ export default function LiveDemoPage() {
               Five live product modules. Switch between them with the tabs below — see how AIpath replaces your stack.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/demo" className="btn-primary">
+              <Link href="/contact" className="btn-primary">
                 Book a personalized demo
               </Link>
-              <Link href="/pricing" className="btn-secondary">
-                See pricing
+              <Link href="/case-studies" className="btn-secondary">
+                See our work
               </Link>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function LiveDemoPage() {
               30-minute personalized walkthrough — bring your real workflows, leave with a working sandbox.
             </p>
             <div className="relative mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/demo" className="btn-primary">Book a demo</Link>
+              <Link href="/contact" className="btn-primary">Book a demo</Link>
               <Link href="/contact" className="btn-secondary">Talk to sales</Link>
             </div>
           </div>

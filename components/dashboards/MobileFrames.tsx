@@ -67,7 +67,7 @@ function PhoneDashboard() {
             <div className="flex-1 min-w-0">
               <p className="text-[10px] font-semibold">AI suggests</p>
               <p className="text-[9px] text-zinc-300 mt-0.5 leading-snug">
-                Follow up with Acme Corp — last seen 4d ago.
+                Follow up with Sunrise Industries — last seen 4d ago.
               </p>
               <button className="mt-1.5 text-[8px] px-2 py-0.5 rounded-md bg-violet-500/20 border border-violet-500/30 text-violet-100">
                 Draft message
@@ -80,8 +80,8 @@ function PhoneDashboard() {
         <p className="text-[9px] text-zinc-500 uppercase tracking-[0.15em] mb-2">Recent</p>
         <div className="space-y-2">
           {[
-            { name: "Globex deal closed", amt: "₹2.1L", color: "bg-emerald-500" },
-            { name: "Stark — proposal sent", amt: "Now", color: "bg-indigo-500" },
+            { name: "Orbit deal closed", amt: "₹2.1L", color: "bg-emerald-500" },
+            { name: "Meridian — proposal sent", amt: "Now", color: "bg-indigo-500" },
           ].map((a) => (
             <div key={a.name} className="flex items-center gap-2">
               <span className={`w-1.5 h-1.5 rounded-full ${a.color}`} />
@@ -128,7 +128,7 @@ function PhoneAttendance() {
         <div className="space-y-1.5">
           {[
             ["09:02", "Check-in", "Office HQ"],
-            ["11:30", "Site visit", "Acme Corp"],
+            ["11:30", "Site visit", "Sunrise Industries"],
             ["14:15", "Returned", "Office HQ"],
           ].map(([t, e, l]) => (
             <div key={t} className="flex items-center gap-2.5 text-[10px]">
@@ -170,10 +170,10 @@ function PhoneInbox() {
         {/* Messages */}
         <div className="space-y-2">
           {[
-            { from: "Acme Corp", msg: "Re: proposal — looks great, when can we…", channel: "WhatsApp", time: "2m", color: "bg-emerald-500", unread: true },
-            { from: "Globex", msg: "AI: Drafted reply about Q3 pricing.", channel: "Email", time: "8m", color: "bg-indigo-500", ai: true },
-            { from: "Stark Industries", msg: "Schedule a call next week?", channel: "WhatsApp", time: "1h", color: "bg-emerald-500" },
-            { from: "Hooli", msg: "Invoice INV-2841 paid ✓", channel: "Stripe", time: "3h", color: "bg-violet-500" },
+            { from: "Sunrise Industries", msg: "Re: proposal — looks great, when can we…", channel: "WhatsApp", time: "2m", color: "bg-emerald-500", unread: true },
+            { from: "Orbit", msg: "AI: Drafted reply about Q3 pricing.", channel: "Email", time: "8m", color: "bg-indigo-500", ai: true },
+            { from: "Meridian Steel", msg: "Schedule a call next week?", channel: "WhatsApp", time: "1h", color: "bg-emerald-500" },
+            { from: "Vertex", msg: "Invoice INV-2841 paid ✓", channel: "Stripe", time: "3h", color: "bg-violet-500" },
           ].map((m) => (
             <div key={m.from} className={`rounded-xl p-2.5 border ${m.unread ? "border-indigo-500/30 bg-indigo-500/[0.05]" : "border-white/[0.06] bg-white/[0.02]"}`}>
               <div className="flex items-start justify-between gap-2 mb-1">

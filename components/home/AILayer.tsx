@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const lines = [
   { prompt: "forecast Q3 pipeline by segment", result: "✓ Generated forecast — Enterprise +24%, Mid-market +11%" },
-  { prompt: "draft proposal for Acme Corp ($120k)", result: "✓ Proposal drafted, 6 pages, sent to legal review" },
+  { prompt: "draft proposal for Sunrise Industries ($120k)", result: "✓ Proposal drafted, 6 pages, sent to legal review" },
   { prompt: "approve invoices under $5k", result: "✓ 14 invoices approved, $42,300 cleared" },
   { prompt: "summarize last 7 customer calls", result: "✓ 3 themes extracted: pricing, onboarding, mobile UX" },
 ];

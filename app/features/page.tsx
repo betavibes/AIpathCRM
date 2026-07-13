@@ -82,8 +82,8 @@ export default function FeaturesPage() {
         <Link href="/contact" className="btn-primary">
           Book a Demo
         </Link>
-        <Link href="/pricing" className="btn-secondary">
-          See pricing
+        <Link href="/case-studies" className="btn-secondary">
+          See our work
         </Link>
       </PageHero>
 
@@ -191,7 +191,7 @@ export default function FeaturesPage() {
           <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8">
             <span className="chip"><span className="chip-dot" />Integrations</span>
             <h3 className="mt-5 text-2xl md:text-3xl font-semibold tracking-tight">
-              Connects to <span className="text-gradient">100+ tools.</span>
+              Connects to <span className="text-gradient">your stack.</span>
             </h3>
             <p className="mt-4 text-zinc-400">
               Slack, Google, Microsoft 365, Stripe, WhatsApp, Telegram, Zapier, and a modern API for the rest.

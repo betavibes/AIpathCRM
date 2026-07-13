@@ -27,23 +27,19 @@ const cols = [
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "/about" },
       { label: "Why AIpath", href: "/why-aipath" },
       { label: "Roadmap", href: "/roadmap" },
       { label: "Security", href: "/security" },
       { label: "Contact", href: "/contact" },
-      { label: "Book Demo", href: "/demo" },
+      { label: "Book a Demo", href: "/contact" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Blog & Guides", href: "/resources" },
-      { label: "Customer Stories", href: "/resources" },
-      { label: "Pricing", href: "/pricing" },
-      { label: "Documentation", href: "/features" },
-      { label: "Help Center", href: "/contact" },
-      { label: "API", href: "/features" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Customer Stories", href: "/case-studies" },
+      { label: "Contact us", href: "/contact" },
     ],
   },
 ];
@@ -60,7 +56,7 @@ export default function SiteFooter() {
           <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div>
               <h3 className="text-3xl md:text-4xl font-semibold tracking-tight">
-                Stop running 14 tools.
+                Stop stitching tools together.
                 <br />
                 Start running your business.
               </h3>
@@ -69,12 +65,12 @@ export default function SiteFooter() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/demo" className="btn-primary">
+              <Link href="/contact" className="btn-primary">
                 Book a Demo
                 <span aria-hidden>→</span>
               </Link>
               <Link href="/contact" className="btn-secondary">
-                Start Free Trial
+                Get a free consultation
               </Link>
             </div>
           </div>
@@ -89,9 +85,8 @@ export default function SiteFooter() {
             <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
               The AI-First Business Operating System. CRM, ERP, automation, and intelligent agents — unified.
             </p>
-            <div className="mt-6 flex items-center gap-3 text-xs text-zinc-500">
-              <span className="chip-dot" />
-              All systems operational
+            <div className="mt-6 text-xs text-zinc-500">
+              Built and run by AIpath DigiNext Private Limited, Lucknow, India.
             </div>
           </div>
 
@@ -119,7 +114,7 @@ export default function SiteFooter() {
         {/* Bottom bar — 3 columns: copyright | developed by (center) | compliance + links */}
         <div className="pt-8 border-t border-white/[0.06] grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-xs text-zinc-500">
           <p className="text-center md:text-left">
-            © {new Date().getFullYear()} AIpath CRM. All rights reserved.
+            © {new Date().getFullYear()} AIpath DigiNext Private Limited. All rights reserved.
           </p>
 
           <p className="text-center order-last md:order-none">
@@ -135,16 +130,8 @@ export default function SiteFooter() {
           </p>
 
           <div className="flex items-center justify-center md:justify-end gap-6 flex-wrap">
-            <span className="inline-flex items-center gap-2">
-              <span className="opacity-60">SOC 2</span>
-              <span className="opacity-60">·</span>
-              <span className="opacity-60">ISO 27001</span>
-              <span className="opacity-60">·</span>
-              <span className="opacity-60">GDPR</span>
-            </span>
-            <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms</Link>
-            <Link href="#" className="hover:text-white transition-colors">Security</Link>
+            <Link href="/security" className="hover:text-white transition-colors">Security</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>

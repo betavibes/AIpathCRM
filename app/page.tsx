@@ -2,12 +2,10 @@ import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Hero from "@/components/home/Hero";
-import LogoCloud from "@/components/home/LogoCloud";
 import HowItWorks from "@/components/home/HowItWorks";
-import StatsBand from "@/components/home/StatsBand";
 import AILayer from "@/components/home/AILayer";
 import Integrations from "@/components/home/Integrations";
-import Testimonials from "@/components/home/Testimonials";
+import WorkDelivered from "@/components/home/WorkDelivered";
 import FAQ from "@/components/home/FAQ";
 import WhatsAppAIDemo from "@/components/showcase/WhatsAppAIDemo";
 
@@ -19,13 +17,10 @@ export default function HomePage() {
       {/* 1. Hero */}
       <Hero />
 
-      {/* 2. Trust strip */}
-      <LogoCloud />
-
-      {/* 3. How it works (3 steps) */}
+      {/* 2. How it works (3 steps) */}
       <HowItWorks />
 
-      {/* 4. Flagship live demo — WhatsApp AI */}
+      {/* 3. Flagship live demo — WhatsApp AI */}
       <section className="py-24">
         <div className="container mx-auto px-5">
           <div className="max-w-3xl mx-auto text-center mb-12">
@@ -51,19 +46,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. AI layer terminal */}
+      {/* 4. AI layer terminal */}
       <AILayer />
 
-      {/* 6. Stats band */}
-      <StatsBand />
-
-      {/* 7. Integrations marquee */}
+      {/* 5. Integrations marquee */}
       <Integrations />
 
-      {/* 8. Testimonials */}
-      <Testimonials />
+      {/* 6. Work we've delivered — real client systems in production */}
+      <WorkDelivered />
 
-      {/* 9. FAQ */}
+      {/* 7. FAQ */}
       <FAQ />
 
       <SiteFooter />

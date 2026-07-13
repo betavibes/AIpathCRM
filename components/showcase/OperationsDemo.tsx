@@ -14,10 +14,10 @@ const revBars = [62, 70, 65, 78, 84, 92];
 const expBars = [44, 50, 52, 55, 58, 60];
 
 const txns = [
-  { ref: "INV-2841", party: "Acme Corp", amt: "₹4,80,000", status: "Paid", color: "emerald" },
-  { ref: "PO-1922", party: "Stark Supplies", amt: "₹1,20,000", status: "Approved", color: "blue" },
-  { ref: "INV-2840", party: "Globex Ltd", amt: "₹2,15,000", status: "Pending", color: "amber" },
-  { ref: "INV-2838", party: "Initech", amt: "₹95,000", status: "Overdue", color: "rose" },
+  { ref: "INV-2841", party: "Sunrise Industries", amt: "₹4,80,000", status: "Paid", color: "emerald" },
+  { ref: "PO-1922", party: "Meridian Supplies", amt: "₹1,20,000", status: "Approved", color: "blue" },
+  { ref: "INV-2840", party: "Orbit Traders", amt: "₹2,15,000", status: "Pending", color: "amber" },
+  { ref: "INV-2838", party: "Lakeview Co", amt: "₹95,000", status: "Overdue", color: "rose" },
 ];
 
 const statusBadge: Record<string, string> = {
@@ -54,11 +54,11 @@ export default function OperationsDemo() {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:gap-5 text-xs md:text-sm">
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-indigo-200/60 shadow-sm">
               <span className="w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px]">⚡</span>
-              <span className="font-semibold text-slate-800">Close books 4× faster</span>
+              <span className="font-semibold text-slate-800">Faster monthly close</span>
             </span>
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-indigo-200/60 shadow-sm">
               <span className="w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px]">✓</span>
-              <span className="font-semibold text-slate-800">99.9% inventory accuracy</span>
+              <span className="font-semibold text-slate-800">Live stock across warehouses</span>
             </span>
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-indigo-200/60 shadow-sm">
               <span className="w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white text-[10px]">📋</span>
@@ -189,11 +189,11 @@ export default function OperationsDemo() {
             {/* Trust strip */}
             <div className="rounded-xl bg-slate-900 text-white p-3 md:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg">
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
-                <span className="inline-flex items-center gap-2"><span className="text-indigo-400">🛡</span> SOC 2 + ISO 27001</span>
-                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-indigo-400">⏱</span> Close books in 3 days</span>
-                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-indigo-400">💰</span> 67% lower TCO</span>
+                <span className="inline-flex items-center gap-2"><span className="text-indigo-400">🛡</span> Sample data — for illustration</span>
+                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-indigo-400">⏱</span> Books, inventory and vendors in one place</span>
+                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-indigo-400">💰</span> Purchase · Sales · Accounts</span>
               </div>
-              <a href="/demo" className="bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
+              <a href="/contact" className="bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
                 Book a Demo →
               </a>
             </div>

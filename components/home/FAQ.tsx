@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     q: "Can I migrate my existing data?",
-    a: "Yes. We provide native importers for Salesforce, HubSpot, Zoho, Pipedrive, NetSuite, and 30+ other systems. Most teams migrate in 2–4 weeks with zero downtime.",
+    a: "Yes. We import from spreadsheets and from systems like Salesforce, HubSpot, Zoho and Tally. Migration timelines depend on how much data you have and how clean it is — we'll scope it with you before you commit.",
   },
   {
-    q: "Is AIpath secure enough for enterprise?",
-    a: "AIpath is SOC 2 Type II certified, ISO 27001, GDPR and HIPAA compliant, with 99.99% uptime SLA, granular RBAC, SSO/SAML, and immutable audit logs.",
+    q: "How do you handle security?",
+    a: "Data is encrypted in transit and at rest, access is controlled per role, and actions are logged. We are not yet independently certified (no SOC 2 or ISO 27001 audit), and we'd rather tell you that than claim a badge we haven't earned. Ask us anything about our setup — we'll answer honestly.",
   },
   {
     q: "Do AI Agents work with my existing data?",
@@ -24,8 +24,8 @@ const faqs = [
     a: "Yes. The Workflow Builder is fully visual — drag-and-drop nodes for triggers, conditions, AI actions, approvals, and integrations. Developers can extend with our API.",
   },
   {
-    q: "What does pricing include?",
-    a: "All plans include CRM core, mobile apps, integrations, and unlimited contacts. AI Agents and ERP modules are included from the Growth plan upward.",
+    q: "How much does it cost?",
+    a: "We scope and price each build around what you actually need — the modules, the integrations, and the size of your team. Tell us what you want to run better and we'll come back with a clear plan and an estimate.",
   },
 ];
 

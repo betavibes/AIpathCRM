@@ -1,51 +1,35 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import PageHero from "@/components/PageHero";
 
 export const metadata = {
-  title: "Security & Compliance — AIpath CRM",
+  title: "Security — AIpath CRM",
   description:
-    "AIpath is built like a bank, feels like consumer. SOC 2 Type II, ISO 27001, GDPR, HIPAA, 99.99% uptime, granular RBAC, immutable audit logs.",
+    "How we protect your data: encryption in transit and at rest, role-based access, and audit logs. We are not yet independently certified, and we say so plainly.",
 };
-
-const certifications = [
-  { name: "SOC 2 Type II", desc: "Annual independent audit" },
-  { name: "ISO 27001", desc: "Information security mgmt" },
-  { name: "GDPR", desc: "EU data protection compliant" },
-  { name: "HIPAA", desc: "Healthcare-grade controls" },
-  { name: "PCI-DSS", desc: "Card data handling" },
-  { name: "DPDP Act", desc: "India data protection" },
-];
 
 const pillars = [
   {
-    title: "Encryption everywhere",
-    body: "AES-256 at rest. TLS 1.3 in transit. Per-tenant keys with optional BYOK (bring-your-own-key) for enterprise.",
-    points: ["AES-256-GCM at rest", "TLS 1.3 in transit", "Per-tenant key isolation", "AWS KMS / HSM-backed"],
+    title: "Encryption",
+    body: "Your data is encrypted in transit over HTTPS/TLS, and encrypted at rest by our cloud database provider.",
+    points: ["TLS for all traffic", "Encryption at rest", "No data sold or shared"],
   },
   {
-    title: "Identity & access",
-    body: "Granular RBAC with field-level controls. SSO, SAML 2.0, SCIM provisioning, MFA enforceable org-wide.",
-    points: ["Role + attribute-based access", "SSO via SAML 2.0 / OIDC", "SCIM auto-provisioning", "MFA + biometric"],
+    title: "Access control",
+    body: "Every user gets a role. People see the records their role allows and nothing more. Admins control who can view, edit and approve.",
+    points: ["Role-based permissions", "Per-user accounts", "Admin-managed roles"],
   },
   {
-    title: "Audit & observability",
-    body: "Immutable audit logs across every action. Webhooks to your SIEM. Real-time anomaly detection.",
-    points: ["Immutable audit trail", "SIEM webhooks (Splunk, Datadog)", "Anomaly detection", "Data retention controls"],
+    title: "Audit logs",
+    body: "Key actions in the system are recorded with who did what and when, so you can trace any change back to a person.",
+    points: ["Action history", "Attributed to a user", "Exportable on request"],
   },
   {
-    title: "Data residency",
-    body: "Choose where your data lives. Multi-region deployments with strict data isolation.",
-    points: ["US, EU, India, APAC regions", "No cross-region replication", "Data export anytime", "Right-to-be-forgotten"],
+    title: "Your data stays yours",
+    body: "Your business data belongs to you. We don't sell it, and we don't train public models on it. Ask us for an export at any time and we'll give you one.",
+    points: ["Export on request", "Deletion on request", "No resale of your data"],
   },
-];
-
-const stats = [
-  ["99.99%", "Uptime SLA"],
-  ["< 50ms", "Median API latency"],
-  ["24à—7", "Security ops center"],
-  ["0", "Reportable breaches"],
 ];
 
 export default function SecurityPage() {
@@ -54,71 +38,49 @@ export default function SecurityPage() {
       <SiteNav />
 
       <PageHero
-        eyebrow="Security & compliance"
+        eyebrow="Security"
         title={
           <>
-            Built like a bank.
+            How we protect
             <br />
-            <span className="text-gradient">Feels like consumer.</span>
+            <span className="text-gradient">your data.</span>
           </>
         }
-        subtitle="Enterprise-grade by default — every customer, every plan. Not a paid add-on."
+        subtitle="Straight answers about what we do, what we don't do yet, and what we'll tell you if you ask."
       >
-        <Link href="/contact" className="btn-primary">Talk to security team</Link>
-        <a className="btn-secondary" href="#">Download whitepaper</a>
+        <Link href="/contact" className="btn-primary">
+          Ask us a security question
+        </Link>
       </PageHero>
 
-      {/* Stats */}
-      <section className="pb-20">
+      {/* Honest position on certification */}
+      <section className="pb-8">
         <div className="container mx-auto px-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {stats.map(([n, l]) => (
-              <div key={l} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 text-center">
-                <p className="text-3xl md:text-4xl font-semibold tracking-tight text-gradient">{n}</p>
-                <p className="mt-1.5 text-xs text-zinc-500 uppercase tracking-[0.15em]">{l}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="py-20 bg-[#161823] border-y border-white/[0.06]">
-        <div className="container mx-auto px-5">
-          <div className="max-w-3xl mx-auto text-center mb-14">
-            <span className="chip"><span className="chip-dot" />Certifications</span>
-            <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
-              Audited. Certified. <span className="text-gradient">Verified.</span>
+          <div className="max-w-3xl mx-auto rounded-2xl border border-amber-400/25 bg-amber-500/[0.06] p-7">
+            <h2 className="text-lg font-semibold tracking-tight text-amber-100">
+              We are not independently certified — yet.
             </h2>
-            <p className="mt-5 text-zinc-400">
-              We've done the heavy lifting so your procurement team doesn't have to.
+            <p className="mt-3 text-sm text-zinc-300 leading-relaxed">
+              We do not hold SOC 2, ISO 27001, HIPAA or PCI-DSS certification, and we don&apos;t offer a
+              contractual uptime SLA. Plenty of companies our size put those badges on the page anyway.
+              We won&apos;t. If your procurement process requires a certification we don&apos;t have,
+              tell us — we&apos;ll say so honestly rather than waste your time.
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-            {certifications.map((c) => (
-              <div
-                key={c.name}
-                className="rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.04] to-transparent p-5 text-center hover:border-indigo-500/40 transition-colors"
-              >
-                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center text-white text-xl shadow-lg shadow-indigo-500/30">
-                  ðŸ›¡
-                </div>
-                <p className="text-sm font-semibold tracking-tight">{c.name}</p>
-                <p className="text-[10px] text-zinc-500 mt-1">{c.desc}</p>
-              </div>
-            ))}
+            <p className="mt-3 text-sm text-zinc-300 leading-relaxed">
+              What we can do is walk you through exactly how the system is built, where your data lives,
+              and who can reach it. Ask us anything.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Pillars */}
-      <section className="py-24">
+      <section className="py-20">
         <div className="container mx-auto px-5">
           <div className="max-w-3xl mb-14">
-            <span className="chip"><span className="chip-dot" />The four pillars</span>
+            <span className="chip"><span className="chip-dot" />What we actually do</span>
             <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
-              How we <span className="text-gradient">protect your data.</span>
+              The controls <span className="text-gradient">that are real.</span>
             </h2>
           </div>
 
@@ -141,73 +103,22 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      {/* Architecture */}
+      {/* CTA */}
       <section className="py-24 bg-[#161823] border-y border-white/[0.06]">
         <div className="container mx-auto px-5">
-          <div className="max-w-3xl mx-auto text-center mb-14">
-            <span className="chip"><span className="chip-dot" />Architecture</span>
-            <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
-              Defense in <span className="text-gradient">depth.</span>
-            </h2>
-            <p className="mt-5 text-zinc-400">
-              Every layer hardened, every layer monitored.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto rounded-2xl border border-white/[0.08] bg-[#15161F] p-6 md:p-10">
-            <div className="space-y-3">
-              {[
-                ["Edge", "Cloudflare WAF · DDoS protection · Bot mitigation", "from-indigo-500/30 to-blue-500/10"],
-                ["Application", "OWASP Top 10 hardened · Per-tenant isolation · Rate limiting", "from-violet-500/30 to-indigo-500/10"],
-                ["Data", "AES-256 at rest · TLS 1.3 · BYOK · Field-level encryption", "from-cyan-500/30 to-violet-500/10"],
-                ["Infrastructure", "AWS multi-AZ · Private VPC · Zero-trust networking", "from-emerald-500/30 to-cyan-500/10"],
-                ["People", "Background-checked · Annual training · Least-privilege access", "from-amber-500/30 to-pink-500/10"],
-              ].map(([layer, desc, grad]) => (
-                <div
-                  key={layer}
-                  className={`relative rounded-xl border border-white/[0.06] bg-gradient-to-r ${grad} p-4 flex items-center gap-5`}
-                >
-                  <span className="font-mono text-xs uppercase tracking-[0.15em] text-zinc-300 w-32 shrink-0">{layer}</span>
-                  <span className="text-sm text-zinc-200">{desc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust resources */}
-      <section className="py-24">
-        <div className="container mx-auto px-5">
-          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {[
-              { title: "Trust Center", desc: "Live status, security posture, current certifications.", cta: "Visit trust center" },
-              { title: "Security Whitepaper", desc: "30-page deep dive on architecture, controls, and processes.", cta: "Download PDF" },
-              { title: "Vulnerability Disclosure", desc: "Report a vulnerability via our coordinated disclosure program.", cta: "Report → security@" },
-            ].map((r) => (
-              <div key={r.title} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7">
-                <h3 className="text-lg font-semibold tracking-tight">{r.title}</h3>
-                <p className="mt-2.5 text-sm text-zinc-400 leading-relaxed">{r.desc}</p>
-                <a href="#" className="mt-5 inline-flex items-center gap-2 text-sm text-indigo-300 hover:text-indigo-200">
-                  {r.cta} <span aria-hidden>→</span>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="pb-28">
-        <div className="container mx-auto px-5">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-600/15 via-violet-600/10 to-transparent p-10 md:p-14 text-center max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-              Procurement got <span className="text-gradient">questions?</span>
+              Found a vulnerability?
             </h2>
-            <p className="mt-4 text-zinc-400">Our security team responds within one business day.</p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/contact" className="btn-primary">Talk to security</Link>
-              <Link href="/demo" className="btn-secondary">Book a demo</Link>
+            <p className="mt-4 text-zinc-400">
+              Email us and we&apos;ll look at it. We don&apos;t have a bug bounty programme, but we
+              will always credit you and fix what you find.
+            </p>
+            <div className="mt-8">
+              <Link href="/contact" className="btn-primary">
+                Get in touch
+                <span aria-hidden>→</span>
+              </Link>
             </div>
           </div>
         </div>

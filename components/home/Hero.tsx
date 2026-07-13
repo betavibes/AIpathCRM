@@ -56,18 +56,18 @@ export default function Hero() {
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 animate-slide-up"
             style={{ animationDelay: "240ms", animationFillMode: "both" }}
           >
-            <Link href="/demo" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               Book a Demo
               <span aria-hidden>→</span>
             </Link>
             <Link href="/contact" className="btn-secondary">
-              Start Free Trial
+              Talk to us
             </Link>
             <Link href="/features" className="btn-ghost ml-2">
               <span className="inline-flex items-center justify-center w-7 h-7 rounded-full border border-white/15 bg-white/5">
                 ▶
               </span>
-              Watch 90-sec tour
+              Explore the product
             </Link>
           </div>
 
@@ -77,19 +77,32 @@ export default function Hero() {
             style={{ animationDelay: "400ms", animationFillMode: "both" }}
           >
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">
-              Trusted by 1,200+ teams across 40 countries
+              Live in production today
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-60">
-              {["Acme", "Globex", "Initech", "Umbrella", "Hooli", "Stark", "Wayne"].map(
-                (name) => (
-                  <span
-                    key={name}
-                    className="text-zinc-400 font-semibold tracking-wider text-sm"
-                  >
-                    {name.toUpperCase()}
-                  </span>
-                )
-              )}
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+              <a
+                href="https://kiranfabricators.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-300 hover:text-white font-semibold tracking-wide text-sm transition-colors"
+              >
+                Kiran Fabricators
+              </a>
+              <span className="text-zinc-700">·</span>
+              <a
+                href="https://bharatcostume.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-300 hover:text-white font-semibold tracking-wide text-sm transition-colors"
+              >
+                Bharat Costumes
+              </a>
+              <Link
+                href="/case-studies"
+                className="text-indigo-300 hover:text-indigo-200 text-sm font-semibold transition-colors"
+              >
+                See the work →
+              </Link>
             </div>
           </div>
         </div>

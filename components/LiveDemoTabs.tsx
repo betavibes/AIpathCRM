@@ -28,7 +28,7 @@ const tabs: Tab[] = [
     icon: "✦",
     tagline: "The CRM that gets you started fast.",
     blurb:
-      "Everything you need to grow, right from day one. AI for small businesses — easy setup, no cost.",
+      "Everything you need to get started — set up around how your business actually works.",
     Component: GetStartedDemo,
     color: "blue",
   },
@@ -83,7 +83,7 @@ const tabs: Tab[] = [
     icon: "🏢",
     tagline: "The premium ERP for growing teams.",
     blurb:
-      "Real-time visibility, flexible scaling, and faster decisions. Replace SAP/NetSuite at a fraction of the cost.",
+      "Real-time visibility across purchase, sales and accounts — without stitching three systems together.",
     Component: BusinessOneDemo,
     color: "blue",
   },
@@ -210,7 +210,7 @@ export default function LiveDemoTabs() {
           className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border ${chipColors[active.color]}`}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-          Live demo · {active.label}
+          Interactive demo · {active.label}
         </span>
         <h2 className="mt-5 text-3xl md:text-5xl font-semibold tracking-tight text-zinc-100 leading-tight">
           {active.tagline}
@@ -227,7 +227,7 @@ export default function LiveDemoTabs() {
 
       {/* Inline CTA */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-        <Link href="/demo" className="btn-primary">
+        <Link href="/contact" className="btn-primary">
           Book a 30-min walkthrough
           <span aria-hidden>→</span>
         </Link>

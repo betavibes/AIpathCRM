@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 export const metadata = {
   title: "Contact — AIpath CRM",
   description:
-    "Talk to the AIpath team. Book a demo, ask a question, or start a free trial. Average response under 4 hours.",
+    "Talk to the AIpath team. Book a demo or ask us a question — we reply within one business day.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
       <SiteNav />
 
       <PageHero
-        eyebrow="We respond within 4 hours"
+        eyebrow="We reply within one business day"
         title={
           <>
             Let's build your <span className="text-gradient">business OS.</span>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                 </button>
 
                 <p className="text-xs text-zinc-500 text-center">
-                  By submitting, you agree to our <a className="underline hover:text-zinc-300" href="#">Privacy Policy</a>.
+                  We use what you send us only to reply to you. We do not sell or share your details.
                 </p>
               </form>
             </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-5 inline-flex items-center gap-2 text-xs text-zinc-500">
                   <span className="chip-dot" />
-                  Average response time: under 4 hours
+                  We reply within one business day
                 </div>
               </div>
 

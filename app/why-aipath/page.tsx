@@ -30,15 +30,15 @@ const reasons = [
   },
   {
     icon: "—²",
-    title: "Enterprise-grade by default",
+    title: "Honest about security",
     body:
-      "SOC 2, ISO 27001, GDPR, granular RBAC, audit logs, 99.99% SLA. The same controls Fortune 500s ship in week one.",
+      "Encryption in transit and at rest, role-based access and audit logs. No certification badges we haven't earned — ask us and we'll tell you exactly what we do and don't have.",
   },
   {
     icon: "●",
-    title: "Setup in days, not quarters",
+    title: "We set it up with you",
     body:
-      "Native importers from Salesforce, HubSpot, Zoho, NetSuite. White-glove onboarding included on every plan.",
+      "We import your existing data, configure the modules around how you actually work, and stay on the phone until it runs.",
   },
   {
     icon: "—¼",

@@ -5,12 +5,11 @@ import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/features", label: "Product" },
   { href: "/live-demo", label: "Live Demo", highlight: true },
   { href: "/solutions", label: "Solutions" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/resources", label: "Resources" },
-  { href: "/about", label: "Company" },
+  { href: "/case-studies", label: "Case Studies" },
 ];
 
 export default function SiteNav() {
@@ -37,37 +36,39 @@ export default function SiteNav() {
           <Logo size="md" />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-zinc-300">
-          {links.map((l) => (
-            <Link
-              key={l.label}
-              href={l.href}
-              className={`relative transition-colors flex items-center gap-1.5 ${
-                l.highlight
-                  ? "text-emerald-300 hover:text-emerald-200"
-                  : "hover:text-white"
-              }`}
-            >
-              {l.highlight && (
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              )}
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden lg:flex items-center gap-9">
+          <nav className="flex items-center gap-7 text-sm font-medium text-zinc-300">
+            {links.map((l) => (
+              <Link
+                key={l.label}
+                href={l.href}
+                className={`relative transition-colors flex items-center gap-1.5 ${
+                  l.highlight
+                    ? "text-emerald-300 hover:text-emerald-200"
+                    : "hover:text-white"
+                }`}
+              >
+                {l.highlight && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                )}
+                {l.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="https://aipath-one.vercel.app/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ghost"
-          >
-            Sign in
-          </a>
-          <Link href="/demo" className="btn-primary !py-2.5 !px-5 text-sm">
-            Book a Demo
-          </Link>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://one.aipathcrm.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost"
+            >
+              Sign in
+            </a>
+            <Link href="/contact" className="btn-primary !py-2.5 !px-5 text-sm">
+              Book a Demo
+            </Link>
+          </div>
         </div>
 
         <button
@@ -99,7 +100,7 @@ export default function SiteNav() {
           </ul>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <a
-              href="https://aipath-one.vercel.app/login"
+              href="https://one.aipathcrm.com"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary !py-2.5 !text-sm"
@@ -107,7 +108,7 @@ export default function SiteNav() {
             >
               Sign in
             </a>
-            <Link href="/demo" className="btn-primary !py-2.5 !text-sm">
+            <Link href="/contact" className="btn-primary !py-2.5 !text-sm">
               Book Demo
             </Link>
           </div>

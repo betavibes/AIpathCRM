@@ -8,11 +8,11 @@ const kpis = [
 ];
 
 const txns = [
-  { ref: "INV-2841", party: "Acme Corp", amt: "₹4,80,000", status: "Paid", color: "emerald" },
-  { ref: "INV-2840", party: "Globex Ltd", amt: "₹2,15,000", status: "Pending", color: "amber" },
-  { ref: "PO-1922", party: "Stark Supplies", amt: "₹1,20,000", status: "Approved", color: "indigo" },
-  { ref: "INV-2839", party: "Hooli", amt: "₹6,25,000", status: "Paid", color: "emerald" },
-  { ref: "INV-2838", party: "Initech", amt: "₹95,000", status: "Overdue", color: "rose" },
+  { ref: "INV-2841", party: "Sunrise Industries", amt: "₹4,80,000", status: "Paid", color: "emerald" },
+  { ref: "INV-2840", party: "Orbit Traders", amt: "₹2,15,000", status: "Pending", color: "amber" },
+  { ref: "PO-1922", party: "Meridian Supplies", amt: "₹1,20,000", status: "Approved", color: "indigo" },
+  { ref: "INV-2839", party: "Vertex", amt: "₹6,25,000", status: "Paid", color: "emerald" },
+  { ref: "INV-2838", party: "Lakeview Co", amt: "₹95,000", status: "Overdue", color: "rose" },
 ];
 
 const statusColors: Record<string, string> = {

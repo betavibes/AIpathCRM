@@ -156,12 +156,12 @@ export default function BusinessSystemHero() {
       <div className="relative flex items-center justify-between px-4 md:px-5 py-2.5 border-b border-white/[0.06] bg-black/30 backdrop-blur">
         <div className="flex items-center gap-3">
           <span className="text-[10px] md:text-xs text-zinc-200 font-semibold flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            AIpath Business OS · Live
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            AIpath Business OS
           </span>
           <span className="hidden md:inline text-[10px] text-zinc-500">·</span>
-          <span className="hidden md:inline text-[10px] text-zinc-400">
-            247 users active across 12 branches
+          <span className="hidden md:inline text-[10px] text-zinc-500">
+            Sample data — for illustration
           </span>
         </div>
         <span className="text-[9px] md:text-[10px] text-zinc-500 font-mono">
@@ -214,7 +214,7 @@ export default function BusinessSystemHero() {
       {/* Bottom activity ticker */}
       <div className="relative px-4 md:px-5 py-2 border-t border-white/[0.06] bg-black/30 flex items-center gap-4 overflow-hidden">
         <span className="text-[10px] text-emerald-300 font-bold whitespace-nowrap">
-          ▲ LIVE FEED
+          ▲ SAMPLE ACTIVITY
         </span>
         <div className="flex gap-5 text-[10px] text-zinc-400 overflow-hidden whitespace-nowrap animate-marquee">
           <span>● Order #ORD-9214 · ₹49,000 · WhatsApp</span>

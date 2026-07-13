@@ -14,10 +14,10 @@ const months = ["1", "5", "10", "15", "20", "25", "30"];
 const monthBars = [40, 65, 50, 78, 62, 88, 92, 70, 85, 95, 58, 80, 72, 90, 100];
 
 const recentDeals = [
-  { name: "Acme Corp", amt: "₹4.85L", channel: "WhatsApp", channelColor: "bg-emerald-500", status: "Won", statusColor: "emerald" },
-  { name: "Globex Ltd", amt: "₹3.20L", channel: "Email", channelColor: "bg-indigo-500", status: "Won", statusColor: "emerald" },
-  { name: "Stark Industries", amt: "₹2.95L", channel: "Phone", channelColor: "bg-violet-500", status: "Active", statusColor: "blue" },
-  { name: "Wayne Enterprises", amt: "₹1.85L", channel: "WhatsApp", channelColor: "bg-emerald-500", status: "Won", statusColor: "emerald" },
+  { name: "Sunrise Industries", amt: "₹4.85L", channel: "WhatsApp", channelColor: "bg-emerald-500", status: "Won", statusColor: "emerald" },
+  { name: "Orbit Traders", amt: "₹3.20L", channel: "Email", channelColor: "bg-indigo-500", status: "Won", statusColor: "emerald" },
+  { name: "Meridian Steel", amt: "₹2.95L", channel: "Phone", channelColor: "bg-violet-500", status: "Active", statusColor: "blue" },
+  { name: "Northwind Traders", amt: "₹1.85L", channel: "WhatsApp", channelColor: "bg-emerald-500", status: "Won", statusColor: "emerald" },
 ];
 
 const statusBadge: Record<string, string> = {
@@ -53,15 +53,15 @@ export default function SalesDemo() {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:gap-5 text-xs md:text-sm">
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-emerald-200/60 shadow-sm">
               <span className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-white text-[10px]">⏱</span>
-              <span className="font-semibold text-slate-800">Save 8+ hrs/week</span>
+              <span className="font-semibold text-slate-800">Less manual data entry</span>
             </span>
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-emerald-200/60 shadow-sm">
               <span className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-white text-[10px]">✓</span>
-              <span className="font-semibold text-slate-800">3.4× pipeline velocity</span>
+              <span className="font-semibold text-slate-800">See every deal in one place</span>
             </span>
             <span className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-3 py-1.5 rounded-full border border-emerald-200/60 shadow-sm">
               <span className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-white text-[10px]">🚀</span>
-              <span className="font-semibold text-slate-800">Close deals 2× faster</span>
+              <span className="font-semibold text-slate-800">Follow-ups that don't slip</span>
             </span>
           </div>
         </div>
@@ -183,12 +183,12 @@ export default function SalesDemo() {
             {/* Trust strip */}
             <div className="rounded-xl bg-slate-900 text-white p-3 md:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg">
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
-                <span className="inline-flex items-center gap-2"><span className="text-emerald-400">🛡</span> Trusted by 1,200+ teams</span>
-                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-emerald-400">⏱</span> Save 8+ hrs / week</span>
-                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-emerald-400">📈</span> Win 2× more deals</span>
+                <span className="inline-flex items-center gap-2"><span className="text-emerald-400">🛡</span> Sample data — for illustration</span>
+                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-emerald-400">⏱</span> CRM · Deals · AI scoring</span>
+                <span className="inline-flex items-center gap-2 opacity-90"><span className="text-emerald-400">📈</span> Try it with your own data</span>
               </div>
-              <a href="/demo" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
-                Start Free Trial →
+              <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
+                Book a demo →
               </a>
             </div>
           </div>
