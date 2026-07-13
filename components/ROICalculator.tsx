@@ -21,7 +21,7 @@ type Sliders = {
   hourlyCost: number;
 };
 
-const aipathPerUser = 499; // matches Scale plan
+const aipathPerUser = 499; // Growth plan, per user / month
 
 function compute({ users, legacyPerUser, hoursSaved, hourlyCost }: Sliders) {
   const legacyMonthly = users * legacyPerUser;
@@ -168,13 +168,13 @@ export default function ROICalculator() {
         <div className="space-y-4">
           {/* Hero result */}
           <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-600/15 via-violet-600/10 to-transparent p-6">
-            <p className="text-xs uppercase tracking-[0.15em] text-indigo-200">Annual savings</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-indigo-200">Estimated annual saving</p>
             <p className="mt-2 text-5xl font-semibold tracking-tight text-gradient">
               {fmtINRshort(r.annualSavings)}
             </p>
             <div className="mt-4 grid grid-cols-2 gap-3 text-xs">
               <div className="rounded-lg bg-white/[0.04] border border-white/[0.06] p-3">
-                <p className="text-zinc-500">Monthly savings</p>
+                <p className="text-zinc-500">Monthly saving</p>
                 <p className="text-base font-semibold mt-1">{fmtINRshort(r.monthlySavings)}</p>
               </div>
               <div className="rounded-lg bg-white/[0.04] border border-white/[0.06] p-3">
@@ -182,6 +182,10 @@ export default function ROICalculator() {
                 <p className="text-base font-semibold mt-1">{r.paybackMonths.toFixed(1)} mo</p>
               </div>
             </div>
+            <p className="mt-4 text-[11px] leading-relaxed text-zinc-400">
+              This is an estimate based on the numbers you entered — not a measured result or a promise.
+              Your actual saving depends on your team and your processes.
+            </p>
           </div>
 
           {/* Breakdown */}
@@ -219,7 +223,7 @@ export default function ROICalculator() {
             href="/demo"
             className="btn-primary w-full justify-center"
           >
-            Lock in these savings — book a demo
+            Talk to us about your numbers
           </Link>
         </div>
       </div>

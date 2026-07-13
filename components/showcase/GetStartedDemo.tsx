@@ -86,7 +86,7 @@ function LaptopMockup() {
                     🏠 Home
                   </div>
                   <div className="flex-1 max-w-md h-7 rounded-md bg-white border border-slate-200 flex items-center px-2 text-[10px] text-slate-400">
-                    🔍 Search Salesforce
+                    🔍 Search
                   </div>
                   <div className="text-slate-400 text-sm">🔔 ⚙</div>
                   <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-300 to-blue-500" />
@@ -115,9 +115,9 @@ function LaptopMockup() {
                   <div className="rounded-lg border border-slate-200 bg-white p-2.5">
                     <p className="text-[8px] text-slate-500 mb-1.5 font-semibold">Top deals</p>
                     {[
-                      [78, "Acme"],
-                      [62, "Globex"],
-                      [44, "Initech"],
+                      [78, "Sunrise"],
+                      [62, "Orbit"],
+                      [44, "Lakeview Co"],
                     ].map(([w, n], i) => (
                       <div key={i} className="flex items-center gap-1 mb-1">
                         <span className="text-[7px] text-slate-500 w-9">{n}</span>

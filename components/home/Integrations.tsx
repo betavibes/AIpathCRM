@@ -16,7 +16,8 @@ export default function Integrations() {
             Connects to <span className="text-gradient">everything</span> you already use.
           </h2>
           <p className="mt-5 text-zinc-400">
-            100+ native integrations. A modern API for the rest. Your data stays unified, automatically.
+            We connect AIpath to the tools you already run on — and build the integration if it
+            doesn&apos;t exist yet. Tell us your stack and we&apos;ll tell you straight what we can wire up.
           </p>
         </div>
 

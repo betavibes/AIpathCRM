@@ -9,8 +9,6 @@ const links = [
   { href: "/live-demo", label: "Live Demo", highlight: true },
   { href: "/solutions", label: "Solutions" },
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/resources", label: "Resources" },
-  { href: "/about", label: "Company" },
 ];
 
 export default function SiteNav() {
@@ -58,7 +56,7 @@ export default function SiteNav() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="https://aipath-one.vercel.app/login"
+            href="https://one.aipathcrm.com"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-ghost"
@@ -99,7 +97,7 @@ export default function SiteNav() {
           </ul>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <a
-              href="https://aipath-one.vercel.app/login"
+              href="https://one.aipathcrm.com"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary !py-2.5 !text-sm"

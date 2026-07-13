@@ -201,7 +201,7 @@ export default function WhatsAppAIDemo() {
             { v: "24/7", l: "Instant response" },
             { v: "0", l: "Manual data entry" },
             { v: "8 langs", l: "Including Hindi & Tamil" },
-            { v: "62%", l: "More qualified leads" },
+            { v: "Live", l: "Running at Kiran Fabricators" },
           ].map((s) => (
             <div key={s.l} className="bg-white/80 backdrop-blur rounded-xl p-4 border border-emerald-100 text-center shadow-sm">
               <p className="text-2xl font-bold text-emerald-600">{s.v}</p>

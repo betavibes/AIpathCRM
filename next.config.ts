@@ -12,6 +12,24 @@ const nextConfig: NextConfig = {
         destination: "/contact",
         permanent: false,
       },
+      // The Company (/about) page was removed. Old links land on Why AIpath.
+      {
+        source: "/about",
+        destination: "/why-aipath",
+        permanent: false,
+      },
+      // The blog was removed — every post was fabricated. Restore real posts
+      // under app/resources/ and delete these two rules to bring it back.
+      {
+        source: "/resources",
+        destination: "/case-studies",
+        permanent: false,
+      },
+      {
+        source: "/resources/:slug*",
+        destination: "/case-studies",
+        permanent: false,
+      },
     ];
   },
 };

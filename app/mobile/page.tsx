@@ -23,7 +23,7 @@ const features = [
   },
   {
     title: "GPS attendance",
-    body: "Selfie + geofence verified check-ins. End proxy attendance, fraud-proof field operations.",
+    body: "Selfie + geofence verified check-ins, to make proxy attendance far harder.",
     icon: "◉",
   },
   {
@@ -58,8 +58,8 @@ export default function MobilePage() {
         }
         subtitle="Native apps engineered for sales reps, technicians, ops teams, and executives — anyone who doesn't sit at a desk all day."
       >
-        <a className="btn-primary" href="#">—² App Store</a>
-        <a className="btn-secondary" href="#">—¶ Google Play</a>
+        <Link className="btn-primary" href="/demo">See it in a demo</Link>
+        <Link className="btn-secondary" href="/contact">Ask about early access</Link>
       </PageHero>
 
       {/* Hero phones */}
@@ -159,11 +159,11 @@ export default function MobilePage() {
                 <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
                   Download AIpath <span className="text-gradient">today.</span>
                 </h2>
-                <p className="mt-3 text-zinc-400">Free for all customers. Available on both stores.</p>
+                <p className="mt-3 text-zinc-400">Deployed directly to your team today. Public app-store listings are on the way — ask us for access.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a className="btn-primary" href="#">—² App Store</a>
-                <a className="btn-secondary" href="#">—¶ Google Play</a>
+                <Link className="btn-primary" href="/demo">See it in a demo</Link>
+                <Link className="btn-secondary" href="/contact">Ask about early access</Link>
               </div>
             </div>
           </div>

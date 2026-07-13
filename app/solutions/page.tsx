@@ -15,7 +15,6 @@ const industries = [
     name: "Manufacturing",
     pain: "Production schedules slip. Inventory blind spots. Quality data scattered.",
     solution: "Shop-floor MES + MRP + quality + finance — unified.",
-    metric: "32% reduction in production delays",
     accent: "from-indigo-500/20 to-blue-500/5",
     capabilities: ["Production planning (MRP)", "Shop floor (MES)", "Quality control", "Multi-warehouse inventory", "Vendor mgmt"],
   },
@@ -24,7 +23,6 @@ const industries = [
     name: "SaaS & Tech",
     pain: "MRR scattered across tools. PLG funnel invisible. Churn is a surprise.",
     solution: "Subscription CRM + revenue ops + product analytics in one stack.",
-    metric: "3.4à— faster pipeline velocity",
     accent: "from-violet-500/20 to-pink-500/5",
     capabilities: ["MRR/ARR tracking", "PLG funnels", "Churn prediction", "Customer health scores", "Expansion forecasting"],
   },
@@ -32,17 +30,15 @@ const industries = [
     icon: "ðŸ©º",
     name: "Healthcare",
     pain: "Patient flow chaos. Compliance overhead. Billing leakage.",
-    solution: "HIPAA-compliant patient CRM + scheduling + claims + audit.",
-    metric: "44% less admin time per provider",
+    solution: "Patient CRM + scheduling + claims + a full audit trail.",
     accent: "from-cyan-500/20 to-indigo-500/5",
-    capabilities: ["Patient 360", "Appointment scheduling", "HIPAA-grade audit", "Insurance claims", "Lab integrations"],
+    capabilities: ["Patient 360", "Appointment scheduling", "Audit trail", "Insurance claims", "Lab integrations"],
   },
   {
     icon: "ðŸ›",
     name: "Retail & E-commerce",
     pain: "Omnichannel inventory mess. Returns nightmare. Customer 360 is fiction.",
     solution: "Omnichannel POS + inventory + loyalty + AI recommendations.",
-    metric: "+18% repeat purchase rate",
     accent: "from-pink-500/20 to-amber-500/5",
     capabilities: ["Omnichannel POS", "Real-time inventory", "Loyalty programs", "AI product recommendations", "Returns workflow"],
   },
@@ -51,7 +47,6 @@ const industries = [
     name: "Real Estate",
     pain: "Leads leak. Site visits unmanaged. Documentation chaos.",
     solution: "Listings + leads + site visits + contracts + e-sign — together.",
-    metric: "2.6à— lead-to-close conversion",
     accent: "from-emerald-500/20 to-cyan-500/5",
     capabilities: ["Listing CRM", "Site visit scheduling", "Document mgmt", "E-sign integration", "Builder collaboration"],
   },
@@ -60,7 +55,6 @@ const industries = [
     name: "Professional Services",
     pain: "Project margins guessed. Time tracking ignored. Billing delayed.",
     solution: "Project management + time + expenses + billing + retainers.",
-    metric: "27% margin improvement",
     accent: "from-amber-500/20 to-rose-500/5",
     capabilities: ["Project planning", "Time tracking", "Expense capture", "Retainer billing", "Resource utilization"],
   },
@@ -105,11 +99,8 @@ export default function SolutionsPage() {
               >
                 <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/5 blur-3xl pointer-events-none" />
                 <div className="relative p-8">
-                  <div className="flex items-start justify-between mb-5">
+                  <div className="mb-5">
                     <div className="text-4xl">{i.icon}</div>
-                    <span className="text-[10px] font-semibold text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
-                      {i.metric}
-                    </span>
                   </div>
                   <h3 className="text-2xl font-semibold tracking-tight">{i.name}</h3>
 
@@ -185,8 +176,8 @@ export default function SolutionsPage() {
                 Already on Salesforce, HubSpot, Zoho, or NetSuite?
               </h2>
               <p className="mt-5 text-lg text-zinc-400">
-                We have native importers for 30+ platforms. Most teams are fully migrated in
-                2—4 weeks with zero downtime.
+                We migrate you off them. Timelines depend on how much data you have and how clean
+                it is — we scope it with you before you commit to anything.
               </p>
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <Link href="/demo" className="btn-primary">Plan migration</Link>
@@ -195,7 +186,7 @@ export default function SolutionsPage() {
             </div>
             <div>
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-                <p className="text-xs uppercase tracking-[0.15em] text-zinc-500 mb-4">Migration partners</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-zinc-500 mb-4">We migrate from</p>
                 <div className="grid grid-cols-3 gap-3">
                   {["Salesforce", "HubSpot", "Zoho", "NetSuite", "Pipedrive", "Freshworks", "Monday", "ClickUp", "Asana"].map((p) => (
                     <div

@@ -28,7 +28,7 @@ const tiers = [
       "Staff Mobile App",
       "Admin Web Dashboard",
       "Customer Notes & History",
-      "Unlimited Support",
+      "Support included",
     ],
   },
   {
@@ -238,10 +238,10 @@ export default function PricingPage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  ["Lowest cost", "Most affordable AI-CRM in India."],
+                  ["Clear pricing", "Priced for Indian businesses, no platform tax."],
                   ["No hidden fees", "What you see is what you pay."],
                   ["Made for India", "Built for Indian business workflows."],
-                  ["24à—7 support", "Included with every plan."],
+                  ["Real support", "You talk to the people who built it."],
                   ["Free training", "We onboard your team end-to-end."],
                   ["Instant setup", "Start in minutes, not weeks."],
                 ].map(([t, d]) => (
@@ -263,14 +263,14 @@ export default function PricingPage() {
             <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-violet-600/20 blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-indigo-600/20 blur-3xl" />
             <h2 className="relative text-3xl md:text-4xl font-semibold tracking-tight">
-              Start free. <span className="text-gradient">No credit card needed.</span>
+              Talk to us. <span className="text-gradient">We will scope it honestly.</span>
             </h2>
             <p className="relative mt-4 text-zinc-400">
-              Join thousands of businesses already running on AIpath.
+              Tell us what you want to run better and we will come back with a plan and an estimate.
             </p>
             <div className="relative mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/contact" className="btn-primary">
-                Start 7-day free trial
+                Get a free consultation
               </Link>
               <Link href="/contact" className="btn-secondary">
                 Schedule live demo

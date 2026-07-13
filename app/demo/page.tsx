@@ -27,14 +27,6 @@ const steps = [
   },
 ];
 
-const slots = [
-  ["Mon, 18 Aug", ["10:00", "11:30", "14:00", "15:30", "17:00"]],
-  ["Tue, 19 Aug", ["09:30", "11:00", "13:00", "14:30", "16:00"]],
-  ["Wed, 20 Aug", ["10:00", "12:00", "15:00"]],
-  ["Thu, 21 Aug", ["09:00", "10:30", "13:30", "15:00", "16:30"]],
-  ["Fri, 22 Aug", ["10:00", "11:30", "14:00"]],
-] as const;
-
 export default function DemoPage() {
   return (
     <main className="min-h-screen bg-[#0E0F1A] text-white overflow-x-hidden">
@@ -58,35 +50,36 @@ export default function DemoPage() {
             <div className="lg:col-span-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7 md:p-9">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-zinc-500">Step 1 of 2</p>
-                  <h2 className="text-2xl font-semibold tracking-tight mt-1">Choose a time</h2>
+                  <p className="text-xs uppercase tracking-[0.15em] text-zinc-500">Book a demo</p>
+                  <h2 className="text-2xl font-semibold tracking-tight mt-1">Tell us when suits you</h2>
                 </div>
                 <div className="text-xs text-zinc-500 font-mono px-3 py-1.5 rounded-md border border-white/[0.06] bg-white/[0.02]">
                   GMT +5:30 (IST)
                 </div>
               </div>
 
-              <div className="space-y-5">
-                {slots.map(([day, times]) => (
-                  <div key={day} className="">
-                    <p className="text-sm font-semibold text-zinc-200 mb-2.5">{day}</p>
-                    <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
-                      {times.map((t) => (
-                        <button
-                          key={t}
-                          className="px-3 py-2.5 rounded-lg text-sm border border-white/[0.08] bg-white/[0.02] hover:bg-indigo-500/15 hover:border-indigo-500/40 hover:text-white transition-all text-zinc-300"
-                        >
-                          {t}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              <p className="text-zinc-400 leading-relaxed">
+                We run demos Monday to Saturday, 10:00–19:00 IST. Send us a couple of times that work
+                for you and we&apos;ll confirm by email — a real person reads every request and replies
+                within one business day.
+              </p>
+
+              <div className="mt-7 flex flex-col sm:flex-row gap-3">
+                <Link href="/contact" className="btn-primary">
+                  Request a demo
+                  <span aria-hidden>→</span>
+                </Link>
+                <a href="https://wa.me/919695974444" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  Message us on WhatsApp
+                </a>
               </div>
 
-              <div className="mt-7 pt-6 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-500">
-                <span>Don't see a time that works?</span>
-                <Link href="/contact" className="text-indigo-300 hover:text-indigo-200">Request a custom slot →</Link>
+              <div className="mt-7 pt-6 border-t border-white/[0.06] text-xs text-zinc-500">
+                Prefer to look around first? The{" "}
+                <Link href="/live-demo" className="text-indigo-300 hover:text-indigo-200">
+                  live demo
+                </Link>{" "}
+                needs no signup.
               </div>
             </div>
 
@@ -110,27 +103,44 @@ export default function DemoPage() {
               <div className="rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-600/15 via-violet-600/10 to-transparent p-7 relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-violet-600/20 blur-3xl" />
                 <div className="relative">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-violet-500" />
-                    <div>
-                      <p className="text-sm font-semibold">Sarah Chen</p>
-                      <p className="text-xs text-zinc-400">Solutions Engineer</p>
-                    </div>
-                  </div>
+                  <p className="text-xs uppercase tracking-[0.15em] text-indigo-200 mb-3">
+                    What you&apos;ll actually get
+                  </p>
                   <p className="text-sm text-zinc-300 leading-relaxed">
-                    "I've onboarded 200+ teams to AIpath. I'll show you exactly what your workflow looks like — not a generic demo."
+                    A working session with the people who build the product — not a scripted pitch.
+                    We&apos;ll walk your workflow, show you what AIpath does today, and tell you
+                    plainly where it doesn&apos;t fit.
                   </p>
                 </div>
               </div>
 
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-                <p className="text-xs uppercase tracking-[0.15em] text-zinc-500 mb-3">Trusted by</p>
-                <div className="grid grid-cols-3 gap-2 opacity-70">
-                  {["Acme", "Globex", "Hooli", "Stark", "Wayne", "Initech"].map((l) => (
-                    <span key={l} className="text-xs font-semibold tracking-wider text-zinc-400 text-center">
-                      {l.toUpperCase()}
-                    </span>
-                  ))}
+                <p className="text-xs uppercase tracking-[0.15em] text-zinc-500 mb-3">
+                  Live in production
+                </p>
+                <div className="space-y-2 text-sm">
+                  <a
+                    href="https://kiranfabricators.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-zinc-300 hover:text-white transition-colors"
+                  >
+                    Kiran Fabricators — CRM, ERP &amp; WhatsApp AI
+                  </a>
+                  <a
+                    href="https://bharatcostume.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-zinc-300 hover:text-white transition-colors"
+                  >
+                    Bharat Costumes — rental platform &amp; CRM
+                  </a>
+                  <Link
+                    href="/case-studies"
+                    className="inline-block pt-1 text-indigo-300 hover:text-indigo-200 font-semibold transition-colors"
+                  >
+                    Read the case studies →
+                  </Link>
                 </div>
               </div>
             </div>
@@ -144,8 +154,8 @@ export default function DemoPage() {
           <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-5">
             {[
               ["Is the demo free?", "Yes — no charge, no obligation."],
-              ["Can I bring my team?", "Absolutely. Bring up to 10 stakeholders."],
-              ["Do you support my industry?", "Manufacturing, SaaS, healthcare, retail, services & more."],
+              ["Can I bring my team?", "Yes — bring whoever needs to be in the room."],
+              ["Do you support my industry?", "We have shipped for manufacturing and rental/retail. Ask us about yours — we will be straight with you."],
             ].map(([q, a]) => (
               <div key={q} className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5">
                 <p className="text-sm font-semibold">{q}</p>

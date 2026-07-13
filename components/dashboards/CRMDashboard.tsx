@@ -27,8 +27,8 @@ const pipeline: Stage[] = [
     value: "$320K",
     color: "from-zinc-500 to-zinc-600",
     deals: [
-      { name: "Acme Corp", amt: "$48K", logo: "AC", color: "bg-rose-500" },
-      { name: "Globex", amt: "$32K", logo: "GX", color: "bg-amber-500" },
+      { name: "Sunrise Industries", amt: "$48K", logo: "AC", color: "bg-rose-500" },
+      { name: "Orbit", amt: "$32K", logo: "GX", color: "bg-amber-500" },
     ],
   },
   {
@@ -37,8 +37,8 @@ const pipeline: Stage[] = [
     value: "$450K",
     color: "from-blue-500 to-indigo-500",
     deals: [
-      { name: "Initech", amt: "$72K", logo: "IN", color: "bg-cyan-500" },
-      { name: "Hooli", amt: "$120K", logo: "HL", color: "bg-violet-500" },
+      { name: "Lakeview Co", amt: "$72K", logo: "IN", color: "bg-cyan-500" },
+      { name: "Vertex", amt: "$120K", logo: "HL", color: "bg-violet-500" },
     ],
   },
   {
@@ -47,7 +47,7 @@ const pipeline: Stage[] = [
     value: "$280K",
     color: "from-violet-500 to-purple-500",
     deals: [
-      { name: "Stark", amt: "$95K", logo: "ST", color: "bg-rose-500", ai: true },
+      { name: "Meridian", amt: "$95K", logo: "ST", color: "bg-rose-500", ai: true },
     ],
   },
   {
@@ -56,7 +56,7 @@ const pipeline: Stage[] = [
     value: "$190K",
     color: "from-emerald-500 to-cyan-500",
     deals: [
-      { name: "Wayne", amt: "$140K", logo: "WE", color: "bg-emerald-500" },
+      { name: "Northwind", amt: "$140K", logo: "WE", color: "bg-emerald-500" },
     ],
   },
 ];

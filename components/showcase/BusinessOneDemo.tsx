@@ -156,9 +156,9 @@ export default function BusinessOneDemo() {
           <div>
             <div className="flex items-center gap-2 mb-5">
               <span className="px-3 py-1.5 rounded-md bg-blue-600 text-white text-[10px] font-bold tracking-wider">AIPATH</span>
-              <span className="text-blue-900 font-bold text-sm">Business One</span>
+              <span className="text-blue-900 font-bold text-sm">Business Suite</span>
               <span className="text-blue-300">|</span>
-              <span className="text-blue-900 font-semibold text-xs">Premium ERP</span>
+              <span className="text-blue-900 font-semibold text-xs">Sample data — for illustration</span>
             </div>
 
             <h3 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] text-slate-900">

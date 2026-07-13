@@ -96,7 +96,7 @@ export default function WorkflowBuilder() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-zinc-500">Last run: 2m ago · 312 leads/day</span>
+            <span className="text-[10px] text-zinc-500">Sample workflow — for illustration</span>
             <button className="text-[10px] px-2.5 py-1 rounded-md bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-medium">
               Test run
             </button>

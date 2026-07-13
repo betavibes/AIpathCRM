@@ -131,7 +131,7 @@ export default function WorkDelivered() {
             <span aria-hidden>→</span>
           </Link>
           <p className="text-sm text-zinc-500">
-            Delivering across <span className="text-zinc-300">India · Singapore · Australia</span>
+            Two systems, both live and in daily use.
           </p>
         </div>
       </div>
