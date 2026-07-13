@@ -227,7 +227,7 @@ export default function LiveDemoTabs() {
 
       {/* Inline CTA */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-        <Link href="/demo" className="btn-primary">
+        <Link href="/contact" className="btn-primary">
           Book a 30-min walkthrough
           <span aria-hidden>→</span>
         </Link>

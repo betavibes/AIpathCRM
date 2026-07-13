@@ -101,7 +101,7 @@ export default function CaseStudiesPage() {
         }
         subtitle="We don't sell slideware. We design, build, ship and run. Here's real work delivered for real clients — with our name in their website footer."
       >
-        <Link href="/demo" className="btn-primary">
+        <Link href="/contact" className="btn-primary">
           Book a Demo
           <span aria-hidden>→</span>
         </Link>
@@ -262,7 +262,7 @@ export default function CaseStudiesPage() {
                   Get a free consultation
                   <span aria-hidden>→</span>
                 </Link>
-                <Link href="/demo" className="btn-secondary">
+                <Link href="/contact" className="btn-secondary">
                   Book a demo
                 </Link>
               </div>

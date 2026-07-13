@@ -220,7 +220,7 @@ export default function ROICalculator() {
           </div>
 
           <Link
-            href="/demo"
+            href="/contact"
             className="btn-primary w-full justify-center"
           >
             Talk to us about your numbers

@@ -27,7 +27,7 @@ export default function StickyDemoBar() {
           ▶ Live Demo
         </Link>
         <Link
-          href="/demo"
+          href="/contact"
           className="flex-1 text-center px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-indigo-500 to-violet-500 shadow-lg shadow-indigo-900/40 active:scale-95 transition-transform"
         >
           Book Demo →

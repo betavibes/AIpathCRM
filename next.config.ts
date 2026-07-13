@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
         destination: "/why-aipath",
         permanent: false,
       },
+      // The Book-a-Demo page was removed; demo requests go through Contact.
+      {
+        source: "/demo",
+        destination: "/contact",
+        permanent: false,
+      },
       // The blog was removed — every post was fabricated. Restore real posts
       // under app/resources/ and delete these two rules to bring it back.
       {

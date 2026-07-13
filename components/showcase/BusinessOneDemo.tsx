@@ -205,7 +205,7 @@ export default function BusinessOneDemo() {
         {/* CTA pill */}
         <div className="mt-10 flex justify-center">
           <a
-            href="/demo"
+            href="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-base shadow-2xl shadow-blue-700/40 hover:shadow-blue-700/60 transition-shadow"
           >
             <span className="w-7 h-7 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">💬</span>

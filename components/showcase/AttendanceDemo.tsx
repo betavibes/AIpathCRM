@@ -202,7 +202,7 @@ export default function AttendanceDemo() {
         {/* CTA */}
         <div className="mt-12 flex justify-center">
           <a
-            href="/demo"
+            href="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-base shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 transition-shadow"
           >
             BOOK A FREE DEMO

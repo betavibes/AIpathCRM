@@ -193,7 +193,7 @@ export default function OperationsDemo() {
                 <span className="inline-flex items-center gap-2 opacity-90"><span className="text-indigo-400">⏱</span> Books, inventory and vendors in one place</span>
                 <span className="inline-flex items-center gap-2 opacity-90"><span className="text-indigo-400">💰</span> Purchase · Sales · Accounts</span>
               </div>
-              <a href="/demo" className="bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
+              <a href="/contact" className="bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
                 Book a Demo →
               </a>
             </div>

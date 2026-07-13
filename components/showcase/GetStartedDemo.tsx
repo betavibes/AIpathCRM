@@ -289,7 +289,7 @@ export default function GetStartedDemo() {
             </p>
           </div>
           <a
-            href="/demo"
+            href="/contact"
             className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-bold shadow-lg shadow-blue-700/30 hover:shadow-blue-700/50 transition-shadow whitespace-nowrap"
           >
             Sign up

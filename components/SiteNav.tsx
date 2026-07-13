@@ -63,7 +63,7 @@ export default function SiteNav() {
           >
             Sign in
           </a>
-          <Link href="/demo" className="btn-primary !py-2.5 !px-5 text-sm">
+          <Link href="/contact" className="btn-primary !py-2.5 !px-5 text-sm">
             Book a Demo
           </Link>
         </div>
@@ -105,7 +105,7 @@ export default function SiteNav() {
             >
               Sign in
             </a>
-            <Link href="/demo" className="btn-primary !py-2.5 !text-sm">
+            <Link href="/contact" className="btn-primary !py-2.5 !text-sm">
               Book Demo
             </Link>
           </div>

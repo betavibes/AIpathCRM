@@ -212,7 +212,7 @@ export default function WhatsAppAIDemo() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-3">
-          <a href="/demo" className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold shadow-xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transition-shadow">
+          <a href="/contact" className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold shadow-xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transition-shadow">
             <span>💬</span>
             Try the WhatsApp AI agent
             <span>→</span>

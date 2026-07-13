@@ -84,7 +84,7 @@ export default function SolutionsPage() {
         }
         subtitle="Pre-configured workflows, dashboards, and AI agents shaped for your vertical — never a generic template."
       >
-        <Link href="/demo" className="btn-primary">Book a Demo</Link>
+        <Link href="/contact" className="btn-primary">Book a Demo</Link>
         <Link href="/features" className="btn-secondary">Explore platform</Link>
       </PageHero>
 
@@ -127,7 +127,7 @@ export default function SolutionsPage() {
                   </div>
 
                   <Link
-                    href="/demo"
+                    href="/contact"
                     className="mt-6 inline-flex items-center gap-2 text-sm text-indigo-300 hover:text-indigo-200 transition-colors"
                   >
                     See {i.name} demo <span aria-hidden>→</span>
@@ -180,7 +180,7 @@ export default function SolutionsPage() {
                 it is — we scope it with you before you commit to anything.
               </p>
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
-                <Link href="/demo" className="btn-primary">Plan migration</Link>
+                <Link href="/contact" className="btn-primary">Plan migration</Link>
                 <Link href="/contact" className="btn-secondary">Talk to sales</Link>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function SolutionsPage() {
               Our platform is configurable. Tell us about your business — we'll show you how AIpath fits.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/demo" className="btn-primary">Book a Demo</Link>
+              <Link href="/contact" className="btn-primary">Book a Demo</Link>
               <Link href="/contact" className="btn-secondary">Talk to us</Link>
             </div>
           </div>

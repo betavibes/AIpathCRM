@@ -58,7 +58,7 @@ export default function MobilePage() {
         }
         subtitle="Native apps engineered for sales reps, technicians, ops teams, and executives — anyone who doesn't sit at a desk all day."
       >
-        <Link className="btn-primary" href="/demo">See it in a demo</Link>
+        <Link className="btn-primary" href="/contact">See it in a demo</Link>
         <Link className="btn-secondary" href="/contact">Ask about early access</Link>
       </PageHero>
 
@@ -162,7 +162,7 @@ export default function MobilePage() {
                 <p className="mt-3 text-zinc-400">Deployed directly to your team today. Public app-store listings are on the way — ask us for access.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link className="btn-primary" href="/demo">See it in a demo</Link>
+                <Link className="btn-primary" href="/contact">See it in a demo</Link>
                 <Link className="btn-secondary" href="/contact">Ask about early access</Link>
               </div>
             </div>

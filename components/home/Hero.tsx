@@ -56,7 +56,7 @@ export default function Hero() {
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 animate-slide-up"
             style={{ animationDelay: "240ms", animationFillMode: "both" }}
           >
-            <Link href="/demo" className="btn-primary">
+            <Link href="/contact" className="btn-primary">
               Book a Demo
               <span aria-hidden>→</span>
             </Link>

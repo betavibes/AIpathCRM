@@ -187,7 +187,7 @@ export default function SalesDemo() {
                 <span className="inline-flex items-center gap-2 opacity-90"><span className="text-emerald-400">⏱</span> CRM · Deals · AI scoring</span>
                 <span className="inline-flex items-center gap-2 opacity-90"><span className="text-emerald-400">📈</span> Try it with your own data</span>
               </div>
-              <a href="/demo" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
+              <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold px-5 py-2 rounded-full shadow-lg hover:shadow-xl transition-shadow whitespace-nowrap">
                 Book a demo →
               </a>
             </div>

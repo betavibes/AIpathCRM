@@ -31,7 +31,7 @@ const cols = [
       { label: "Roadmap", href: "/roadmap" },
       { label: "Security", href: "/security" },
       { label: "Contact", href: "/contact" },
-      { label: "Book Demo", href: "/demo" },
+      { label: "Book a Demo", href: "/contact" },
     ],
   },
   {
@@ -65,7 +65,7 @@ export default function SiteFooter() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/demo" className="btn-primary">
+              <Link href="/contact" className="btn-primary">
                 Book a Demo
                 <span aria-hidden>→</span>
               </Link>
