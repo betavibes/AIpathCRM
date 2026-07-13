@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/features", label: "Product" },
   { href: "/live-demo", label: "Live Demo", highlight: true },
   { href: "/solutions", label: "Solutions" },
