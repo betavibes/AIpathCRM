@@ -2,6 +2,7 @@
 import SiteFooter from "@/components/SiteFooter";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { CONTACT } from "@/lib/contact";
 
 export const metadata = {
@@ -54,13 +55,6 @@ export default function ContactPage() {
                     value={CONTACT.phones[1].display}
                   />
                   <ContactRow
-                    icon={<WhatsAppIcon />}
-                    label="WhatsApp"
-                    href={CONTACT.whatsapp.href}
-                    value={CONTACT.whatsapp.display}
-                    accent="emerald"
-                  />
-                  <ContactRow
                     icon={<MailIcon />}
                     label="Email"
                     href={`mailto:${CONTACT.emails.general}`}
@@ -68,10 +62,17 @@ export default function ContactPage() {
                     sub={`Sales — ${CONTACT.emails.sales}`}
                   />
                 </div>
+
+                <div className="mt-7 pt-6 border-t border-white/[0.06]">
+                  <WhatsAppButton className="w-full" />
+                  <p className="mt-3 text-center text-xs text-zinc-500">
+                    {CONTACT.whatsapp.display}
+                  </p>
+                </div>
               </div>
 
               <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7">
-                <h3 className="text-lg font-semibold tracking-tight mb-5">Our offices</h3>
+                <h3 className="text-lg font-semibold tracking-tight mb-5">Our presence</h3>
                 <div className="space-y-5">
                   <ContactRow
                     icon={<PinIcon />}
@@ -100,20 +101,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-600/10 to-transparent p-7">
-                <h3 className="text-lg font-semibold tracking-tight">Prefer to talk?</h3>
-                <p className="mt-2 text-sm text-zinc-400">
-                  Message us on WhatsApp — it&apos;s usually the fastest way to reach us.
-                </p>
-                <a
-                  href={CONTACT.whatsapp.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary mt-5 !py-2.5 !px-5 text-sm"
-                >
-                  Chat on WhatsApp
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -146,14 +133,6 @@ function PinIcon() {
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
       <circle cx="12" cy="10" r="3" />
-    </svg>
-  );
-}
-
-function WhatsAppIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
     </svg>
   );
 }

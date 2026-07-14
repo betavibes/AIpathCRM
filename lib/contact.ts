@@ -7,12 +7,12 @@
 export const CONTACT = {
   offices: {
     singapore: {
-      label: "Singapore — Headquarters",
+      label: "Singapore",
       address: "10 Ubi Crescent, #07-52, Ubi Tech Park Lobby C",
       city: "Singapore 408564",
     },
     india: {
-      label: "India — Delivery Office",
+      label: "India",
       address: "659, Ganga Vihar",
       city: "Lucknow 226101, India",
     },
