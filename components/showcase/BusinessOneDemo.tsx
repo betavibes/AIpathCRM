@@ -215,8 +215,8 @@ export default function BusinessOneDemo() {
 
         {/* Footer contact strip */}
         <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-blue-900/80 font-medium">
-          <span className="inline-flex items-center gap-1.5">📞 +91 9695 974 444</span>
-          <span className="inline-flex items-center gap-1.5">✉ contact@aipathcrm.com</span>
+          <span className="inline-flex items-center gap-1.5">📞 +91 91694 44081</span>
+          <span className="inline-flex items-center gap-1.5">✉ Contact@aipathdiginext.com</span>
           <span className="inline-flex items-center gap-1.5">🌐 aipathcrm.com</span>
         </div>
       </div>
