@@ -39,4 +39,13 @@ export const CONTACT = {
     weekend: "Sat — Sun",
     weekendTime: "Closed",
   },
+
+  /** Live accounts, as linked from aipathdiginext.com. */
+  social: [
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/107958013/" },
+    { name: "X", href: "https://x.com/AIDiginext" },
+    { name: "Instagram", href: "https://www.instagram.com/aidiginext" },
+    { name: "YouTube", href: "https://www.youtube.com/@AIDigiNext" },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61577566715005" },
+  ],
 } as const;
