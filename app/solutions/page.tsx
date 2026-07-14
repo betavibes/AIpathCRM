@@ -61,13 +61,126 @@ const industries = [
 ];
 
 const teams = [
-  ["Sales", "Pipeline, forecasting, AI SDR agent."],
-  ["Operations", "Workflows, approvals, field ops."],
-  ["Finance", "Invoicing, reconciliation, AI close."],
-  ["HR", "Hiring, attendance, payroll, appraisals."],
-  ["Service", "Tickets, SLA, AI ticket triage."],
-  ["Marketing", "Campaigns, attribution, lead scoring."],
+  {
+    key: "sales",
+    name: "Sales",
+    hook: "Stop losing deals in a spreadsheet.",
+    pitch:
+      "Every lead, call and follow-up lands in one pipeline. AI scores what's worth chasing and drafts the next touch — so your reps spend the day selling, not typing.",
+    tags: ["Pipeline", "Forecasting", "AI follow-ups"],
+    accent: "from-indigo-500/20 to-violet-500/5",
+  },
+  {
+    key: "operations",
+    name: "Operations",
+    hook: "The work gets tracked, not chased.",
+    pitch:
+      "Approvals, tasks and field jobs move through workflows you define — with a live view of what's stuck and who's sitting on it. No more chasing updates on WhatsApp.",
+    tags: ["Workflows", "Approvals", "Field ops"],
+    accent: "from-violet-500/20 to-pink-500/5",
+  },
+  {
+    key: "finance",
+    name: "Finance",
+    hook: "Close the books without the panic.",
+    pitch:
+      "Quotes become invoices become payments — on one ledger, reconciled as they go. Month-end stops being a fire drill because nothing was left in someone's inbox.",
+    tags: ["Invoicing", "Reconciliation", "Payments"],
+    accent: "from-emerald-500/20 to-cyan-500/5",
+  },
+  {
+    key: "hr",
+    name: "HR",
+    hook: "From hire to payslip, in one place.",
+    pitch:
+      "Hiring, attendance, leave, payroll and appraisals share one employee record. Selfie and geo-verified check-ins mean field attendance you can actually trust.",
+    tags: ["Attendance", "Payroll", "Leave & appraisals"],
+    accent: "from-cyan-500/20 to-indigo-500/5",
+  },
+  {
+    key: "service",
+    name: "Service",
+    hook: "No ticket falls through.",
+    pitch:
+      "Every request — email, web or WhatsApp — becomes a tracked ticket. AI reads it, summarises it and routes it to the right person before anyone has to triage a queue.",
+    tags: ["Tickets", "SLA tracking", "AI triage"],
+    accent: "from-amber-500/20 to-rose-500/5",
+  },
+  {
+    key: "marketing",
+    name: "Marketing",
+    hook: "Know which campaigns actually pay.",
+    pitch:
+      "Because leads and revenue live in the same system, you can follow a campaign all the way to the closed deal — and stop arguing about which channel deserves the budget.",
+    tags: ["Campaigns", "Attribution", "Lead scoring"],
+    accent: "from-pink-500/20 to-amber-500/5",
+  },
 ];
+
+function TeamIcon({ name }: { name: string }) {
+  const p = {
+    width: 20,
+    height: 20,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.7,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": true,
+  } as const;
+
+  switch (name) {
+    case "sales": // rising chart
+      return (
+        <svg {...p}>
+          <path d="M3 17l5-5 4 4 8-8" />
+          <path d="M15 8h5v5" />
+        </svg>
+      );
+    case "operations": // gear
+      return (
+        <svg {...p}>
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.6 1.6 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.6 1.6 0 00-1.8-.3 1.6 1.6 0 00-1 1.5V21a2 2 0 11-4 0v-.1A1.6 1.6 0 008 19.4a1.6 1.6 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.6 1.6 0 00.3-1.8 1.6 1.6 0 00-1.5-1H2a2 2 0 110-4h.1A1.6 1.6 0 004.6 8a1.6 1.6 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.6 1.6 0 001.8.3H9a1.6 1.6 0 001-1.5V2a2 2 0 114 0v.1a1.6 1.6 0 001 1.5 1.6 1.6 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.6 1.6 0 00-.3 1.8V9a1.6 1.6 0 001.5 1H22a2 2 0 110 4h-.1a1.6 1.6 0 00-1.5 1z" />
+        </svg>
+      );
+    case "finance": // banknote
+      return (
+        <svg {...p}>
+          <rect x="2" y="6" width="20" height="12" rx="2" />
+          <circle cx="12" cy="12" r="2.5" />
+          <path d="M6 12h.01M18 12h.01" />
+        </svg>
+      );
+    case "hr": // people
+      return (
+        <svg {...p}>
+          <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+        </svg>
+      );
+    case "service": // headset
+      return (
+        <svg {...p}>
+          <path d="M4 14v-2a8 8 0 1116 0v2" />
+          <path d="M20 15a2 2 0 01-2 2h-1v-5h1a2 2 0 012 2zM4 15a2 2 0 002 2h1v-5H6a2 2 0 00-2 2z" />
+          <path d="M18 17v1a3 3 0 01-3 3h-3" />
+        </svg>
+      );
+    case "marketing": // megaphone
+      return (
+        <svg {...p}>
+          <path d="M3 11v2a1 1 0 001 1h2l5 4V6L6 10H4a1 1 0 00-1 1z" />
+          <path d="M15.5 8.5a4 4 0 010 7" />
+          <path d="M18.5 6a7 7 0 010 12" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
 
 function IndustryIcon({ name }: { name: string }) {
   const p = {
@@ -215,16 +328,47 @@ export default function SolutionsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {teams.map(([t, d]) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            {teams.map((t) => (
               <div
-                key={t}
-                className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 hover:border-indigo-500/30 transition-colors"
+                key={t.key}
+                className={`group relative rounded-2xl border border-white/[0.08] bg-gradient-to-br ${t.accent} p-7 hover:border-indigo-500/40 hover:-translate-y-1 transition-all duration-300`}
               >
-                <p className="text-sm font-semibold">{t}</p>
-                <p className="text-xs text-zinc-500 mt-1.5">{d}</p>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 text-white shadow-lg shadow-indigo-500/25">
+                    <TeamIcon name={t.key} />
+                  </span>
+                  <h3 className="text-2xl font-semibold tracking-tight text-gradient">
+                    {t.name}
+                  </h3>
+                </div>
+
+                <p className="text-base font-semibold text-zinc-100 leading-snug">
+                  {t.hook}
+                </p>
+                <p className="mt-2.5 text-sm text-zinc-400 leading-relaxed">
+                  {t.pitch}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {t.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-1 text-xs font-medium text-zinc-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/contact" className="btn-primary">
+              Tell us which team to fix first
+              <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
