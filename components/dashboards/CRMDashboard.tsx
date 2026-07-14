@@ -132,8 +132,8 @@ export default function CRMDashboard() {
                 <p className="text-[9px] text-zinc-500 uppercase tracking-[0.15em]">{s.label}</p>
                 <div className="flex items-end justify-between mt-1.5">
                   <span className="text-base font-semibold tracking-tight">{s.value}</span>
-                  <span className={`text-[9px] font-medium ${s.up ? "text-emerald-400" : "text-rose-400"}`}>
-                    {s.up ? "—²" : "—¼"} {s.trend}
+                  <span className={`text-[9px] font-medium ${s.up ? "▲" : "▼"}`}>
+                    {s.up ? "▲" : "▼"} {s.trend}
                   </span>
                 </div>
                 {/* sparkline */}

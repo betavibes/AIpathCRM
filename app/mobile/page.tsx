@@ -14,7 +14,7 @@ const features = [
   {
     title: "Native iOS & Android",
     body: "Built ground-up for each platform — not a web wrapper. Sub-second navigation, native gestures.",
-    icon: "—¦",
+    icon: "◆",
   },
   {
     title: "Offline mode",
@@ -24,22 +24,22 @@ const features = [
   {
     title: "GPS attendance",
     body: "Selfie + geofence verified check-ins, to make proxy attendance far harder.",
-    icon: "◉",
+    icon: "◇",
   },
   {
     title: "Push intelligence",
     body: "AI-curated alerts only. Approvals, escalations, deal updates — never noise.",
-    icon: "—²",
+    icon: "◈",
   },
   {
     title: "Voice + dictation",
     body: "Log calls, update deals, create tasks by voice. Built for the field.",
-    icon: "♪",
+    icon: "●",
   },
   {
     title: "Biometric security",
     body: "FaceID, TouchID, fingerprint. Enterprise SSO and MFA enforced.",
-    icon: "—¼",
+    icon: "▣",
   },
 ];
 

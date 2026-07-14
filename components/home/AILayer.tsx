@@ -72,14 +72,14 @@ export default function AILayer() {
                   <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
                   <span className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
                 </div>
-                <span className="text-xs text-zinc-500 font-mono">aipath —¸ ai-console</span>
+                <span className="text-xs text-zinc-500 font-mono">aipath › ai-console</span>
                 <span className="text-xs text-zinc-500">●</span>
               </div>
               <div className="p-6 font-mono text-sm space-y-4 min-h-[20rem]">
                 {lines.slice(0, step).map((l, i) => (
                   <div key={i} className="space-y-1.5 opacity-50">
                     <div className="flex gap-2">
-                      <span className="text-violet-400">"º</span>
+                      <span className="text-violet-400">❯</span>
                       <span className="text-zinc-300">{l.prompt}</span>
                     </div>
                     <div className="text-emerald-400 pl-4">{l.result}</div>
@@ -87,7 +87,7 @@ export default function AILayer() {
                 ))}
                 <div className="space-y-1.5">
                   <div className="flex gap-2">
-                    <span className="text-violet-400">"º</span>
+                    <span className="text-violet-400">❯</span>
                     <span className="text-zinc-100">
                       {typed}
                       <span className="inline-block w-2 h-4 bg-violet-400 align-middle ml-0.5 animate-blink" />

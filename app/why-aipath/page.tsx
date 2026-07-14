@@ -29,7 +29,7 @@ const reasons = [
       "Native iOS & Android with offline mode. Built for sales reps, technicians, and operations teams who don't sit at desks.",
   },
   {
-    icon: "—²",
+    icon: "◈",
     title: "Honest about security",
     body:
       "Encryption in transit and at rest, role-based access and audit logs. No certification badges we haven't earned — ask us and we'll tell you exactly what we do and don't have.",
@@ -41,7 +41,7 @@ const reasons = [
       "We import your existing data, configure the modules around how you actually work, and stay on the phone until it runs.",
   },
   {
-    icon: "—¼",
+    icon: "▣",
     title: "Pricing built for India and the world",
     body:
       "₹199—₹499 per user. No hidden fees, no platform tax. Predictable monthly billing with annual discounts.",

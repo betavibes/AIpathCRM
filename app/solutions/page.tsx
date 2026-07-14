@@ -11,7 +11,7 @@ export const metadata = {
 
 const industries = [
   {
-    icon: "ðŸ­",
+    icon: "factory",
     name: "Manufacturing",
     pain: "Production schedules slip. Inventory blind spots. Quality data scattered.",
     solution: "Shop-floor MES + MRP + quality + finance — unified.",
@@ -19,7 +19,7 @@ const industries = [
     capabilities: ["Production planning (MRP)", "Shop floor (MES)", "Quality control", "Multi-warehouse inventory", "Vendor mgmt"],
   },
   {
-    icon: "⚡",
+    icon: "saas",
     name: "SaaS & Tech",
     pain: "MRR scattered across tools. PLG funnel invisible. Churn is a surprise.",
     solution: "Subscription CRM + revenue ops + product analytics in one stack.",
@@ -27,7 +27,7 @@ const industries = [
     capabilities: ["MRR/ARR tracking", "PLG funnels", "Churn prediction", "Customer health scores", "Expansion forecasting"],
   },
   {
-    icon: "ðŸ©º",
+    icon: "health",
     name: "Healthcare",
     pain: "Patient flow chaos. Compliance overhead. Billing leakage.",
     solution: "Patient CRM + scheduling + claims + a full audit trail.",
@@ -35,7 +35,7 @@ const industries = [
     capabilities: ["Patient 360", "Appointment scheduling", "Audit trail", "Insurance claims", "Lab integrations"],
   },
   {
-    icon: "ðŸ›",
+    icon: "retail",
     name: "Retail & E-commerce",
     pain: "Omnichannel inventory mess. Returns nightmare. Customer 360 is fiction.",
     solution: "Omnichannel POS + inventory + loyalty + AI recommendations.",
@@ -43,7 +43,7 @@ const industries = [
     capabilities: ["Omnichannel POS", "Real-time inventory", "Loyalty programs", "AI product recommendations", "Returns workflow"],
   },
   {
-    icon: "ðŸ ",
+    icon: "realestate",
     name: "Real Estate",
     pain: "Leads leak. Site visits unmanaged. Documentation chaos.",
     solution: "Listings + leads + site visits + contracts + e-sign — together.",
@@ -51,7 +51,7 @@ const industries = [
     capabilities: ["Listing CRM", "Site visit scheduling", "Document mgmt", "E-sign integration", "Builder collaboration"],
   },
   {
-    icon: "ðŸ› ",
+    icon: "services",
     name: "Professional Services",
     pain: "Project margins guessed. Time tracking ignored. Billing delayed.",
     solution: "Project management + time + expenses + billing + retainers.",
@@ -68,6 +68,67 @@ const teams = [
   ["Service", "Tickets, SLA, AI ticket triage."],
   ["Marketing", "Campaigns, attribution, lead scoring."],
 ];
+
+function IndustryIcon({ name }: { name: string }) {
+  const p = {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.6,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": true,
+  } as const;
+
+  switch (name) {
+    case "factory": // Manufacturing
+      return (
+        <svg {...p}>
+          <path d="M2 20h20V9l-6 4V9l-6 4V4H2z" />
+          <path d="M6 20v-4M11 20v-4M16 20v-4" />
+        </svg>
+      );
+    case "saas": // SaaS & Tech
+      return (
+        <svg {...p}>
+          <rect x="2" y="4" width="20" height="13" rx="2" />
+          <path d="M8 21h8M12 17v4" />
+        </svg>
+      );
+    case "health": // Healthcare
+      return (
+        <svg {...p}>
+          <path d="M12 21s-7-4.5-7-9.5A4.5 4.5 0 0112 8a4.5 4.5 0 017 3.5c0 5-7 9.5-7 9.5z" />
+          <path d="M9 12h2l1-2 1 4 1-2h2" />
+        </svg>
+      );
+    case "retail": // Retail & E-commerce
+      return (
+        <svg {...p}>
+          <path d="M3 6h18l-1.5 13a2 2 0 01-2 1.8H6.5a2 2 0 01-2-1.8z" />
+          <path d="M8.5 6V5a3.5 3.5 0 017 0v1" />
+        </svg>
+      );
+    case "realestate": // Real Estate
+      return (
+        <svg {...p}>
+          <path d="M3 10.5L12 3l9 7.5" />
+          <path d="M5 9.5V21h14V9.5" />
+          <path d="M10 21v-6h4v6" />
+        </svg>
+      );
+    case "services": // Professional Services
+      return (
+        <svg {...p}>
+          <path d="M14.7 6.3a4 4 0 01-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 015.4-5.4l-2.6 2.6-2.1-2.1z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
 
 export default function SolutionsPage() {
   return (
@@ -100,7 +161,9 @@ export default function SolutionsPage() {
                 <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/5 blur-3xl pointer-events-none" />
                 <div className="relative p-8">
                   <div className="mb-5">
-                    <div className="text-4xl">{i.icon}</div>
+                    <div className="inline-flex w-12 h-12 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-indigo-300">
+                      <IndustryIcon name={i.icon} />
+                    </div>
                   </div>
                   <h3 className="text-2xl font-semibold tracking-tight">{i.name}</h3>
 

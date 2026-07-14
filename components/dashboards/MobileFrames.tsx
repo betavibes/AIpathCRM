@@ -105,7 +105,7 @@ function PhoneAttendance() {
         {/* Selfie area */}
         <div className="aspect-square rounded-2xl bg-gradient-to-br from-indigo-700 via-violet-700 to-pink-700 mb-3 flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.15),transparent_60%)]" />
-          <div className="relative w-16 h-16 rounded-full border-2 border-white/40 flex items-center justify-center text-3xl">ðŸ‘¤</div>
+          <div className="relative w-16 h-16 rounded-full border-2 border-white/40 flex items-center justify-center text-3xl">👤</div>
           <div className="absolute bottom-2 left-2 right-2 flex items-center gap-1.5 text-[9px] bg-black/40 backdrop-blur rounded-md px-2 py-1">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-glow" />
             GPS verified · Office HQ

@@ -78,7 +78,7 @@ export default function AnalyticsDashboard() {
             <div key={m.label} className="rounded-lg border border-white/[0.05] bg-white/[0.02] p-3">
               <p className="text-[9px] text-zinc-500 uppercase tracking-[0.15em]">{m.label}</p>
               <p className="text-lg font-semibold tracking-tight mt-1">{m.value}</p>
-              <p className="text-[9px] text-emerald-400 mt-0.5">—² {m.trend}</p>
+              <p className="text-[9px] text-emerald-400 mt-0.5">▲ {m.trend}</p>
             </div>
           ))}
         </div>

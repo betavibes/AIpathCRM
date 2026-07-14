@@ -22,7 +22,7 @@ export default function BrowserFrame({
             <span className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
           </div>
           <div className="text-[11px] text-zinc-500 font-mono px-3 py-1 rounded-md bg-white/[0.03] border border-white/[0.04]">
-            ðŸ”’ {url}
+            🔒 {url}
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-1 h-1 rounded-full bg-zinc-600" />
