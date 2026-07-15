@@ -29,13 +29,16 @@ export default function HomePage() {
       {/* 3. Three pillars — CRM · ERP · AI */}
       <Pillars />
 
-      {/* 4. The whole platform — every module, alternating showcases */}
+      {/* 4. Who it's for — industries (early, so prospects self-select) */}
+      <Industries />
+
+      {/* 5. The whole platform — every module, framed showcases */}
       <ModuleShowcase />
 
-      {/* 5. AI-first — chatbot, agents, automation, analytics, forecasting */}
+      {/* 6. AI-first — chatbot, agents, automation, analytics, forecasting */}
       <AICapabilities />
 
-      {/* 6. One system, every device */}
+      {/* 7. One system, every device */}
       <Omnichannel />
 
       {/* 8. Security — RBAC, MFA, encryption, audit */}
@@ -47,19 +50,16 @@ export default function HomePage() {
       {/* 10. Why AIpath vs Tally / Zoho / Salesforce */}
       <Compare />
 
-      {/* 11. Who it's for — industries */}
-      <Industries />
-
-      {/* 12. Work we've delivered — real client systems in production */}
+      {/* 11. Work we've delivered — real client systems in production */}
       <WorkDelivered />
 
-      {/* 13. Want this built for you? — projects */}
+      {/* 12. Want this built for you? — projects */}
       <Projects />
 
-      {/* 14. FAQ */}
+      {/* 13. FAQ */}
       <FAQ />
 
-      {/* 15. Talk to us — inline lead capture */}
+      {/* 14. Talk to us — inline lead capture */}
       <ContactCTA />
 
       <SiteFooter />

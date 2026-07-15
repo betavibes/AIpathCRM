@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrowserFrame from "@/components/dashboards/BrowserFrame";
 import SalesDemo from "@/components/showcase/SalesDemo";
 import WhatsAppAIDemo from "@/components/showcase/WhatsAppAIDemo";
 import OperationsDemo from "@/components/showcase/OperationsDemo";
@@ -11,6 +12,7 @@ type Module = {
   title: string;
   body: string;
   points: string[];
+  frame: string;
   Component: () => React.ReactNode;
 };
 
@@ -21,6 +23,7 @@ const modules: Module[] = [
     body:
       "Leads, deals and a full customer 360 in one pipeline. AI scores every record and surfaces the next best action, so your team always knows who to call.",
     points: ["Pipeline & deal stages", "Customer 360", "AI next-best-action"],
+    frame: "AIpath One · CRM & Sales",
     Component: SalesDemo,
   },
   {
@@ -29,6 +32,7 @@ const modules: Module[] = [
     body:
       "They message on WhatsApp like they always have. AI turns the conversation into quotes, orders and tickets, and files every record in your CRM.",
     points: ["Quotes & orders from chat", "Voice & image understanding", "Every record in CRM"],
+    frame: "AIpath One · WhatsApp AI",
     Component: WhatsAppAIDemo,
   },
   {
@@ -37,6 +41,7 @@ const modules: Module[] = [
     body:
       "Purchases, inventory and accounts on one ledger — reconciled as work happens, so your numbers are always live and month-end stops being a fire drill.",
     points: ["Purchases & inventory", "Double-entry accounting", "GST-ready"],
+    frame: "AIpath One · ERP & Operations",
     Component: OperationsDemo,
   },
   {
@@ -45,6 +50,7 @@ const modules: Module[] = [
     body:
       "Selfie and geo-verified check-ins flow straight into leave and payroll — no proxies, no paper registers, no manual entry.",
     points: ["Selfie + geo check-in", "Leave & shifts", "Feeds payroll"],
+    frame: "AIpath One · Attendance & HR",
     Component: AttendanceDemo,
   },
   {
@@ -53,6 +59,7 @@ const modules: Module[] = [
     body:
       "Real-time visibility across purchase, sales and accounts in one place — without stitching three different systems together.",
     points: ["One connected ledger", "Live business view", "Multi-branch ready"],
+    frame: "AIpath One · Business Suite",
     Component: BusinessOneDemo,
   },
   {
@@ -61,13 +68,14 @@ const modules: Module[] = [
     body:
       "Onboarding that configures the system around how your business already works — so your team is productive from week one.",
     points: ["Guided setup", "Your data imported", "Shaped to your workflow"],
+    frame: "AIpath One · Get Started",
     Component: GetStartedDemo,
   },
 ];
 
 export default function ModuleShowcase() {
   return (
-    <section className="py-28 bg-[#161823] border-y border-white/[0.06] overflow-hidden">
+    <section className="py-28 overflow-hidden">
       <div className="container mx-auto px-5">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="chip">
@@ -110,10 +118,12 @@ export default function ModuleShowcase() {
                   </div>
                 </div>
 
-                {/* Full-width image below */}
-                <div className="rounded-2xl overflow-x-auto scrollbar-none">
-                  <Demo />
-                </div>
+                {/* Full-width image below — consistent frame unifies each demo */}
+                <BrowserFrame url={m.frame} glow={false}>
+                  <div className="overflow-x-auto scrollbar-none">
+                    <Demo />
+                  </div>
+                </BrowserFrame>
               </div>
             );
           })}

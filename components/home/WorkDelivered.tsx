@@ -38,7 +38,7 @@ function CheckIcon({ className = "" }: { className?: string }) {
 
 export default function WorkDelivered() {
   return (
-    <section className="py-28">
+    <section className="py-28 bg-[#161823] border-y border-white/[0.06]">
       <div className="container mx-auto px-5">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <span className="chip">
