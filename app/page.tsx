@@ -2,7 +2,9 @@ import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Hero from "@/components/home/Hero";
+import Problem from "@/components/home/Problem";
 import HowItWorks from "@/components/home/HowItWorks";
+import AICapabilities from "@/components/home/AICapabilities";
 import AILayer from "@/components/home/AILayer";
 import Integrations from "@/components/home/Integrations";
 import WorkDelivered from "@/components/home/WorkDelivered";
@@ -17,10 +19,16 @@ export default function HomePage() {
       {/* 1. Hero */}
       <Hero />
 
-      {/* 2. How it works (3 steps) */}
+      {/* 2. The problem — scattered tools */}
+      <Problem />
+
+      {/* 3. How it works (3 steps) */}
       <HowItWorks />
 
-      {/* 3. Flagship live demo — WhatsApp AI */}
+      {/* 4. AI-first — the six real AI capabilities */}
+      <AICapabilities />
+
+      {/* 5. Flagship live demo — WhatsApp AI */}
       <section className="py-24">
         <div className="container mx-auto px-5">
           <div className="max-w-3xl mx-auto text-center mb-12">

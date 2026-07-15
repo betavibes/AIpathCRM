@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="inline-flex animate-fade-in">
             <span className="chip">
               <span className="chip-dot" />
-              Introducing AIpath One · AI Agents now live
+              AI-First Business OS · Live at Kiran Fabricators
             </span>
           </div>
 
@@ -41,15 +41,17 @@ export default function Hero() {
             className="mt-5 text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed font-medium animate-slide-up"
             style={{ animationDelay: "160ms", animationFillMode: "both" }}
           >
-            The <span className="text-zinc-100 font-semibold">AI-first Business Operating System</span> — built to automate operations, streamline growth, and run your entire business from one intelligent platform.
+            Run your entire business from one system — and let{" "}
+            <span className="text-zinc-100 font-semibold">AI handle the busywork</span>. It answers
+            your customers on WhatsApp, reads your supplier invoices, and keeps your books moving.
           </p>
 
           <p
             className="mt-3 text-sm md:text-base text-zinc-500 max-w-2xl mx-auto leading-relaxed animate-slide-up"
             style={{ animationDelay: "220ms", animationFillMode: "both" }}
           >
-            From sales to service, finance to communication — across{" "}
-            <span className="text-zinc-300">web, mobile, and messaging</span> platforms.
+            Sales, stock, accounts, staff and customer chat — on{" "}
+            <span className="text-zinc-300">web, mobile and WhatsApp</span>.
           </p>
 
           <div
