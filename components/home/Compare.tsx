@@ -50,7 +50,14 @@ export default function Compare() {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto overflow-x-auto scrollbar-none">
+        <p className="lg:hidden text-center text-xs text-zinc-500 mb-3">
+          Swipe the table to compare with Tally, Zoho &amp; Salesforce →
+        </p>
+
+        <div className="relative max-w-5xl mx-auto">
+          {/* right-edge fade cue on mobile */}
+          <div className="lg:hidden pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-[#0E0F1A] to-transparent z-10" />
+          <div className="overflow-x-auto scrollbar-none">
           <table className="w-full min-w-[640px] border-separate border-spacing-0">
             <thead>
               <tr>
@@ -91,6 +98,7 @@ export default function Compare() {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
 
         <div className="mt-6 flex items-center justify-center gap-5 text-xs text-zinc-500">
