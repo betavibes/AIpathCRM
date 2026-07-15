@@ -73,9 +73,29 @@ export default function Hero() {
             </Link>
           </div>
 
+          {/* Differentiators */}
+          <div
+            className="mt-9 flex flex-wrap items-center justify-center gap-2.5 animate-fade-in"
+            style={{ animationDelay: "320ms", animationFillMode: "both" }}
+          >
+            {[
+              "CRM + ERP + AI in one",
+              "Web · Mobile · Tablet · WhatsApp",
+              "No recurring licence fees",
+              "Small to large enterprise",
+            ].map((t) => (
+              <span
+                key={t}
+                className="rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 text-xs md:text-sm text-zinc-300 backdrop-blur-md"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+
           {/* Trust strip */}
           <div
-            className="mt-14 flex flex-col items-center gap-5 animate-fade-in"
+            className="mt-12 flex flex-col items-center gap-5 animate-fade-in"
             style={{ animationDelay: "400ms", animationFillMode: "both" }}
           >
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">

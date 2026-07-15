@@ -68,6 +68,17 @@ const tiles = [
     ),
   },
   {
+    title: "Spots what's coming",
+    body:
+      "Reads your live data and flags what needs you now — low stock, overdue payments, slow-moving deals — turned into analytics you can act on.",
+    accent: "from-blue-500/25 to-cyan-500/10",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+        <path d="M3 3v18h18" /><path d="M7 14l3-3 4 4 5-7" /><path d="M17 8h3v3" />
+      </svg>
+    ),
+  },
+  {
     title: "Writes your catalog",
     body:
       "Generates product descriptions and tags so your catalog fills itself in.",
@@ -93,8 +104,9 @@ export default function AICapabilities() {
             AI that does the work — <span className="text-gradient-ai">not another chatbot.</span>
           </h2>
           <p className="mt-5 text-lg text-zinc-400">
-            AIpath One doesn&apos;t bolt an assistant onto the side. AI is wired into the data —
-            reading, deciding and acting across your business. Six ways it already earns its keep:
+            AIpath One doesn&apos;t bolt an assistant onto the side. Chatbots, agents, automation,
+            analytics and forecasting are wired into the data — reading, deciding and acting across
+            your business. Here&apos;s how it already earns its keep:
           </p>
         </div>
 

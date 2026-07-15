@@ -3,12 +3,14 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import Hero from "@/components/home/Hero";
 import Problem from "@/components/home/Problem";
-import HowItWorks from "@/components/home/HowItWorks";
+import Pillars from "@/components/home/Pillars";
 import Platform from "@/components/home/Platform";
 import AICapabilities from "@/components/home/AICapabilities";
-import ByTeam from "@/components/home/ByTeam";
-import Integrations from "@/components/home/Integrations";
+import Omnichannel from "@/components/home/Omnichannel";
+import Security from "@/components/home/Security";
+import Ownership from "@/components/home/Ownership";
 import WorkDelivered from "@/components/home/WorkDelivered";
+import Projects from "@/components/home/Projects";
 import FAQ from "@/components/home/FAQ";
 import WhatsAppAIDemo from "@/components/showcase/WhatsAppAIDemo";
 
@@ -17,22 +19,22 @@ export default function HomePage() {
     <main className="relative min-h-screen bg-[#0E0F1A] text-zinc-100 overflow-x-hidden">
       <SiteNav />
 
-      {/* 1. Hero */}
+      {/* 1. Hero — CRM + ERP + AI, every device, no recurring cost */}
       <Hero />
 
       {/* 2. The problem — scattered tools */}
       <Problem />
 
-      {/* 3. How it works (3 steps) */}
-      <HowItWorks />
+      {/* 3. Three pillars — CRM · ERP · AI */}
+      <Pillars />
 
       {/* 4. The full system — real CRM + ERP modules */}
       <Platform />
 
-      {/* 5. AI-first — the six real AI capabilities */}
+      {/* 5. AI-first — chatbot, agents, automation, analytics, forecasting */}
       <AICapabilities />
 
-      {/* 5. Flagship live demo — WhatsApp AI */}
+      {/* 6. Flagship live demo — WhatsApp AI */}
       <section className="py-24">
         <div className="container mx-auto px-5">
           <div className="max-w-3xl mx-auto text-center mb-12">
@@ -58,16 +60,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Every team, one platform */}
-      <ByTeam />
+      {/* 7. One system, every device */}
+      <Omnichannel />
 
-      {/* 7. Channels it connects to */}
-      <Integrations />
+      {/* 8. Security — RBAC, MFA, encryption, audit */}
+      <Security />
 
-      {/* 8. Work we've delivered — real client systems in production */}
+      {/* 9. Own it — no recurring licence, every size */}
+      <Ownership />
+
+      {/* 10. Work we've delivered — real client systems in production */}
       <WorkDelivered />
 
-      {/* 9. FAQ */}
+      {/* 11. Want this built for you? — projects */}
+      <Projects />
+
+      {/* 12. FAQ */}
       <FAQ />
 
       <SiteFooter />
