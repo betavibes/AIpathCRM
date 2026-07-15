@@ -3,6 +3,9 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import PageHero from "@/components/PageHero";
 import TeamIcon from "@/components/TeamIcon";
+import AllInOne from "@/components/solutions/AllInOne";
+import SolutionProducts from "@/components/solutions/SolutionProducts";
+import FeatureTabs from "@/components/solutions/FeatureTabs";
 
 export const metadata = {
   title: "Solutions by Industry — AIpath CRM",
@@ -197,6 +200,15 @@ export default function SolutionsPage() {
         <Link href="/contact" className="btn-primary">Book a Demo</Link>
         <Link href="/features" className="btn-secondary">Explore platform</Link>
       </PageHero>
+
+      {/* 1. All-in-one positioning */}
+      <AllInOne />
+
+      {/* 2. Three products — CRM / ERP / AI */}
+      <SolutionProducts />
+
+      {/* 3. Tabbed feature overview */}
+      <FeatureTabs />
 
       {/* Industries grid */}
       <section className="pb-24">
