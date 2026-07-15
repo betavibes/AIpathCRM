@@ -22,17 +22,6 @@ type Tab = {
 
 const tabs: Tab[] = [
   {
-    id: "quickstart",
-    label: "Quick Start",
-    short: "Start",
-    icon: "✦",
-    tagline: "The CRM that gets you started fast.",
-    blurb:
-      "Everything you need to get started — set up around how your business actually works.",
-    Component: GetStartedDemo,
-    color: "blue",
-  },
-  {
     id: "crm",
     label: "CRM · Sales",
     short: "CRM",
@@ -85,6 +74,17 @@ const tabs: Tab[] = [
     blurb:
       "Real-time visibility across purchase, sales and accounts — without stitching three systems together.",
     Component: BusinessOneDemo,
+    color: "blue",
+  },
+  {
+    id: "quickstart",
+    label: "Quick Start",
+    short: "Start",
+    icon: "✦",
+    tagline: "Guided setup, tailored to you.",
+    blurb:
+      "Onboarding that configures the system around how your business already works.",
+    Component: GetStartedDemo,
     color: "blue",
   },
 ];

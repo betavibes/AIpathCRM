@@ -285,14 +285,14 @@ export default function GetStartedDemo() {
             <span className="text-2xl">✦</span>
             <p className="text-sm md:text-base font-semibold text-slate-900">
               AI for small businesses.{" "}
-              <span className="text-slate-500 font-normal">Easy setup, no cost.</span>
+              <span className="text-slate-500 font-normal">Set up around how you work.</span>
             </p>
           </div>
           <a
             href="/contact"
             className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-bold shadow-lg shadow-blue-700/30 hover:shadow-blue-700/50 transition-shadow whitespace-nowrap"
           >
-            Sign up
+            Book a demo
           </a>
         </div>
       </div>
