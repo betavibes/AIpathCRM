@@ -69,7 +69,7 @@ export default function HowItWorks() {
 
         <div className="mt-12 text-center">
           <Link href="/live-demo" className="btn-primary">
-            See it live in 60 seconds
+            Try the live demo — no signup
             <span aria-hidden>→</span>
           </Link>
         </div>
