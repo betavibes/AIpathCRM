@@ -1,23 +1,28 @@
-﻿const apps = [
-  "Slack", "Google Workspace", "Microsoft 365", "Stripe", "Shopify",
-  "WhatsApp", "Telegram", "Zapier", "QuickBooks", "Salesforce",
-  "HubSpot", "Notion", "Linear", "Jira", "Twilio", "SendGrid",
-  "AWS", "GitHub", "DocuSign", "Calendly",
+const channels = [
+  "WhatsApp",
+  "Email",
+  "Website & web forms",
+  "Mobile app · iOS & Android",
+  "Google Drive",
+  "Media & documents",
+  "Payment capture",
+  "Custom integrations",
 ];
 
 export default function Integrations() {
-  const doubled = [...apps, ...apps];
+  const doubled = [...channels, ...channels];
   return (
-    <section className="py-28 bg-[#161823] border-y border-white/[0.06]">
+    <section className="py-28">
       <div className="container mx-auto px-5">
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <span className="chip"><span className="chip-dot" />Integrations</span>
+          <span className="chip"><span className="chip-dot" />Connected</span>
           <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight">
-            Connects to <span className="text-gradient">everything</span> you already use.
+            Runs on the channels <span className="text-gradient">your business already uses.</span>
           </h2>
           <p className="mt-5 text-zinc-400">
-            We connect AIpath to the tools you already run on — and build the integration if it
-            doesn&apos;t exist yet. Tell us your stack and we&apos;ll tell you straight what we can wire up.
+            Customers reach you on WhatsApp, email and your website; your team works on web and
+            mobile. AIpath pulls it all into one place — and if you need a specific tool wired in,
+            we build the integration. Tell us your stack and we&apos;ll tell you straight what we can connect.
           </p>
         </div>
 

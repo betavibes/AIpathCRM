@@ -5,7 +5,7 @@ import Hero from "@/components/home/Hero";
 import Problem from "@/components/home/Problem";
 import HowItWorks from "@/components/home/HowItWorks";
 import AICapabilities from "@/components/home/AICapabilities";
-import AILayer from "@/components/home/AILayer";
+import ByTeam from "@/components/home/ByTeam";
 import Integrations from "@/components/home/Integrations";
 import WorkDelivered from "@/components/home/WorkDelivered";
 import FAQ from "@/components/home/FAQ";
@@ -54,16 +54,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. AI layer terminal */}
-      <AILayer />
+      {/* 6. Every team, one platform */}
+      <ByTeam />
 
-      {/* 5. Integrations marquee */}
+      {/* 7. Channels it connects to */}
       <Integrations />
 
-      {/* 6. Work we've delivered — real client systems in production */}
+      {/* 8. Work we've delivered — real client systems in production */}
       <WorkDelivered />
 
-      {/* 7. FAQ */}
+      {/* 9. FAQ */}
       <FAQ />
 
       <SiteFooter />
