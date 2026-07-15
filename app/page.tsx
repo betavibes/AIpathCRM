@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import Hero from "@/components/home/Hero";
 import Problem from "@/components/home/Problem";
 import HowItWorks from "@/components/home/HowItWorks";
+import Platform from "@/components/home/Platform";
 import AICapabilities from "@/components/home/AICapabilities";
 import ByTeam from "@/components/home/ByTeam";
 import Integrations from "@/components/home/Integrations";
@@ -25,7 +26,10 @@ export default function HomePage() {
       {/* 3. How it works (3 steps) */}
       <HowItWorks />
 
-      {/* 4. AI-first — the six real AI capabilities */}
+      {/* 4. The full system — real CRM + ERP modules */}
+      <Platform />
+
+      {/* 5. AI-first — the six real AI capabilities */}
       <AICapabilities />
 
       {/* 5. Flagship live demo — WhatsApp AI */}
