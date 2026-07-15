@@ -31,7 +31,7 @@ export default function LiveDemoPage() {
               Take AIpath for a <span className="text-gradient">test drive.</span>
             </h1>
             <p className="mt-5 text-lg text-zinc-400 max-w-2xl mx-auto">
-              Five live product modules. Switch between them with the tabs below — see how AIpath replaces your stack.
+              Six product modules. Switch between them with the tabs below — see how AIpath replaces your stack.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/contact" className="btn-primary">

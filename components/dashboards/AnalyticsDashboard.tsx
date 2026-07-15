@@ -149,7 +149,7 @@ export default function AnalyticsDashboard() {
           <div className="flex-1">
             <p className="text-[11px] font-semibold">AI insight</p>
             <p className="text-[10px] text-zinc-300 mt-0.5">
-              Enterprise segment growing 3.2à— faster than SMB. Reallocating ad spend could lift Q4 revenue by <span className="text-emerald-300 font-semibold">₹14L+</span>.
+              Enterprise segment growing 3.2× faster than SMB. Reallocating ad spend could lift Q4 revenue by <span className="text-emerald-300 font-semibold">₹14L+</span>.
             </p>
           </div>
           <button className="text-[9px] px-2 py-1 rounded-md bg-white/10 border border-white/10 text-zinc-200">Investigate</button>

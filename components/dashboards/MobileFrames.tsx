@@ -43,7 +43,7 @@ function PhoneDashboard() {
           <div className="absolute top-0 right-0 w-20 h-20 rounded-full bg-white/10 blur-2xl" />
           <p className="relative text-[9px] text-indigo-100 uppercase tracking-[0.15em]">Today's pipeline</p>
           <p className="relative text-2xl font-semibold tracking-tight mt-1">₹4.82L</p>
-          <p className="relative text-[10px] text-indigo-200 mt-0.5">—² 12% vs yesterday</p>
+          <p className="relative text-[10px] text-indigo-200 mt-0.5">▲ 12% vs yesterday</p>
         </div>
 
         {/* Quick stats */}
