@@ -85,6 +85,25 @@ export default function Ownership() {
           </div>
         </div>
 
+        {/* How you buy + support */}
+        <div className="mt-16 max-w-5xl mx-auto">
+          <p className="text-center text-xs uppercase tracking-[0.25em] text-zinc-500 mb-6">
+            How you buy — and stay supported
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              ["1 · Tailored quote", "We scope exactly what you need — modules, users, integrations — and give you one clear price. No per-seat guesswork."],
+              ["2 · Built & owned", "A one-time investment to build and deploy your system. It's yours to run — no monthly licence renting your own tools back to you."],
+              ["3 · Ongoing support", "Optional support and updates on your terms — we stay reachable after go-live, not gone the day it ships."],
+            ].map(([t, d]) => (
+              <div key={t} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+                <p className="text-sm font-semibold text-indigo-200">{t}</p>
+                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-12 text-center">
           <Link href="/contact" className="btn-primary">
             Get a tailored quote

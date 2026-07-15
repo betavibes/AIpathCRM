@@ -8,9 +8,12 @@ import AICapabilities from "@/components/home/AICapabilities";
 import Omnichannel from "@/components/home/Omnichannel";
 import Security from "@/components/home/Security";
 import Ownership from "@/components/home/Ownership";
+import Compare from "@/components/home/Compare";
+import Industries from "@/components/home/Industries";
 import WorkDelivered from "@/components/home/WorkDelivered";
 import Projects from "@/components/home/Projects";
 import FAQ from "@/components/home/FAQ";
+import ContactCTA from "@/components/home/ContactCTA";
 
 export default function HomePage() {
   return (
@@ -38,17 +41,26 @@ export default function HomePage() {
       {/* 8. Security — RBAC, MFA, encryption, audit */}
       <Security />
 
-      {/* 9. Own it — no recurring licence, every size */}
+      {/* 9. Own it — no recurring licence, buy & support, every size */}
       <Ownership />
 
-      {/* 10. Work we've delivered — real client systems in production */}
+      {/* 10. Why AIpath vs Tally / Zoho / Salesforce */}
+      <Compare />
+
+      {/* 11. Who it's for — industries */}
+      <Industries />
+
+      {/* 12. Work we've delivered — real client systems in production */}
       <WorkDelivered />
 
-      {/* 11. Want this built for you? — projects */}
+      {/* 13. Want this built for you? — projects */}
       <Projects />
 
-      {/* 12. FAQ */}
+      {/* 14. FAQ */}
       <FAQ />
+
+      {/* 15. Talk to us — inline lead capture */}
+      <ContactCTA />
 
       <SiteFooter />
     </main>
