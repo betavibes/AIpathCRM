@@ -83,39 +83,36 @@ export default function ModuleShowcase() {
           </p>
         </div>
 
-        <div className="space-y-24 max-w-6xl mx-auto">
-          {modules.map((m, i) => {
-            const flipped = i % 2 === 1;
+        <div className="space-y-28 max-w-6xl mx-auto">
+          {modules.map((m) => {
             const Demo = m.Component;
             return (
-              <div
-                key={m.tag}
-                className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center"
-              >
-                {/* Copy */}
-                <div className={`lg:col-span-5 ${flipped ? "lg:order-2" : ""}`}>
+              <div key={m.tag}>
+                {/* Content above */}
+                <div className="max-w-3xl mx-auto text-center mb-10">
                   <span className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-indigo-200">
                     {m.tag}
                   </span>
-                  <h3 className="mt-4 text-2xl md:text-3xl font-semibold tracking-tight text-zinc-100">
+                  <h3 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-zinc-100">
                     {m.title}
                   </h3>
-                  <p className="mt-4 text-zinc-400 leading-relaxed">{m.body}</p>
-                  <ul className="mt-6 space-y-2.5">
+                  <p className="mt-4 text-zinc-400 text-lg leading-relaxed">{m.body}</p>
+                  <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
                     {m.points.map((p) => (
-                      <li key={p} className="flex items-center gap-2.5 text-sm text-zinc-300">
-                        <span className="inline-flex w-5 h-5 items-center justify-center rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs">✓</span>
+                      <span
+                        key={p}
+                        className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-3.5 py-1.5 text-sm text-zinc-300"
+                      >
+                        <span className="inline-flex w-4 h-4 items-center justify-center rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[10px]">✓</span>
                         {p}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
-                {/* Visual */}
-                <div className={`lg:col-span-7 min-w-0 ${flipped ? "lg:order-1" : ""}`}>
-                  <div className="rounded-2xl overflow-x-auto scrollbar-none">
-                    <Demo />
-                  </div>
+                {/* Full-width image below */}
+                <div className="rounded-2xl overflow-x-auto scrollbar-none">
+                  <Demo />
                 </div>
               </div>
             );
