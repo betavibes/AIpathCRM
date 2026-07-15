@@ -62,7 +62,7 @@ export default function LiveDemoPage() {
               Want to see <span className="text-gradient">your data</span> in here?
             </h2>
             <p className="relative mt-4 text-zinc-400 max-w-xl mx-auto">
-              30-minute personalized walkthrough — bring your real workflows, leave with a working sandbox.
+              A 30-minute walkthrough on your real workflows — we&apos;ll show you exactly how AIpath would run your business.
             </p>
             <div className="relative mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/contact" className="btn-primary">Book a demo</Link>

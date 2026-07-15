@@ -37,10 +37,10 @@ export default function HowItWorks() {
             How it works
           </span>
           <h2 className="mt-5 text-4xl md:text-5xl font-semibold tracking-tight text-zinc-100">
-            From scattered tools to <span className="text-gradient">one operating system</span> — in days.
+            From scattered tools to <span className="text-gradient">one operating system</span> — in weeks, not quarters.
           </h2>
           <p className="mt-5 text-zinc-400 text-lg">
-            Three simple steps. No 6-month implementation. No expensive consultants.
+            Three simple steps. We set it up around how your business already works — no year-long rollout, no army of consultants.
           </p>
         </div>
 
