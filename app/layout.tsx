@@ -7,6 +7,10 @@ import StickyDemoBar from "@/components/StickyDemoBar";
 // Google Analytics 4 measurement ID
 const GA_ID = "G-Q43K20QZ8D";
 
+// Tawk.to live-chat property/widget id (same widget as aipathdiginext.com)
+const TAWK_ID =
+  process.env.NEXT_PUBLIC_TAWK_ID || "6871f58fb0c9561915a88a4e/1ivuieebp";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -56,6 +60,29 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_ID}');
+          `}
+        </Script>
+
+        {/* Tawk.to live chat (bottom-left, same widget as aipathdiginext.com) */}
+        <Script id="tawk-to" strategy="afterInteractive">
+          {`
+            window.Tawk_API = window.Tawk_API || {};
+            window.Tawk_LoadStart = new Date();
+            window.Tawk_API.customStyle = {
+              visibility: {
+                desktop: { position: 'bl', xOffset: 24, yOffset: 24 },
+                mobile:  { position: 'bl', xOffset: 12, yOffset: 12 }
+              }
+            };
+            (function () {
+              var s1 = document.createElement('script');
+              var s0 = document.getElementsByTagName('script')[0];
+              s1.async = true;
+              s1.src = 'https://embed.tawk.to/${TAWK_ID}';
+              s1.charset = 'UTF-8';
+              s1.setAttribute('crossorigin', '*');
+              s0.parentNode.insertBefore(s1, s0);
+            })();
           `}
         </Script>
       </body>
